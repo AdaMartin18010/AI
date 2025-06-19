@@ -15,6 +15,7 @@
 **形式化定义**: 集合是一个原始概念，通过公理系统定义
 
 **表示方法**:
+
 - 列举法: $A = \{1, 2, 3, 4\}$
 - 描述法: $A = \{x : P(x)\}$
 - 构造法: $A = \{f(x) : x \in B \land P(x)\}$
@@ -125,6 +126,7 @@ $$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$$
 **定义**: $R \subseteq A \times B$
 
 **性质**:
+
 - 自反性: $\forall x \in A: (x,x) \in R$
 - 对称性: $\forall x,y \in A: (x,y) \in R \rightarrow (y,x) \in R$
 - 传递性: $\forall x,y,z \in A: (x,y) \in R \land (y,z) \in R \rightarrow (x,z) \in R$
@@ -211,6 +213,7 @@ $$\text{Knowledge} = \{(e_1, r, e_2) : e_1, e_2 \in \text{Entities}, r \in \text
 #### 8.2 数据结构
 
 **集合作为数据结构**:
+
 ```rust
 struct Set<T> {
     elements: Vec<T>,
@@ -230,6 +233,7 @@ impl<T: Eq + Hash> Set<T> {
 #### 8.3 算法设计
 
 **集合算法**:
+
 - 并查集 (Union-Find)
 - 集合覆盖问题
 - 子集和问题
@@ -279,4 +283,4 @@ $$\underline{A} = \{x \in U : [x]_R \subseteq A\}$$
 
 ---
 
-*返回 [数学基础](../README.md) | 继续 [范畴论](../02.2-CategoryTheory/README.md)* 
+*返回 [数学基础](../README.md) | 继续 [范畴论](../02.2-CategoryTheory/README.md)*
