@@ -2,7 +2,7 @@
 
 ## 目录结构
 
-```
+```text
 03-ComputerScience/
 ├── 03.1-AutomataTheory/         # 自动机理论
 ├── 03.2-ComplexityTheory/       # 计算复杂度理论
@@ -28,6 +28,7 @@
 $$M = (Q, \Sigma, \delta, q_0, F)$$
 
 其中：
+
 - $Q$: 状态集合
 - $\Sigma$: 输入字母表
 - $\delta: Q \times \Sigma \rightarrow Q$: 转移函数
@@ -38,10 +39,12 @@ $$M = (Q, \Sigma, \delta, q_0, F)$$
 $$TM = (Q, \Sigma, \Gamma, \delta, q_0, q_{accept}, q_{reject})$$
 
 其中：
+
 - $\Gamma$: 磁带字母表
 - $\delta: Q \times \Gamma \rightarrow Q \times \Gamma \times \{L, R\}$: 转移函数
 
 **与AI的关联**:
+
 - 自然语言处理
 - 模式识别
 - 计算模型
@@ -59,6 +62,7 @@ NP类定义：
 $$\text{NP} = \{L : \exists \text{NTM } M \text{ s.t. } L(M) = L \land \text{Time}_M(n) = O(n^k)\}$$
 
 **与AI的关联**:
+
 - 算法设计
 - 问题分类
 - 计算限制
@@ -267,4 +271,4 @@ $$\text{Decrypt}(c, k) = m$$
 
 ---
 
-*返回 [数学基础](../02-Mathematics/README.md) | 继续 [AI理论与模型](../04-AITheory/README.md)* 
+*返回 [数学基础](../02-Mathematics/README.md) | 继续 [AI理论与模型](../04-AITheory/README.md)*

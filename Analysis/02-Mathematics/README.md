@@ -2,7 +2,7 @@
 
 ## 目录结构
 
-```
+```text
 02-Mathematics/
 ├── 02.1-SetTheory/              # 集合论基础
 ├── 02.2-CategoryTheory/         # 范畴论
@@ -238,4 +238,4 @@ $$T(n) = O(f(n)) \iff \exists c, n_0: \forall n > n_0: T(n) \leq c \cdot f(n)$$
 
 ---
 
-*返回 [哲学基础](../01-Philosophy/README.md) | 继续 [计算机科学基础](../03-ComputerScience/README.md)* 
+*返回 [哲学基础](../01-Philosophy/README.md) | 继续 [计算机科学基础](../03-ComputerScience/README.md)*

@@ -2,7 +2,7 @@
 
 ## 目录结构
 
-```
+```text
 01-Philosophy/
 ├── 01.1-Epistemology/           # 认识论基础
 ├── 01.2-Ontology/               # 本体论
@@ -20,6 +20,7 @@
 **核心问题**: 知识如何可能？AI如何获得知识？
 
 **关键概念**:
+
 - 知识的定义：JTB理论（Justified True Belief）
 - 先验知识与后验知识
 - 理性主义与经验主义
@@ -30,6 +31,7 @@
 $$K(p) \equiv J(p) \land T(p) \land B(p)$$
 
 其中：
+
 - $K(p)$: 主体知道命题p
 - $J(p)$: 主体对p有正当理由
 - $T(p)$: p为真
@@ -40,6 +42,7 @@ $$K(p) \equiv J(p) \land T(p) \land B(p)$$
 **核心问题**: 存在是什么？AI系统中的实体如何定义？
 
 **关键概念**:
+
 - 实体与属性
 - 存在与虚无
 - 同一性与变化
@@ -57,6 +60,7 @@ $$R(a,b) \rightarrow \exists x \exists y (x = a \land y = b \land R(x,y))$$
 **核心问题**: 推理的有效性如何保证？
 
 **关键概念**:
+
 - 命题逻辑
 - 谓词逻辑
 - 模态逻辑
@@ -177,4 +181,4 @@ $$\text{Intelligent}(A) \iff \forall H \forall Q (H(Q) = A(Q) \land P(H \text{ i
 
 ---
 
-*返回 [主目录](../README.md) | 继续 [数学基础](../02-Mathematics/README.md)* 
+*返回 [主目录](../README.md) | 继续 [数学基础](../02-Mathematics/README.md)*

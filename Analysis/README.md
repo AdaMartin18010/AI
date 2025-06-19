@@ -6,7 +6,7 @@
 
 ## 目录结构
 
-```
+```text
 Analysis/
 ├── 01-Philosophy/           # 哲学基础与认识论
 ├── 02-Mathematics/          # 数学基础与形式化
