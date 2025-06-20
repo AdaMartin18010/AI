@@ -2,30 +2,42 @@
 
 ## 目录
 
-- [1. Petri网导论](#1-petri网导论)
-  - [1.1 什么是Petri网？](#11-什么是petri网)
-  - [1.2 图形化的并发模型](#12-图形化的并发模型)
-- [2. 经典Petri网 (P/T Nets)](#2-经典petri网-pt-nets)
-  - [2.1 核心组件：库所、变迁、弧、令牌](#21-核心组件库所变迁弧令牌)
-  - [2.2 动态行为：令牌游戏](#22-动态行为令牌游戏)
-  - [2.3 状态方程](#23-状态方程)
-- [3. Petri网的核心分析属性](#3-petri网的核心分析属性)
-  - [3.1 可达性 (Reachability)](#31-可达性-reachability)
-  - [3.2 有界性 (Boundedness)](#32-有界性-boundedness)
-  - [3.3 活性 (Liveness)](#33-活性-liveness)
-  - [3.4 公平性 (Fairness)](#34-公平性-fairness)
-- [4. Petri网的扩展](#4-petri网的扩展)
-  - [4.1 高级Petri网 (High-level Petri Nets)](#41-高级petri网-high-level-petri-nets)
-  - [4.2 着色Petri网 (Coloured Petri Nets - CPN)](#42-着色petri网-coloured-petri-nets---cpn)
-  - [4.3 时间Petri网 (Timed Petri Nets)](#43-时间petri网-timed-petri-nets)
-- [5. Petri网与AI](#5-petri网与ai)
-  - [5.1 工作流与业务流程建模](#51-工作流与业务流程建模)
-  - [5.2 规划与调度问题](#52-规划与调度问题)
-  - [5.3 知识表示与推理](#53-知识表示与推理)
-- [6. 工具与实践](#6-工具与实践)
-  - [6.1 CPN Tools](#61-cpn-tools)
-  - [6.2 PIPE (Platform Independent Petri Net Editor)](#62-pipe-platform-independent-petri-net-editor)
-- [7. Petri网 vs. 其他并发模型](#7-petri网-vs-其他并发模型)
+- [06.10 Petri网 (Petri Nets)](#0610-petri网-petri-nets)
+  - [目录](#目录)
+  - [1. Petri网导论](#1-petri网导论)
+    - [1.1 什么是Petri网？](#11-什么是petri网)
+    - [1.2 图形化的并发模型](#12-图形化的并发模型)
+  - [2. 经典Petri网 (P/T Nets)](#2-经典petri网-pt-nets)
+    - [2.1 核心组件：库所、变迁、弧、令牌](#21-核心组件库所变迁弧令牌)
+    - [2.2 动态行为：令牌游戏](#22-动态行为令牌游戏)
+    - [2.3 状态方程](#23-状态方程)
+  - [3. Petri网的核心分析属性](#3-petri网的核心分析属性)
+    - [3.1 可达性 (Reachability)](#31-可达性-reachability)
+    - [3.2 有界性 (Boundedness)](#32-有界性-boundedness)
+    - [3.3 活性 (Liveness)](#33-活性-liveness)
+    - [3.4 公平性 (Fairness)](#34-公平性-fairness)
+  - [4. Petri网的扩展](#4-petri网的扩展)
+    - [4.1 高级Petri网 (High-level Petri Nets)](#41-高级petri网-high-level-petri-nets)
+    - [4.2 着色Petri网 (Coloured Petri Nets - CPN)](#42-着色petri网-coloured-petri-nets---cpn)
+    - [4.3 时间Petri网 (Timed Petri Nets)](#43-时间petri网-timed-petri-nets)
+  - [5. Petri网与AI](#5-petri网与ai)
+    - [5.1 工作流与业务流程建模](#51-工作流与业务流程建模)
+    - [5.2 规划与调度问题](#52-规划与调度问题)
+    - [5.3 知识表示与推理](#53-知识表示与推理)
+  - [6. 工具与实践](#6-工具与实践)
+    - [6.1 CPN Tools](#61-cpn-tools)
+    - [6.2 PIPE (Platform Independent Petri Net Editor)](#62-pipe-platform-independent-petri-net-editor)
+    - [6.3 实用工具链](#63-实用工具链)
+  - [7. Petri网 vs. 其他并发模型](#7-petri网-vs-其他并发模型)
+    - [7.1 与CSP (通信顺序进程) 的比较](#71-与csp-通信顺序进程-的比较)
+    - [7.2 与π演算的比较](#72-与π演算的比较)
+    - [7.3 与时态逻辑的比较](#73-与时态逻辑的比较)
+    - [7.4 与状态机的比较](#74-与状态机的比较)
+    - [7.5 选择合适的形式化模型](#75-选择合适的形式化模型)
+  - [8. 结论与未来方向](#8-结论与未来方向)
+    - [8.1 Petri网理论的发展趋势](#81-petri网理论的发展趋势)
+    - [8.2 AI系统验证中的应用前景](#82-ai系统验证中的应用前景)
+    - [8.3 实践建议](#83-实践建议)
 
 ---
 
@@ -146,7 +158,7 @@ Petri网被广泛应用于工作流和业务流程的建模：
 
 **示例**: 大型语言模型推理管道的Petri网模型
 
-```
+```text
 [请求接收] → (请求处理变迁) → [待推理队列] → (分配资源变迁) → [推理中]
                                                 ↑            ↓
 [空闲GPU资源] -----------------------------------|            | 
@@ -188,11 +200,12 @@ CPN Tools是研究和应用着色Petri网的主流工具：
 - **性能分析**: 支持时间CPN的性能指标计算。
 
 **主要特点**:
+
 - 使用ML编程语言定义颜色集、变量和函数
 - 层次化建模，支持模块化设计
 - 丰富的分析报告生成功能
 
-**网站**: http://cpntools.org/
+**网站**: <http://cpntools.org/>
 
 ### 6.2 PIPE (Platform Independent Petri Net Editor)
 
@@ -203,11 +216,12 @@ PIPE是一个开源的Petri网编辑和分析工具：
 - **扩展性**: 支持通过模块扩展功能。
 
 **主要用途**:
+
 - 教学演示
 - 小型系统的快速建模和分析
 - 自定义分析算法的开发
 
-**网站**: https://github.com/sarahtattersall/PIPE
+**网站**: <https://github.com/sarahtattersall/PIPE>
 
 ### 6.3 实用工具链
 

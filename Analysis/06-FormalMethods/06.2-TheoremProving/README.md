@@ -40,7 +40,7 @@
    6.1 [Coq](#61-coq)
    6.2 [Isabelle/HOL](#62-isabellehol)
    6.3 [Lean](#63-lean)
-   6.4 [Agda和Idris](#64-agda和idris-agda-and-idris)
+   6.4 [Agda和Idris](#64-agda和idris)
    6.5 [自动证明器](#65-自动证明器-automatic-provers)
 
 7. [前沿研究](#7-前沿研究-frontier-research)
@@ -254,15 +254,15 @@
 
 **定义 1.3.2.2** (依赖函数类型规则)
 
-```
+```text
 \frac{\Gamma \vdash A: \text{Type} \quad \Gamma, x:A \vdash B: \text{Type}}{\Gamma \vdash \Pi x:A.B: \text{Type}} (\Pi-Form)
 ```
 
-```
+```text
 \frac{\Gamma, x:A \vdash b: B}{\Gamma \vdash \lambda x:A.b: \Pi x:A.B} (\Pi-Intro)
 ```
 
-```
+```text
 \frac{\Gamma \vdash f: \Pi x:A.B \quad \Gamma \vdash a: A}{\Gamma \vdash f \; a: B[x:=a]} (\Pi-Elim)
 ```
 
@@ -368,7 +368,7 @@ Curry-Howard同构建立了逻辑系统和程序设计语言之间的深刻联�
 
 **算法 2.1.1.1** (Robinson合一算法)
 
-```
+```text
 函数 合一(t1, t2)
   若 t1 是变量:
     若 t1 出现在 t2 中: 失败 // 出现检测
@@ -421,7 +421,7 @@ Curry-Howard同构建立了逻辑系统和程序设计语言之间的深刻联�
 
 **算法 2.1.4.1** (基本归结算法)
 
-```
+```text
 函数 归结证明(S)
   子句集 = CNF转换(S)
   while true:
@@ -479,7 +479,7 @@ Curry-Howard同构建立了逻辑系统和程序设计语言之间的深刻联�
 
 **算法 2.2.3.1** (连接表算法)
 
-```
+```text
 函数 连接表证明(φ)
   初始表 T = {¬φ}
   while T 中有未展开的复合公式:
@@ -568,7 +568,7 @@ SAT是NP完全的。
 
 **算法 2.4.1.1** (DPLL算法)
 
-```
+```text
 函数 DPLL(φ, 赋值)
   φ = 单元传播(φ, 赋值)
   φ = 纯文字消除(φ, 赋值)
@@ -597,7 +597,7 @@ SAT是NP完全的。
 
 **算法 2.4.2.1** (DPLL(T)框架)
 
-```
+```text
 函数 DPLL_T(φ, 赋值)
   // φ是与理论T结合的公式
   φ, 赋值 = 理论传播(φ, 赋值)
@@ -683,7 +683,7 @@ SAT是NP完全的。
 
 **例子**:
 
-```
+```text
 apply theorem1.
 unfold definition2.
 rewrite using lemma3.
@@ -695,7 +695,7 @@ apply induction on n.
 
 **例子**:
 
-```
+```text
 proof
   assume n is even
   then n = 2k for some k
@@ -709,7 +709,7 @@ qed
 
 **例子**:
 
-```
+```text
 Proof.
   intros n H.
   destruct H as [k H'].
@@ -732,7 +732,7 @@ Qed.
 
 **例子**：
 
-```
+```text
 Goal: Γ ⊢ A → B
 Apply →-intro:
   Goal: Γ, A ⊢ B
@@ -775,7 +775,7 @@ Apply →-intro:
 
 **示例**：
 
-```
+```text
 tactic crush := repeat (first [apply theorem1 | rewrite lemma2 | auto]).
 ```
 
@@ -809,7 +809,7 @@ Ltac是Coq中的战术语言，具有特殊语法和语义，专为证明自动�
 
 **基本结构**:
 
-```
+```text
 Theorem theorem_name: statement.
 Proof.
   tactic1.
@@ -877,7 +877,7 @@ Qed.
 
 **例子**：
 
-```
+```text
 Theorem map_fusion {A B C} {f: A -> B} {g: B -> C}:
   forall xs, map g (map f xs) = map (fun x => g (f x)) xs.
 ```
@@ -971,7 +971,7 @@ Nelson-Oppen方法是组合满足以下条件的量词无关理论 T₁, T₂, .
 
 **算法 4.1.2.1** (Nelson-Oppen组合)
 
-```
+```text
 函数 Nelson-Oppen(φ)
   将φ分解为各理论的子公式 φ₁, φ₂, ..., φₙ
   引入共享变量等式
@@ -1022,7 +1022,7 @@ Shostak方法是用于组合满足如下附加条件的理论：
 
 **算法 4.2.1.1** (基于SAT的反例生成)
 
-```
+```text
 函数 生成反例(φ)
   ψ = ¬φ
   调用SAT求解器检查ψ
@@ -1046,7 +1046,7 @@ Shostak方法是用于组合满足如下附加条件的理论：
 
 **算法 4.2.2.1** (Delta调试)
 
-```
+```text
 函数 简化反例(测试, 反例)
   当无法进一步简化:
     尝试将反例分成两部分
@@ -1072,7 +1072,7 @@ Shostak方法是用于组合满足如下附加条件的理论：
 
 **算法 4.2.3.1** (CEGIS - 反例指导的归纳合成)
 
-```
+```text
 函数 CEGIS(规范)
   候选 = 初始猜测
   反例集 = 空集
@@ -1104,7 +1104,7 @@ Shostak方法是用于组合满足如下附加条件的理论：
 
 **算法 4.3.1.1** (谓词抽象构造)
 
-```
+```text
 函数 构建谓词抽象(系统, 谓词集)
   抽象状态空间 = 谓词集上的所有可能真值组合
   对于每个抽象状态s和转移t:
@@ -1126,7 +1126,7 @@ Shostak方法是用于组合满足如下附加条件的理论：
 
 **算法 4.3.2.1** (CEGAR循环)
 
-```
+```text
 函数 CEGAR(系统, 性质)
   抽象系统 = 初始抽象(系统)
   循环:
@@ -1183,7 +1183,7 @@ Shostak方法是用于组合满足如下附加条件的理论：
 
 **算法 4.4.1.1** (基于提示的证明搜索)
 
-```
+```text
 函数 提示搜索(目标, 提示数据库, 最大深度)
   如果深度 > 最大深度: 返回失败
   从提示数据库选择适用于目标的提示
@@ -1209,7 +1209,7 @@ Shostak方法是用于组合满足如下附加条件的理论：
 
 **算法 4.4.2.1** (分层证明规划)
 
-```
+```text
 函数 证明规划(目标)
   构建初始规划问题
   生成高级证明计划
@@ -1240,7 +1240,7 @@ Shostak方法是用于组合满足如下附加条件的理论：
 
 **算法 4.4.3.1** (神经指导的战术选择)
 
-```
+```text
 函数 神经战术选择(目标, 上下文)
   提取目标特征向量
   将特征输入神经网络

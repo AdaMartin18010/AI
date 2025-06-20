@@ -52,11 +52,13 @@ APIs可以被视为软件组件之间的**契约**，它明确规定了：
 APIs可以从多个维度进行分类：
 
 **按照暴露范围分类**：
+
 - **内部API**：限于组织内部使用，不对外公开
 - **合作伙伴API**：对特定合作伙伴开放
 - **公共API**：对所有开发者开放，通常有注册和API密钥管理
 
 **按照架构风格分类**：
+
 - **REST API**：基于HTTP协议的无状态API，强调资源表示和操作
 - **GraphQL API**：基于请求指定的数据需求返回精确数据的API
 - **RPC API**：如gRPC、XML-RPC等，侧重于过程调用
@@ -65,6 +67,7 @@ APIs可以从多个维度进行分类：
 - **WebHook**：反向API，通过回调机制通知客户端事件
 
 **按照特性分类**：
+
 - **数据API**：提供数据访问和操作
 - **功能API**：提供特定功能服务
 - **组合API**：组合多个API提供集成服务
@@ -106,6 +109,7 @@ API的生命周期通常包括以下阶段：
 - **风格一致性**：遵循所用技术栈的约定和最佳实践
 
 **不良实践示例**：
+
 ```javascript
 // 不一致的命名
 getUserData()
@@ -114,6 +118,7 @@ RETRIEVE_PRODUCT_DETAILS()
 ```
 
 **良好实践示例**：
+
 ```javascript
 // 一致的命名
 getUserData()
@@ -131,6 +136,7 @@ API的行为应符合用户期望，避免令人惊讶的结果：
 - 错误情况的处理应符合常规预期
 
 **不良实践示例**：
+
 ```javascript
 // 令人惊讶的行为
 function deleteUser(id) {
@@ -139,6 +145,7 @@ function deleteUser(id) {
 ```
 
 **良好实践示例**：
+
 ```javascript
 // 符合预期的行为
 function deleteUser(id, options = { preserveRelatedData: true }) {
@@ -157,6 +164,7 @@ function deleteUser(id, options = { preserveRelatedData: true }) {
 - 将复杂操作简化为直观的接口
 
 **示例**：
+
 ```javascript
 // 良好的封装与抽象
 class DatabaseConnection {
@@ -182,6 +190,7 @@ class DatabaseConnection {
 - 考虑使用策略模式和依赖注入
 
 **可扩展参数设计示例**：
+
 ```javascript
 // 使用选项对象模式实现可扩展参数
 function createUser({ 
@@ -212,6 +221,7 @@ API设计中安全性是首要考虑因素：
 - 实现速率限制和访问控制
 
 **示例**：
+
 ```javascript
 // 基于权限的API访问控制
 app.get('/api/users/:id', authenticate, authorizeRoles(['admin', 'manager']), (req, res) => {
@@ -245,13 +255,15 @@ REST API使用URI（统一资源标识符）来标识资源：
 - **使用小写字母**：URIs对大小写敏感
 
 **不良实践示例**：
-```
+
+```text
 /getUserById/123
 /Company_Departments/5/get-All-Employees
 ```
 
 **良好实践示例**：
-```
+
+```text
 /users/123
 /companies/5/departments
 /departments/8/employees
@@ -270,7 +282,8 @@ REST API应正确使用HTTP方法，遵循其语义：
 - **OPTIONS**：获取资源支持的操作
 
 **示例**：
-```
+
+```text
 GET /users                # 获取用户列表
 GET /users/123            # 获取特定用户
 POST /users               # 创建新用户
@@ -301,6 +314,7 @@ DELETE /users/123         # 删除用户
   - 503 Service Unavailable：服务暂时不可用
 
 **错误响应示例**：
+
 ```json
 {
   "error": {
@@ -336,6 +350,7 @@ GET /users?offset=20&limit=20
 ```
 
 **分页响应示例**：
+
 ```json
 {
   "data": [/* 用户列表 */],
@@ -351,11 +366,13 @@ GET /users?offset=20&limit=20
 ```
 
 **过滤**：
+
 ```text
 GET /users?role=admin&status=active
 ```
 
 **排序**：
+
 ```text
 GET /users?sort=name
 GET /users?sort=-created_at,name
@@ -373,6 +390,7 @@ AI模型推理API设计需要考虑：
 - **模型版本控制**：明确指定使用的模型版本
 
 **示例**：
+
 ```json
 // 请求
 POST /api/v1/models/text-generation
@@ -406,6 +424,7 @@ POST /api/v1/models/text-generation
 - **模型导出与部署**：将训练好的模型导出或直接部署
 
 **示例**：
+
 ```json
 // 请求
 POST /api/v1/fine-tuning
@@ -443,6 +462,7 @@ AI系统的非确定性本质要求API设计特别考虑：
 - **不确定性表示**：明确表示结果的不确定性范围
 
 **示例**：
+
 ```json
 // 请求
 POST /api/v1/image-classification
@@ -473,6 +493,7 @@ POST /api/v1/image-classification
 - **完成状态指示**：明确标记生成过程的结束
 
 **使用SSE的流式API示例**：
+
 ```javascript
 // 客户端代码
 const eventSource = new EventSource('/api/v1/completions/stream?prompt=讲一个故事');
@@ -503,6 +524,7 @@ eventSource.onerror = (error) => {
 - **内容引用与关联**：建立不同模态输出之间的关联
 
 **示例**：
+
 ```json
 // 请求
 POST /api/v1/multimodal-analysis
@@ -543,6 +565,7 @@ Content-Type: multipart/form-data
 - **模型卡片**：提供模型偏见、限制等元信息
 
 **示例**：
+
 ```json
 // 请求
 POST /api/v1/loan-approval
@@ -575,4 +598,4 @@ POST /api/v1/loan-approval
 
 良好的API设计是构建可维护、可扩展和用户友好的软件系统的关键。在AI时代，API设计面临新的挑战，如处理非确定性、流式生成、多模态交互和解释性需求。通过遵循本章介绍的设计原则和最佳实践，开发者可以创建既符合传统软件工程质量标准，又能适应AI系统特殊需求的API。
 
-特别是对于AI系统，API应该成为模型能力与用户需求之间的桥梁，不仅传递数据，还要管理期望、提供透明度，并确保系统行为可控、可解释和可信任。 
+特别是对于AI系统，API应该成为模型能力与用户需求之间的桥梁，不仅传递数据，还要管理期望、提供透明度，并确保系统行为可控、可解释和可信任。
