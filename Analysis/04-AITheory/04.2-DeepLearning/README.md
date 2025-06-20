@@ -28,6 +28,7 @@ $$z = Wx + b$$
 $$a = \sigma(z)$$
 
 其中：
+
 - $W \in \mathbb{R}^{n \times m}$: 权重矩阵
 - $b \in \mathbb{R}^n$: 偏置向量
 - $\sigma$: 激活函数
@@ -81,6 +82,7 @@ $$\frac{\partial C}{\partial b^{(l)}} = \delta^{(l)}$$
 **梯度爆炸**: 当 $|\sigma'(z)| > 1$ 时，梯度在反向传播过程中指数增长。
 
 **解决方案**:
+
 - 使用ReLU激活函数
 - 批归一化 (Batch Normalization)
 - 残差连接 (Residual Connections)
@@ -153,6 +155,7 @@ $$(f * k)(i,j) = \sum_{m,n} f(m,n) \cdot k(i-m, j-n)$$
 $$o = \frac{i + 2p - k}{s} + 1$$
 
 其中：
+
 - $i$: 输入尺寸
 - $k$: 卷积核尺寸
 - $p$: 填充
@@ -343,4 +346,4 @@ pub trait Optimizer {
 2. LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. Nature, 521(7553), 436-444.
 3. Vaswani, A., et al. (2017). Attention is all you need. Advances in neural information processing systems, 30.
 4. Hochreiter, S., & Schmidhuber, J. (1997). Long short-term memory. Neural computation, 9(8), 1735-1780.
-5. Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). Imagenet classification with deep convolutional neural networks. Advances in neural information processing systems, 25. 
+5. Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). Imagenet classification with deep convolutional neural networks. Advances in neural information processing systems, 25.

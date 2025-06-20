@@ -23,6 +23,7 @@
 
 **学习问题**:
 给定样本空间 $\mathcal{Z} = \mathcal{X} \times \mathcal{Y}$，其中：
+
 - $\mathcal{X}$: 输入空间
 - $\mathcal{Y}$: 输出空间
 
@@ -93,6 +94,7 @@ $$L(h) \leq \hat{L}_S(h) + 2R_m(\mathcal{H}) + \sqrt{\frac{\log(1/\delta)}{2m}}$
 $$\mathbb{E}[(h(x) - y)^2] = \text{Bias}^2(h) + \text{Var}(h) + \text{Noise}$$
 
 其中：
+
 - $\text{Bias}(h) = \mathbb{E}[h(x)] - f^*(x)$
 - $\text{Var}(h) = \mathbb{E}[(h(x) - \mathbb{E}[h(x)])^2]$
 - $\text{Noise} = \mathbb{E}[(y - f^*(x))^2]$
@@ -130,6 +132,7 @@ $$\min_{\theta, \phi} \mathbb{E}_{x \sim p(x)}[\|x - g_\phi(f_\theta(x))\|^2]$$
 $$\mathcal{L} = \mathcal{L}_s + \lambda \mathcal{L}_u$$
 
 其中：
+
 - $\mathcal{L}_s$: 监督损失
 - $\mathcal{L}_u$: 无监督一致性损失
 
@@ -141,6 +144,7 @@ $$\mathcal{L}_u = \mathbb{E}_{x \in \mathcal{U}} [\|f_\theta(x) - f_{\theta'}(x)
 #### 5.2 伪标签学习 (Pseudo-Labeling)
 
 **算法**:
+
 1. 在标记数据上训练模型
 2. 对未标记数据生成伪标签
 3. 在伪标记数据上继续训练
@@ -293,4 +297,4 @@ pub trait OnlineLearner {
 2. Shalev-Shwartz, S., & Ben-David, S. (2014). Understanding Machine Learning. Cambridge University Press.
 3. Mohri, M., Rostamizadeh, A., & Talwalkar, A. (2018). Foundations of Machine Learning. MIT Press.
 4. Bishop, C. M. (2006). Pattern Recognition and Machine Learning. Springer.
-5. Hastie, T., Tibshirani, R., & Friedman, J. (2009). The Elements of Statistical Learning. Springer. 
+5. Hastie, T., Tibshirani, R., & Friedman, J. (2009). The Elements of Statistical Learning. Springer.

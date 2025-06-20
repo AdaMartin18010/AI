@@ -14,6 +14,9 @@ Analysis/
 ├── 04-AITheory/            # AI理论与模型
 ├── 05-SoftwareEngineering/  # 软件工程实践
 ├── 06-FormalMethods/       # 形式化方法
+│   ├── README.md           # 形式化方法概述
+│   ├── 06.1-ModelChecking/ # 模型检查
+│   └── 06.2-TheoremProving/ # 定理证明
 ├── 07-DistributedSystems/   # 分布式系统
 ├── 08-QuantumComputing/     # 量子计算
 └── 09-Applications/         # 应用领域

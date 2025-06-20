@@ -1,4 +1,6 @@
-# 微服务架构理论 (Microservices Architecture Theory)
+# 微服务架构理论
+
+ (Microservices Architecture Theory)
 
 ## 目录
 
@@ -99,7 +101,8 @@ data BoundedContext = Context {
 每个微服务应该只负责一个业务能力或领域功能。
 
 **形式化表达**:
-```
+
+```latex
 ∀s ∈ Services: |Responsibilities(s)| = 1
 ```
 
@@ -108,7 +111,8 @@ data BoundedContext = Context {
 每个服务应该能够独立运行，不依赖其他服务的内部实现。
 
 **形式化表达**:
-```
+
+```latex
 ∀s ∈ Services: 
     Independent(s) ∧ SelfContained(s) ∧ 
     ∀d ∈ Dependencies(s): ExternalInterface(d)
@@ -119,7 +123,8 @@ data BoundedContext = Context {
 每个服务拥有和管理自己的数据，不直接访问其他服务的数据。
 
 **形式化表达**:
-```
+
+```latex
 ∀s₁, s₂ ∈ Services, s₁ ≠ s₂:
     DataOwnership(s₁) ∩ DataOwnership(s₂) = ∅
 ```
@@ -129,7 +134,8 @@ data BoundedContext = Context {
 单个服务的故障不应影响整个系统的可用性。
 
 **形式化表达**:
-```
+
+```latex
 ∀s ∈ Services: 
     Fault(s) → ¬Affects(System, s)
 ```
@@ -153,6 +159,7 @@ data GatewayPolicy =
 ```
 
 **实现示例**:
+
 ```rust
 // API网关核心结构
 pub struct ApiGateway {
@@ -214,6 +221,7 @@ data CircuitState =
 ```
 
 **实现示例**:
+
 ```rust
 pub struct CircuitBreaker {
     state: CircuitState,
@@ -347,6 +355,7 @@ data SagaStep = Step {
 ```
 
 **实现示例**:
+
 ```rust
 pub struct Saga {
     id: SagaId,
@@ -463,6 +472,7 @@ data ModelService = ModelService {
 ```
 
 **实现示例**:
+
 ```rust
 pub struct AIMicroservice {
     model_registry: ModelRegistry,
@@ -641,6 +651,7 @@ impl Service for UserService {
 **挑战**: 网络分区、时钟同步、一致性保证
 
 **解决方案**:
+
 - 使用CAP定理指导设计决策
 - 实现最终一致性模型
 - 采用事件溯源和CQRS模式
@@ -650,6 +661,7 @@ impl Service for UserService {
 **挑战**: 网络延迟、服务发现、负载均衡
 
 **解决方案**:
+
 - 实现服务网格
 - 使用异步通信模式
 - 实现智能负载均衡
@@ -659,6 +671,7 @@ impl Service for UserService {
 **挑战**: 数据一致性、事务管理、数据迁移
 
 **解决方案**:
+
 - 使用Saga模式处理分布式事务
 - 实现事件溯源
 - 建立数据迁移策略
@@ -695,4 +708,4 @@ impl Service for UserService {
 
 ---
 
-*本文档基于Matter目录中的软件工程内容，结合最新微服务架构理论和实践，构建了完整的微服务架构理论体系。* 
+*本文档基于Matter目录中的软件工程内容，结合最新微服务架构理论和实践，构建了完整的微服务架构理论体系。*
