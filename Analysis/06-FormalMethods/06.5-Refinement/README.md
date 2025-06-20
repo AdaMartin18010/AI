@@ -53,9 +53,9 @@ $$ S_A \sqsubseteq S_C \iff \text{Models}(S_C) \subseteq \text{Models}(S_A) $$
 
 精化是连接**规约 (What)** 和 **实现 (How)** 的桥梁。它构成了`06.4-形式化规约`与`06.3-程序验证`之间的关键环节。
 
-1.  **始于规约**: 从一个高层次、抽象的形式化规约开始。
-2.  **逐步精化**: 应用一系列精化规则，逐步加入实现细节。
-3.  **终于代码**: 最终的规约足够具体，可以被直接翻译成代码。
+1. **始于规约**: 从一个高层次、抽象的形式化规约开始。
+2. **逐步精化**: 应用一系列精化规则，逐步加入实现细节。
+3. **终于代码**: 最终的规约足够具体，可以被直接翻译成代码。
 
 由于每一步精化都经过了数学证明，因此最终代码的正确性得到了保证，无需再进行后期的整体验证。
 
@@ -71,6 +71,7 @@ $$ S_A \sqsubseteq S_C \iff \text{Models}(S_C) \subseteq \text{Models}(S_A) $$
 - **具体状态 (Concrete State)**: 在底层规约或实现中使用的状态，通常是计算机可表示的数据结构（如数组、链表、哈希表）。
 
 **案例**: 将一个"电话簿"规约从抽象的"人名到电话号码的偏函数"精化为具体的"两个数组分别存储人名和号码"。
+
 - 抽象状态: `phone_book: NAME \rightarrowtail PHONE`
 - 具体状态: `names: array[1..max] of NAME`, `phones: array[1..max] of PHONE`, `count: 0..max`
 
@@ -85,10 +86,10 @@ $$ \text{Retr}(names, phones, count) = \{ names[i] \mapsto phones[i] \mid i \in 
 
 数据精化必须满足两个证明责任 (Proof Obligations):
 
-1.  **初始化正确性**: 具体状态的初始化必须对应一个合法的抽象初始状态。
+1. **初始化正确性**: 具体状态的初始化必须对应一个合法的抽象初始状态。
     $$ \forall \text{cstate} . \text{Init}_C(\text{cstate}) \implies \exists \text{astate} . \text{Init}_A(\text{astate}) \land \text{Retr}(\text{cstate}) = \text{astate} $$
 
-2.  **操作正确性**: 对于每一个操作，当它在合法的具体状态上执行时，其结果必须对应于在相应抽象状态上执行该操作的某个可能结果。这通常分为两部分：
+2. **操作正确性**: 对于每一个操作，当它在合法的具体状态上执行时，其结果必须对应于在相应抽象状态上执行该操作的某个可能结果。这通常分为两部分：
     - **适用性 (Applicability)**: 只要一个操作在某个抽象状态下是可执行的，那么在代表该抽象状态的任何一个具体状态下，它也必须是可执行的。
       $$ \forall \text{astate, cstate} . \text{pre}_A(\text{astate}) \land \text{Retr}(\text{cstate}) = \text{astate} \implies \text{pre}_C(\text{cstate}) $$
     - **正确性 (Correctness)**: 操作在具体状态上的转换必须符合在抽象状态上的转换。
@@ -111,6 +112,7 @@ $$ \text{pre}_A(s) \implies \text{pre}_C(s) $$
 $$ \text{post}_C(s, s') \implies \text{post}_A(s, s') $$
 
 **案例**:
+
 - 抽象规约: `x_new := any element from {1, 2, 3}` (后置条件: `x_new \in \{1, 2, 3\}`)
 - 具体实现: `x_new := 1` (后置条件: `x_new = 1`)
 显然 `x_new = 1 \implies x_new \in \{1, 2, 3\}`，所以这是个合法的精化。
@@ -129,6 +131,7 @@ $$ (\text{pre}_A \implies \text{pre}_C) \land (\text{pre}_A \land \text{post}_C 
 ### 4.1 规约语句 (Specification Statement)
 
 精化演算的核心是**规约语句**，由Dijkstra的卫式命令语言扩展而来，通常写作 $w: [\text{pre}, \text{post}]$。
+
 - $w$: 变量框 (frame)，表示该语句最多只能修改 $w$ 中的变量。
 - $\text{pre}$: 前置条件，语句执行前必须为真的状态。
 - $\text{post}$: 后置条件，语句执行后必须为真的状态。
@@ -151,15 +154,16 @@ $$ (\text{pre}_A \implies \text{pre}_C) \land (\text{pre}_A \land \text{post}_C 
 ### 4.3 逐步求精示例
 
 **目标**: `x: [x=X, x = \text{max}(X, Y)]`
-1.  **引入条件语句**:
+
+1. **引入条件语句**:
     `if x >= Y then ??? else ??? fi`
-2.  **精化 `then` 分支**:
+2. **精化 `then` 分支**:
     在 `x >= Y` 时，目标 `x = max(X, Y)` 已经满足。所以我们需要一个什么都不做的语句。
     `x: [x >= Y, x = X]` 精化为 `skip`。
-3.  **精化 `else` 分支**:
+3. **精化 `else` 分支**:
     在 `x < Y` 时，目标是 `x=Y`。
     `x: [x < Y, x = Y]` 精化为 `x := Y`。
-4.  **最终代码**:
+4. **最终代码**:
     `if x >= Y then skip else x := Y fi`
 
 ---
@@ -170,9 +174,9 @@ $$ (\text{pre}_A \implies \text{pre}_C) \land (\text{pre}_A \land \text{post}_C 
 
 精化方法是构建可信AI（Trustworthy AI）的有力工具。
 
-1.  **高层安全规约**: 使用LTL或CTL*规约AI的安全性，如"自动驾驶汽车永远不会违反交通规则"。
-2.  **精化为控制逻辑**: 将时态逻辑规约逐步精化为控制器或监控器的实现。例如，将 `G(speed <= speed_limit)` 精化为一个速度控制模块。
-3.  **可验证的实现**: 每一步精化都有数学证明支持，确保最终的控制模块严格遵守高级安全规约。
+1. **高层安全规约**: 使用LTL或CTL*规约AI的安全性，如"自动驾驶汽车永远不会违反交通规则"。
+2. **精化为控制逻辑**: 将时态逻辑规约逐步精化为控制器或监控器的实现。例如，将 `G(speed <= speed_limit)` 精化为一个速度控制模块。
+3. **可验证的实现**: 每一步精化都有数学证明支持，确保最终的控制模块严格遵守高级安全规约。
 
 ### 5.2 策略精化在强化学习中的应用
 
@@ -229,4 +233,4 @@ $$ S_A \sqsubseteq_p S_C $$
 
 - **自动提出检索关系**: 基于抽象和具体的数据类型，机器学习模型可以预测可能的检索关系。
 - **引导精化策略**: AI可以学习在复杂的精化证明中，哪些精化法则是最可能成功的。
-- **代码生成**: 从非常具体的规约自动生成多种语言的优化代码。 
+- **代码生成**: 从非常具体的规约自动生成多种语言的优化代码。
