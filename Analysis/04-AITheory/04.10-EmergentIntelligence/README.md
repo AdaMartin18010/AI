@@ -51,11 +51,13 @@ $$\text{Order}(S) = \frac{1}{N} \sum_{i=1}^N \text{Correlation}(i, j)$$
 #### 1.3 涌现分类
 
 **弱涌现**:
+
 - 可预测的涌现
 - 基于已知规则
 - 可还原到组成部分
 
 **强涌现**:
+
 - 不可预测的涌现
 - 新的规则和规律
 - 不可还原到组成部分
@@ -97,6 +99,7 @@ $$v_{i}^{t+1} = w v_i^t + c_1 r_1 (p_i - x_i^t) + c_2 r_2 (g - x_i^t)$$
 $$x_{i}^{t+1} = x_i^t + v_i^{t+1}$$
 
 其中：
+
 - $v_i$: 速度
 - $p_i$: 个体最优
 - $g$: 全局最优
@@ -158,7 +161,7 @@ $$D = \frac{\ln N(\epsilon)}{\ln(1/\epsilon)}$$
 #### 4.3 临界现象
 
 **相变**:
-$$\text{Order Parameter} = \begin{cases} 
+$$\text{Order Parameter} = \begin{cases}
 0 & \text{if } T > T_c \\
 (T_c - T)^\beta & \text{if } T < T_c
 \end{cases}$$
@@ -220,7 +223,7 @@ $$\text{Offer} \rightarrow \text{Counter-offer} \rightarrow \text{Agreement}$$
 #### 6.3 涌现合作
 
 **囚徒困境**:
-$$\text{Payoff Matrix} = \begin{bmatrix} 
+$$\text{Payoff Matrix} = \begin{bmatrix}
 (R,R) & (S,T) \\
 (T,S) & (P,P)
 \end{bmatrix}$$
@@ -407,7 +410,7 @@ impl CollectiveIntelligence {
     pub fn make_decision(&self, problem: &Problem) -> Decision {
         // 集体决策
     }
-    
+
     pub fn learn_collectively(&mut self, experience: &Experience) {
         // 集体学习
     }
@@ -423,7 +426,7 @@ impl SwarmIntelligence {
     pub fn optimize(&mut self, objective: &ObjectiveFunction) -> Position {
         // 群体优化
     }
-    
+
     pub fn update_positions(&mut self) {
         // 更新位置
     }
@@ -440,7 +443,7 @@ impl ComplexAdaptiveSystem {
     pub fn evolve(&mut self, steps: usize) {
         // 系统演化
     }
-    
+
     pub fn get_emergent_patterns(&self) -> Vec<Pattern> {
         // 获取涌现模式
     }
@@ -456,7 +459,7 @@ impl SelfOrganizingSystem {
     pub fn self_organize(&mut self) {
         // 自组织过程
     }
-    
+
     pub fn get_organization_level(&self) -> f64 {
         // 组织水平
     }
@@ -473,4 +476,4 @@ impl SelfOrganizingSystem {
 2. Bonabeau, E., Dorigo, M., & Theraulaz, G. (1999). Swarm intelligence: from natural to artificial systems. Oxford University Press.
 3. Surowiecki, J. (2005). The wisdom of crowds. Anchor.
 4. Mitchell, M. (2009). Complexity: a guided tour. Oxford University Press.
-5. Kauffman, S. A. (1993). The origins of order: self-organization and selection in evolution. Oxford University Press. 
+5. Kauffman, S. A. (1993). The origins of order: self-organization and selection in evolution. Oxford University Press.

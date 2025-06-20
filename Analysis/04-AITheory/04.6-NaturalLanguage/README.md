@@ -75,7 +75,7 @@ $$X_{ij} = \text{count}(w_i, w_j)$$
 $$J = \sum_{i,j=1}^V f(X_{ij})(w_i^T \tilde{w}_j + b_i + \tilde{b}_j - \log X_{ij})^2$$
 
 其中 $f(x)$ 是权重函数：
-$$f(x) = \begin{cases} 
+$$f(x) = \begin{cases}
 (x/x_{max})^\alpha & \text{if } x < x_{max} \\
 1 & \text{otherwise}
 \end{cases}$$
@@ -366,7 +366,7 @@ impl Attention {
         let q = query * &self.query_weight;
         let k = key * &self.key_weight;
         let v = value * &self.value_weight;
-        
+
         let attention_weights = softmax(&(q * k.transpose()) / (k.cols() as f64).sqrt());
         attention_weights * v
     }
@@ -384,7 +384,7 @@ impl TransformerEncoder {
     pub fn forward(&self, input: &Matrix) -> Matrix {
         let attn_output = self.attention.forward(input, input, input);
         let norm1_output = self.layer_norm1.forward(&(input + attn_output));
-        
+
         let ff_output = self.feed_forward.forward(&norm1_output);
         self.layer_norm2.forward(&(norm1_output + ff_output))
     }
@@ -401,4 +401,4 @@ impl TransformerEncoder {
 2. Goldberg, Y. (2017). Neural network methods for natural language processing. Synthesis lectures on human language technologies, 10(1), 1-309.
 3. Vaswani, A., et al. (2017). Attention is all you need. Advances in neural information processing systems, 30.
 4. Devlin, J., et al. (2018). Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805.
-5. Brown, T., et al. (2020). Language models are few-shot learners. Advances in neural information processing systems, 33, 1877-1901. 
+5. Brown, T., et al. (2020). Language models are few-shot learners. Advances in neural information processing systems, 33, 1877-1901.

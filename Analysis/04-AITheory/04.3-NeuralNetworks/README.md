@@ -27,13 +27,14 @@
 $$y = \sigma\left(\sum_{i=1}^n w_i x_i + b\right)$$
 
 其中：
+
 - $x_i$: 输入信号
 - $w_i$: 连接权重
 - $b$: 偏置项
 - $\sigma$: 激活函数
 
 **阈值函数**:
-$$\sigma(x) = \begin{cases} 
+$$\sigma(x) = \begin{cases}
 1 & \text{if } x \geq 0 \\
 0 & \text{if } x < 0
 \end{cases}$$
@@ -81,13 +82,13 @@ $$\sigma'(x) = 1 - \sigma^2(x)$$
 $$\sigma(x) = \max(0, x)$$
 
 **导数**:
-$$\sigma'(x) = \begin{cases} 
+$$\sigma'(x) = \begin{cases}
 1 & \text{if } x > 0 \\
 0 & \text{if } x \leq 0
 \end{cases}$$
 
 **Leaky ReLU**:
-$$\sigma(x) = \begin{cases} 
+$$\sigma(x) = \begin{cases}
 x & \text{if } x > 0 \\
 \alpha x & \text{if } x \leq 0
 \end{cases}$$
@@ -343,4 +344,4 @@ pub trait Layer {
 2. Bishop, C. M. (2006). Pattern Recognition and Machine Learning. Springer.
 3. Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep Learning. MIT Press.
 4. Rumelhart, D. E., Hinton, G. E., & Williams, R. J. (1986). Learning representations by back-propagating errors. Nature, 323(6088), 533-536.
-5. Rosenblatt, F. (1958). The perceptron: a probabilistic model for information storage and organization in the brain. Psychological review, 65(6), 386. 
+5. Rosenblatt, F. (1958). The perceptron: a probabilistic model for information storage and organization in the brain. Psychological review, 65(6), 386.

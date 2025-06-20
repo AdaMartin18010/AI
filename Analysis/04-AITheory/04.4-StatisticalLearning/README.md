@@ -100,6 +100,7 @@ $$L(h) \leq \hat{L}_S(h) + 2R_m(\mathcal{H}) + \sqrt{\frac{\log(1/\delta)}{2m}}$
 $$\mathbb{E}[(h(x) - y)^2] = \text{Bias}^2(h) + \text{Var}(h) + \text{Noise}$$
 
 其中：
+
 - $\text{Bias}(h) = \mathbb{E}[h(x)] - f^*(x)$
 - $\text{Var}(h) = \mathbb{E}[(h(x) - \mathbb{E}[h(x)])^2]$
 - $\text{Noise} = \mathbb{E}[(y - f^*(x))^2]$
@@ -110,6 +111,7 @@ $$\mathbb{E}[(h(x) - y)^2] = \text{Bias}^2(h) + \text{Var}(h) + \text{Noise}$$
 $$\mathbb{E}[\mathbb{I}[h(x) \neq y]] = \text{Bias}(h) + \text{Var}(h)$$
 
 其中：
+
 - $\text{Bias}(h) = \mathbb{E}[\mathbb{I}[h(x) \neq f^*(x)]]$
 - $\text{Var}(h) = \mathbb{E}[\mathbb{I}[h(x) \neq \mathbb{E}[h(x)]]]$
 
@@ -152,6 +154,7 @@ $$\mathbb{E}[L(\mathcal{A}_S) - \hat{L}_S(\mathcal{A}_S)] \leq \beta$$
 #### 7.1 压缩方案
 
 **定义**: 压缩方案 $(\kappa, \rho)$ 包含：
+
 - 压缩函数 $\kappa: \mathcal{Z}^m \rightarrow \mathcal{Z}^k$
 - 重构函数 $\rho: \mathcal{Z}^k \rightarrow \mathcal{H}$
 
@@ -256,4 +259,4 @@ pub trait PACLearner {
 2. Shalev-Shwartz, S., & Ben-David, S. (2014). Understanding Machine Learning. Cambridge University Press.
 3. Mohri, M., Rostamizadeh, A., & Talwalkar, A. (2018). Foundations of Machine Learning. MIT Press.
 4. Bartlett, P. L., & Mendelson, S. (2002). Rademacher and Gaussian complexities: Risk bounds and structural results. Journal of Machine Learning Research, 3(Nov), 463-482.
-5. Kearns, M. J., & Vazirani, U. V. (1994). An introduction to computational learning theory. MIT press. 
+5. Kearns, M. J., & Vazirani, U. V. (1994). An introduction to computational learning theory. MIT press.

@@ -65,13 +65,14 @@ $$\theta = \arctan\left(\frac{G_y}{G_x}\right)$$
 #### 2.2 Canny边缘检测
 
 **步骤**:
+
 1. 高斯滤波
 2. 计算梯度
 3. 非极大值抑制
 4. 双阈值检测
 
 **非极大值抑制**:
-$$M(x,y) = \begin{cases} 
+$$M(x,y) = \begin{cases}
 G(x,y) & \text{if } G(x,y) \text{ is local maximum} \\
 0 & \text{otherwise}
 \end{cases}$$
@@ -427,7 +428,7 @@ impl Image {
     pub fn apply_filter(&self, kernel: &Matrix) -> Image {
         // 实现卷积滤波
     }
-    
+
     pub fn resize(&self, new_width: usize, new_height: usize) -> Image {
         // 实现图像缩放
     }
@@ -445,7 +446,7 @@ impl ConvLayer {
     pub fn forward(&self, input: &Tensor) -> Tensor {
         // 实现前向传播
     }
-    
+
     pub fn backward(&self, grad: &Tensor) -> Tensor {
         // 实现反向传播
     }
@@ -487,4 +488,4 @@ impl SegmentationModel {
 2. Gonzalez, R. C., & Woods, R. E. (2017). Digital image processing. Pearson.
 3. Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). Imagenet classification with deep convolutional neural networks. Advances in neural information processing systems, 25.
 4. He, K., et al. (2016). Deep residual learning for image recognition. Proceedings of the IEEE conference on computer vision and pattern recognition, 770-778.
-5. Redmon, J., et al. (2016). You only look once: Unified, real-time object detection. Proceedings of the IEEE conference on computer vision and pattern recognition, 779-788. 
+5. Redmon, J., et al. (2016). You only look once: Unified, real-time object detection. Proceedings of the IEEE conference on computer vision and pattern recognition, 779-788.

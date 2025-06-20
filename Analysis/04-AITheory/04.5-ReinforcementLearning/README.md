@@ -27,6 +27,7 @@
 $$M = (S, A, P, R, \gamma)$$
 
 其中：
+
 - $S$: 状态空间
 - $A$: 动作空间
 - $P: S \times A \times S \rightarrow [0,1]$: 转移概率
@@ -109,7 +110,7 @@ $$V(s) = \frac{1}{N(s)} \sum_{i=1}^{N(s)} G_i(s)$$
 #### 4.2 蒙特卡洛控制
 
 **$\epsilon$-贪婪策略**:
-$$\pi(a|s) = \begin{cases} 
+$$\pi(a|s) = \begin{cases}
 1 - \epsilon + \frac{\epsilon}{|A|} & \text{if } a = \arg\max_a Q(s,a) \\
 \frac{\epsilon}{|A|} & \text{otherwise}
 \end{cases}$$
@@ -260,7 +261,7 @@ $$J(\pi) = \mathbb{E}_{\pi}[\sum_{t=0}^{\infty} \gamma^t(r_t + \alpha H(\pi(\cdo
 
 **问题**: 强化学习需要大量样本。
 
-**解决方案**: 
+**解决方案**:
 - 模型基础方法
 - 优先经验回放
 - 分层强化学习
@@ -319,7 +320,7 @@ impl QLearning {
             .map(|(_, q)| q)
             .max_by(|a, b| a.partial_cmp(b).unwrap())
             .unwrap_or(&0.0);
-        
+
         let new_q = current_q + self.learning_rate * (reward + self.discount_factor * max_next_q - current_q);
         self.q_table.insert((state, action), new_q);
     }
@@ -336,4 +337,4 @@ impl QLearning {
 2. Szepesvári, C. (2010). Algorithms for reinforcement learning. Synthesis lectures on artificial intelligence and machine learning, 4(1), 1-103.
 3. Bertsekas, D. P. (2012). Dynamic programming and optimal control: Volume I. Athena scientific.
 4. Silver, D., et al. (2016). Mastering the game of Go with deep neural networks and tree search. Nature, 529(7587), 484-489.
-5. Schulman, J., et al. (2017). Proximal policy optimization algorithms. arXiv preprint arXiv:1707.06347. 
+5. Schulman, J., et al. (2017). Proximal policy optimization algorithms. arXiv preprint arXiv:1707.06347.

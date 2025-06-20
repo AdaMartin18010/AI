@@ -38,6 +38,7 @@ $$f(x_1, x_2, \ldots, x_n)$$
 $$P, Q, R, \ldots$$
 
 **逻辑连接词**:
+
 - 否定: $\neg P$
 - 合取: $P \land Q$
 - 析取: $P \lor Q$
@@ -45,6 +46,7 @@ $$P, Q, R, \ldots$$
 - 等价: $P \leftrightarrow Q$
 
 **真值表**:
+
 | P | Q | P∧Q | P∨Q | P→Q |
 |---|---|-----|-----|-----|
 | T | T |  T  |  T  |  T  |
@@ -70,6 +72,7 @@ $$\text{hasChild}(\text{Mary}, \text{John})$$
 #### 2.1 基本语义网络
 
 **节点和边**:
+
 - 节点表示概念或实体
 - 边表示关系
 
@@ -84,6 +87,7 @@ $$\text{Bird} \xrightarrow{\text{can}} \text{Fly}$$
 #### 2.2 框架表示 (Frame Representation)
 
 **槽-填充结构**:
+
 ```
 Bird:
   is-a: Animal
@@ -99,6 +103,7 @@ $$\text{default}(\text{Bird}, \text{color}) = \text{varies}$$
 #### 2.3 脚本表示 (Script Representation)
 
 **事件脚本**:
+
 ```
 Restaurant-Script:
   roles: Customer, Waiter, Cook
@@ -114,6 +119,7 @@ Restaurant-Script:
 $$\mathcal{O} = (C, R, I, A)$$
 
 其中：
+
 - $C$: 概念集合
 - $R$: 关系集合
 - $I$: 实例集合
@@ -122,6 +128,7 @@ $$\mathcal{O} = (C, R, I, A)$$
 #### 3.2 本体语言
 
 **OWL (Web Ontology Language)**:
+
 ```owl
 Class: Person
 Class: Student
@@ -135,6 +142,7 @@ SubClassOf: Professor Person
 ```
 
 **RDF (Resource Description Framework)**:
+
 ```rdf
 <http://example.org/John> <http://example.org/type> <http://example.org/Student>
 <http://example.org/John> <http://example.org/studies> <http://example.org/AI>
@@ -160,6 +168,7 @@ $$(subject, predicate, object)$$
 $$G = (V, E, L)$$
 
 其中：
+
 - $V$: 顶点集合 (实体)
 - $E$: 边集合 (关系)
 - $L$: 标签函数
@@ -223,6 +232,7 @@ $$\mathbf{h} \odot \mathbf{r} \approx \mathbf{t}$$
 $$\mathbf{H}^{(l+1)} = \sigma\left(\tilde{\mathbf{D}}^{-\frac{1}{2}} \tilde{\mathbf{A}} \tilde{\mathbf{D}}^{-\frac{1}{2}} \mathbf{H}^{(l)} \mathbf{W}^{(l)}\right)$$
 
 其中：
+
 - $\tilde{\mathbf{A}} = \mathbf{A} + \mathbf{I}$
 - $\tilde{\mathbf{D}}$ 是 $\tilde{\mathbf{A}}$ 的度矩阵
 
@@ -433,4 +443,4 @@ impl SemanticNetwork {
 2. Sowa, J. F. (1999). Knowledge representation: logical, philosophical, and computational foundations. Brooks/Cole.
 3. Baader, F., et al. (2003). The description logic handbook: theory, implementation, and applications. Cambridge university press.
 4. Bordes, A., et al. (2013). Translating embeddings for modeling multi-relational data. Advances in neural information processing systems, 26.
-5. Kipf, T. N., & Welling, M. (2016). Semi-supervised classification with graph convolutional networks. arXiv preprint arXiv:1609.02907. 
+5. Kipf, T. N., & Welling, M. (2016). Semi-supervised classification with graph convolutional networks. arXiv preprint arXiv:1609.02907.

@@ -62,6 +62,7 @@ $$\frac{\beta \rightarrow \alpha, \alpha}{\beta \text{ is a possible explanation
 $$P(H|E) = \frac{P(E|H)P(H)}{P(E)}$$
 
 其中：
+
 - $P(H|E)$: 后验概率
 - $P(E|H)$: 似然
 - $P(H)$: 先验概率
@@ -119,11 +120,13 @@ $$\text{CATE}(X) = E[Y(1) - Y(0) | X]$$
 #### 3.3 因果发现
 
 **PC算法**:
+
 1. 构建完全无向图
 2. 测试条件独立
 3. 确定边的方向
 
 **GES算法**:
+
 - 贪心等价搜索
 - 评分函数优化
 - 等价类搜索
@@ -199,6 +202,7 @@ $$\text{Interaction} = \text{Object} \times \text{Object} \rightarrow \text{Rela
 $$\varphi ::= p | \neg \varphi | \varphi \land \psi | \mathbf{X} \varphi | \mathbf{F} \varphi | \mathbf{G} \varphi | \varphi \mathbf{U} \psi$$
 
 其中：
+
 - $\mathbf{X}$: 下一个
 - $\mathbf{F}$: 最终
 - $\mathbf{G}$: 全局
@@ -217,12 +221,14 @@ $$P(x_{t+1} | x_1, x_2, \ldots, x_t) = f(x_1, x_2, \ldots, x_t)$$
 #### 8.1 空间关系
 
 **拓扑关系**:
+
 - 包含 (contains)
 - 相交 (intersects)
 - 相邻 (adjacent)
 - 分离 (disjoint)
 
 **方向关系**:
+
 - 上 (above)
 - 下 (below)
 - 左 (left)
@@ -401,4 +407,4 @@ impl GraphReasoner {
 2. Pearl, J. (2009). Causality: models, reasoning and inference. Cambridge University Press.
 3. Koller, D., & Friedman, N. (2009). Probabilistic graphical models: principles and techniques. MIT press.
 4. Davis, E., & Marcus, G. (2015). Commonsense reasoning and commonsense knowledge in artificial intelligence. Communications of the ACM, 58(9), 92-103.
-5. Battaglia, P. W., et al. (2018). Relational inductive biases, deep learning, and graph networks. arXiv preprint arXiv:1806.01261. 
+5. Battaglia, P. W., et al. (2018). Relational inductive biases, deep learning, and graph networks. arXiv preprint arXiv:1806.01261.
