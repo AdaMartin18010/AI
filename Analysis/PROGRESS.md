@@ -94,12 +94,12 @@
 - [x] 06.1-ModelChecking/ - 模型检查
 - [x] 06.2-TheoremProving/ - 定理证明
 - [x] 06.3-ProgramVerification/ - 程序验证
-- [ ] 06.4-Specification/ - 形式化规范
-- [ ] 06.5-Refinement/ - 精化方法
-- [ ] 06.6-TemporalLogic/ - 时态逻辑
-- [ ] 06.7-ModalLogic/ - 模态逻辑
-- [ ] 06.8-HoareLogic/ - Hoare逻辑
-- [ ] 06.9-CSP/ - 通信顺序进程
+- [x] 06.4-Specification/ - 形式化规范
+- [x] 06.5-Refinement/ - 精化方法
+- [x] 06.6-TemporalLogic/ - 时态逻辑
+- [x] 06.7-ModalLogic/ - 模态逻辑
+- [x] 06.8-HoareLogic/ - Hoare逻辑
+- [x] 06.9-CSP/ - 通信顺序进程
 - [ ] 06.10-PetriNets/ - Petri网
 
 ### 🔄 8. 分布式系统 (Distributed Systems)
@@ -720,7 +720,7 @@
       - 前后条件规约与不变量
       - 程序验证工具与方法论
       - 实际验证案例研究
-   - [ ] 06.4-Specification - 形式化规范：计划中
+   - [x] 06.4-Specification - 形式化规范：已完成
    - [ ] 06.5-Refinement - 精化方法：计划中
 
 2. **丰富现有模块的实现代码**
