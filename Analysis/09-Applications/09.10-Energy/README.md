@@ -337,4 +337,4 @@ pub mod energy_simulation {
 - [电力研究院 (EPRI)](https://www.epri.com/)
 - [国际能源署 (IEA)](https://www.iea.org/)
 - [美国能源部 (DOE)](https://www.energy.gov/)
-- [欧盟能源研究联盟](https://ec.europa.eu/energy/) 
+- [欧盟能源研究联盟](https://ec.europa.eu/energy/)
