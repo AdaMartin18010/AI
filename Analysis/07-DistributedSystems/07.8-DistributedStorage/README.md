@@ -502,4 +502,4 @@ impl<T: Clone + Send + 'static> StorageCluster<T> {
 - [Distributed Systems: Principles and Paradigms](https://www.distributed-systems.net/index.php/books/ds3/)
 - [The Google File System](https://research.google/pubs/pub51/)
 - [Amazon DynamoDB: A Scalable, Predictably Performant, and Fully Managed NoSQL Database Service](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf)
-- [Ceph: A Scalable, High-Performance Distributed File System](https://www.ssrc.ucsc.edu/Papers/weil-osdi06.pdf) 
+- [Ceph: A Scalable, High-Performance Distributed File System](https://www.ssrc.ucsc.edu/Papers/weil-osdi06.pdf)

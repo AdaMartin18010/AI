@@ -63,4 +63,4 @@
 
 - [分布式系统原理与范型](https://book.douban.com/subject/3108801/)
 - [Designing Data-Intensive Applications](https://dataintensive.net/)
-- [分布式系统：概念与设计](https://book.douban.com/subject/21624776/) 
+- [分布式系统：概念与设计](https://book.douban.com/subject/21624776/)

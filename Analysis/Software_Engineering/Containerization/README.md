@@ -7,6 +7,7 @@
 ## 容器技术基础
 
 ### 1. 容器架构
+
 ```rust
 // 容器运行时抽象
 pub trait ContainerRuntime {
@@ -36,6 +37,7 @@ pub enum ContainerStatus {
 ```
 
 ### 2. 镜像管理
+
 ```rust
 // 镜像结构
 #[derive(Debug, Clone)]
@@ -94,6 +96,7 @@ impl ImageBuilder {
 ```
 
 ### 3. 容器网络
+
 ```rust
 // 网络配置
 #[derive(Debug, Clone)]
@@ -132,6 +135,7 @@ impl NetworkManager {
 ## 容器编排
 
 ### 1. 编排系统架构
+
 ```rust
 // 编排器核心
 pub struct Orchestrator {
@@ -170,6 +174,7 @@ impl Orchestrator {
 ```
 
 ### 2. 调度算法
+
 ```rust
 // 调度器
 pub struct Scheduler {
@@ -200,6 +205,7 @@ pub trait SchedulingAlgorithm {
 ```
 
 ### 3. 服务发现
+
 ```rust
 // 服务注册
 #[derive(Debug, Clone)]
@@ -232,6 +238,7 @@ impl ServiceDiscovery {
 ## 容器安全
 
 ### 1. 安全策略
+
 ```rust
 // 安全上下文
 #[derive(Debug, Clone)]
@@ -261,6 +268,7 @@ impl SecurityPolicyEnforcer {
 ```
 
 ### 2. 镜像安全扫描
+
 ```rust
 // 安全扫描器
 pub struct SecurityScanner {
@@ -289,6 +297,7 @@ impl SecurityScanner {
 ## 容器存储
 
 ### 1. 存储卷管理
+
 ```rust
 // 存储卷
 #[derive(Debug, Clone)]
@@ -334,6 +343,7 @@ impl StorageManager {
 ## 监控与日志
 
 ### 1. 容器监控
+
 ```rust
 // 监控收集器
 pub struct ContainerMonitor {
@@ -356,6 +366,7 @@ impl ContainerMonitor {
 ```
 
 ### 2. 日志管理
+
 ```rust
 // 日志收集器
 pub struct LogCollector {
@@ -376,24 +387,28 @@ impl LogCollector {
 ## 最佳实践
 
 ### 1. 镜像优化
+
 - **多阶段构建**: 减少镜像大小
 - **层缓存**: 优化构建速度
 - **安全基础镜像**: 使用官方安全镜像
 - **最小化依赖**: 只包含必要组件
 
 ### 2. 容器设计
+
 - **单一职责**: 每个容器只运行一个进程
 - **无状态设计**: 避免容器内状态存储
 - **健康检查**: 实现有效的健康检查
 - **资源限制**: 设置CPU和内存限制
 
 ### 3. 安全实践
+
 - **非特权运行**: 避免使用root用户
 - **镜像签名**: 验证镜像完整性
 - **网络隔离**: 使用网络策略
 - **运行时保护**: 启用安全策略
 
 ### 4. 性能优化
+
 - **资源调优**: 合理分配资源
 - **网络优化**: 使用合适的网络模式
 - **存储优化**: 选择合适的存储类型
@@ -415,4 +430,4 @@ impl LogCollector {
 3. **安全考虑**: 实施全面的安全策略
 4. **运维准备**: 建立监控、日志、备份体系
 
-容器化将继续演进，与云原生、微服务、DevOps等理念深度融合，成为现代软件开发和部署的标准实践。 
+容器化将继续演进，与云原生、微服务、DevOps等理念深度融合，成为现代软件开发和部署的标准实践。
