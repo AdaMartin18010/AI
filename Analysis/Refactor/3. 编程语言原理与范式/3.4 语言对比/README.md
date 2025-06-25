@@ -7,4 +7,4 @@
 - 3.4.3 Haskell与Scala对比
 - 3.4.4 WebAssembly与主流语言对比
 
-每个三级主题下可继续细分，详见各自README。 
+每个三级主题下可继续细分，详见各自README。
