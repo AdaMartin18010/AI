@@ -552,7 +552,7 @@ graph TD
 - 学习路径推荐与知识图谱
 - 数据驱动的学习分析与反馈
 
-**Python示例：简单知识图谱节点关系**
+**Python示例：简单知识图谱节点关系**:
 
 ```python
 import networkx as nx
@@ -569,7 +569,7 @@ print(list(G.edges))
 - 数学可视化与仿真平台
 - 交互式编程与STEAM融合
 
-**JavaScript示例：Desmos API调用（伪代码）**
+**JavaScript示例：Desmos API调用（伪代码）**:
 
 ```javascript
 // 创建Desmos图形计算器实例
@@ -584,7 +584,7 @@ calculator.setExpression({ id: 'graph1', latex: 'y=x^2' });
 - 数学与物理、计算机、经济等学科融合
 - 项目式学习与真实问题解决
 
-**Rust示例：简单统计分析**
+**Rust示例：简单统计分析**:
 
 ```rust
 fn mean(data: &[f64]) -> f64 {
@@ -601,19 +601,19 @@ fn main() {
 
 ## 24.8 学习建议与资源
 
-### 经典教材与课程
+### 经典教材与课程1
 
 1. **《How to Solve It》** - G. Polya
 2. **《The Art of Problem Solving》** - R. Rusczyk
 3. **《Principles and Standards for School Mathematics》** - NCTM
 
-### 在线资源
+### 在线资源1
 
 - **Khan Academy**：全球最大数学教育平台
 - **GeoGebra**：动态数学可视化工具
 - **Coursera/edX**：数学教育与教学法课程
 
-### 研究前沿
+### 研究前沿1
 
 - **AI驱动的自适应教育**
 - **数学教育中的可视化与STEAM融合**
