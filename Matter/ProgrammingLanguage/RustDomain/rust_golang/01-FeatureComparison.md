@@ -7,12 +7,14 @@
 - Rust：静态强类型、类型推断、模式匹配、泛型、trait
 - Golang：静态类型、接口、类型推断（有限）、无泛型（Go1.18前）
 - 代码示例：
+
 ```rust
 // Rust 泛型函数
 def add<T: std::ops::Add<Output=T>>(a: T, b: T) -> T {
     a + b
 }
 ```
+
 ```go
 // Go 接口示例
 type Adder interface {
@@ -37,6 +39,7 @@ type Adder interface {
 - Rust：基于线程、async/await、Send/Sync trait、Tokio/async-std等生态
 - Golang：goroutine、channel、select、内建调度器
 - Mermaid 并发模型对比：
+
 ```mermaid
 graph TD
   Rust[线程/async] --> Tokio[Tokio/async-std]
@@ -53,6 +56,7 @@ graph TD
 - Rust：Cargo、rustfmt、clippy、单元测试、文档生成
 - Golang：go build、go fmt、go test、go doc
 - Mermaid 工具链对比：
+
 ```mermaid
 graph LR
   RustTools[Cargo] --> RustFmt[rustfmt]
@@ -66,10 +70,11 @@ graph LR
 ---
 
 ## 本地交叉引用
+
 - [rust_golang分支总览](./README.md)
 - [RustDomain分支总览](../README.md)
 - [编程语言主题索引](../../../../Analysis/SUMMARY.md)
 
 ---
 
-> 本文件为语言特性对比详细内容，后续将继续推进各主线分支的系统化整理。 
+> 本文件为语言特性对比详细内容，后续将继续推进各主线分支的系统化整理。
