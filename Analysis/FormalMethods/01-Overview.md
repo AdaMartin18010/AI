@@ -12,6 +12,7 @@
 $$\mathcal{FM} = \langle \mathcal{L}, \mathcal{S}, \mathcal{V}, \mathcal{P}, \mathcal{T} \rangle$$
 
 其中：
+
 - $\mathcal{L}$：形式语言集合 (Formal Languages)
 - $\mathcal{S}$：规约语义体系 (Specification Semantics)  
 - $\mathcal{V}$：验证方法论 (Verification Methods)
@@ -244,47 +245,47 @@ graph TD
     A --> C[方法论]
     A --> D[工具生态]
     A --> E[应用领域]
-    
+
     B --> B1[数理逻辑]
     B --> B2[类型理论]
     B --> B3[范畴论]
     B --> B4[计算理论]
-    
+
     B1 --> B11[命题逻辑]
     B1 --> B12[一阶逻辑]
     B1 --> B13[时态逻辑]
     B1 --> B14[模态逻辑]
-    
+
     B2 --> B21[简单类型]
     B2 --> B22[依赖类型]
     B2 --> B23[线性类型]
     B2 --> B24[量子类型]
-    
+
     C --> C1[模型检验]
     C --> C2[定理证明]
     C --> C3[抽象解释]
     C --> C4[精化验证]
-    
+
     C1 --> C11[显式状态]
     C1 --> C12[符号化验证]
     C1 --> C13[实时系统]
     C1 --> C14[概率模型]
-    
+
     C2 --> C21[自然演绎]
     C2 --> C22[归结原理]
     C2 --> C23[交互式证明]
     C2 --> C24[自动化证明]
-    
+
     D --> D1[证明助手]
     D --> D2[模型检验器]
     D --> D3[静态分析]
     D --> D4[综合工具]
-    
+
     E --> E1[软件验证]
     E --> E2[硬件设计]
     E --> E3[协议验证]
     E --> E4[AI安全]
-    
+
     style A fill:#e1f5fe
     style B fill:#f3e5f5
     style C fill:#e8f5e8
@@ -389,4 +390,4 @@ $$\text{经典逻辑} \subset \text{量子逻辑} \subset \text{非交换逻辑}
 - [AI/02-MetaTheory.md](../AI/02-MetaTheory.md) - AI元理论基础
 - [SoftwareEngineering/Architecture/](../SoftwareEngineering/Architecture/) - 软件架构形式化
 
-**文档版本**：v1.0 | **创建日期**：2024-12 | **字数统计**：约4,200字 
+**文档版本**：v1.0 | **创建日期**：2024-12 | **字数统计**：约4,200字
