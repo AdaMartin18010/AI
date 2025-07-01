@@ -10,6 +10,7 @@
 $$\mathcal{CS\_Theory} = \langle \mathcal{F}, \mathcal{T}, \mathcal{A}, \mathcal{I} \rangle$$
 
 其中：
+
 - $\mathcal{F}$：**基础理论层** - 计算模型、可计算性、复杂度
 - $\mathcal{T}$：**技术理论层** - 算法设计、数据结构、图论
 - $\mathcal{A}$：**应用理论层** - 具体算法实现、优化技术
@@ -38,6 +39,7 @@ $$\mathcal{CS} = \langle \mathcal{C}, \mathcal{A}, \mathcal{D}, \mathcal{G}, \ma
 包含可计算性、算法设计、数据结构、图论、复杂性、系统理论六大核心组件。
 
 **五层理论架构**：
+
 1. **Layer 1**: 计算基础理论（图灵机、递归函数）
 2. **Layer 2**: 算法设计理论（分治、动态规划、贪心）
 3. **Layer 3**: 数据结构理论（抽象数据类型、高级结构）
@@ -47,11 +49,13 @@ $$\mathcal{CS} = \langle \mathcal{C}, \mathcal{A}, \mathcal{D}, \mathcal{G}, \ma
 #### 02.1.2 统计成就
 
 **内容规模**：
+
 - 108个文档
 - 79,775行内容
 - 覆盖8大主要类别
 
 **质量指标**：
+
 - 85%文档包含严格数学证明
 - 92%算法有完整复杂度分析
 - 78%概念有精确数学定义
@@ -67,6 +71,7 @@ $$\text{图灵机} \equiv \text{递归函数} \equiv \text{λ演算} \equiv \tex
 $$\text{P} \subseteq \text{NP} \subseteq \text{PSPACE} = \text{NPSPACE} \subseteq \text{EXPTIME}$$
 
 **不可判定问题核心**：
+
 - 停机问题：$\text{HALT} \notin \text{REC}$
 - Rice定理：非平凡性质不可判定
 - 归约理论：问题相对难度比较
@@ -77,6 +82,7 @@ $$\text{P} \subseteq \text{NP} \subseteq \text{PSPACE} = \text{NPSPACE} \subsete
 $$\text{P} \subseteq \text{BQP} \subseteq \text{PSPACE}$$
 
 **随机化复杂度**：
+
 - RP类（单边错误）
 - BPP类（双边错误）
 - ZPP类（零错误）
@@ -97,6 +103,7 @@ $$\text{贪心选择性质} + \text{最优子结构} \Rightarrow \text{贪心可
 #### 02.3.2 图算法体系
 
 **搜索算法复杂度**：
+
 - DFS/BFS: $O(V + E)$
 - Dijkstra: $O((V + E) \log V)$
 - Floyd-Warshall: $O(V^3)$
@@ -162,7 +169,7 @@ $$\{I \land B\} \; \text{loop body} \; \{I\}$$
 
 **依赖类型规约**：
 ```coq
-Definition sort (l : list nat) : 
+Definition sort (l : list nat) :
   {l' : list nat | Sorted l' /\ Permutation l l'}.
 ```
 
@@ -203,7 +210,7 @@ def quick_sort(arr):
 class Graph:
     def __init__(self):
         self.vertices = {}
-    
+
     def add_edge(self, u, v, weight=1):
         if u not in self.vertices:
             self.vertices[u] = []
@@ -241,11 +248,11 @@ graph TD
     A --> C[算法设计]
     A --> D[数据结构]
     A --> E[图论算法]
-    
+
     B --> B1[图灵机]
     B --> B2[复杂度类]
     B --> B3[不可判定问题]
-    
+
     style A fill:#e1f5fe
     style B fill:#f3e5f5
     style C fill:#e8f5e8
@@ -407,4 +414,4 @@ graph TD
 - [FormalMethods/04-ModelChecking.md](../FormalMethods/04-ModelChecking.md) - 模型检验
 - [SoftwareEngineering/DesignPattern/](../SoftwareEngineering/DesignPattern/) - 设计模式
 
-**文档版本**：v1.0 | **创建日期**：2024-12 | **字数统计**：约4,800字 
+**文档版本**：v1.0 | **创建日期**：2024-12 | **字数统计**：约4,800字

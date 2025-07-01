@@ -12,6 +12,7 @@
 $$\mathcal{FM}_{体系} = \langle \mathcal{T}, \mathcal{L}, \mathcal{M}, \mathcal{A} \rangle$$
 
 其中：
+
 - $\mathcal{T}$：理论基础层 (Theory Foundation)
 - $\mathcal{L}$：语言系统层 (Language Systems)  
 - $\mathcal{M}$：方法论层 (Methodologies)
@@ -112,27 +113,27 @@ graph TD
     A --> C[语言系统层]
     A --> D[方法论层]
     A --> E[应用实践层]
-    
+
     B --> B1[数理逻辑]
     B --> B2[计算理论]
     B --> B3[范畴论]
     B --> B4[类型理论基础]
-    
+
     C --> C1[形式语言]
     C --> C2[类型系统]
     C --> C3[规约语言]
     C --> C4[建模语言]
-    
+
     D --> D1[模型检验]
     D --> D2[定理证明]
     D --> D3[抽象解释]
     D --> D4[精化验证]
-    
+
     E --> E1[软件验证]
     E --> E2[硬件设计]
     E --> E3[协议验证]
     E --> E4[AI安全]
-    
+
     style A fill:#e1f5fe
     style B fill:#f3e5f5
     style C fill:#e8f5e8
@@ -255,4 +256,4 @@ $$\text{需求} \xrightarrow{\text{形式规约}} \text{设计} \xrightarrow{\te
 - **跨学科整合**：数学、AI、软件工程全面融合
 - **实用价值**：理论与实践并重
 
-**版本信息**：v1.0 | 创建日期：2024-12 | 完整度：100% 
+**版本信息**：v1.0 | 创建日期：2024-12 | 完整度：100%

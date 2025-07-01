@@ -8,6 +8,7 @@
 
 **状态空间模型**：
 $$M = \langle S, R, L, s_0 \rangle$$
+
 - $S$：有限状态集合
 - $R \subseteq S \times S$：转移关系
 - $L: S \rightarrow 2^{AP}$：原子命题标记函数
@@ -35,6 +36,7 @@ $$M, s \models \phi$$
 #### 01.2.1 CTL模型检验
 
 **标记算法** (Labeling Algorithm)：
+
 ```algorithm
 function CTL_MODEL_CHECK(M, φ)
     for each subformula ψ of φ do
@@ -48,6 +50,7 @@ $$\mu Z. \tau(Z) = \bigcap\{X \subseteq S \mid \tau(X) \subseteq X\}$$
 #### 01.2.2 LTL模型检验
 
 **自动机方法**：
+
 1. 将$\neg\phi$转换为Büchi自动机$\mathcal{B}_{\neg\phi}$
 2. 计算$\mathcal{B}_M \times \mathcal{B}_{\neg\phi}$的积
 3. 检查积自动机是否为空
@@ -73,6 +76,7 @@ $$R(s, s') = \bigvee_{(s,s') \in R} \text{encode}(s) \land \text{encode}(s')$$
 $$\bigvee_{i=0}^k (I(s_0) \land \bigwedge_{j=0}^{i-1} T(s_j, s_{j+1}) \land \neg P_i)$$
 
 其中：
+
 - $I(s_0)$：初始状态约束
 - $T(s_j, s_{j+1})$：转移关系
 - $P_i$：第$i$步的性质
@@ -82,6 +86,7 @@ $$\bigvee_{i=0}^k (I(s_0) \land \bigwedge_{j=0}^{i-1} T(s_j, s_{j+1}) \land \neg
 ### 02.1 硬件验证
 
 **数字电路模型**：
+
 ```verilog
 module counter(clk, reset, count);
     input clk, reset;
@@ -97,6 +102,7 @@ endmodule
 ```
 
 **验证性质**：
+
 ```ctl
 AG(reset → AX(count = 0))  // 复位后计数器归零
 AG(count = 15 → AX(count = 0))  // 计数器溢出
@@ -105,6 +111,7 @@ AG(count = 15 → AX(count = 0))  // 计数器溢出
 ### 02.2 软件验证
 
 **并发程序模型**：
+
 ```c
 int x = 0, y = 0;
 
@@ -126,6 +133,7 @@ void P2() {
 ```
 
 **互斥性验证**：
+
 ```ltl
 G ¬(P1_in_cs ∧ P2_in_cs)  // 永不同时在临界区
 ```
@@ -133,6 +141,7 @@ G ¬(P1_in_cs ∧ P2_in_cs)  // 永不同时在临界区
 ### 02.3 协议验证
 
 **通信协议模型**：
+
 ```promela
 mtype = { req, ack, data };
 chan ch = [1] of { mtype };
@@ -151,6 +160,7 @@ active proctype Receiver() {
 ```
 
 **协议性质**：
+
 ```ltl
 G(req → F ack)  // 请求最终得到确认
 G(ack → X data)  // 确认后紧跟数据
@@ -183,6 +193,7 @@ $$\frac{M_1 \models A_1 \rightarrow G_1 \quad M_2 \models A_2 \rightarrow G_2 \q
 $$\text{counterexample}: s_0 \rightarrow s_1 \rightarrow \ldots \rightarrow s_k$$
 
 **反例分析**：
+
 1. 路径可达性检查
 2. 性质违反点定位
 3. 根因分析
@@ -202,11 +213,13 @@ $$\text{counterexample}: s_0 \rightarrow s_1 \rightarrow \ldots \rightarrow s_k$
 ### 04.2 工业应用案例
 
 **Intel CPU验证**：
+
 - 微处理器设计验证
 - 缓存一致性协议
 - 指令流水线正确性
 
 **Microsoft驱动验证**：
+
 - 设备驱动程序验证
 - 内核接口正确性
 - 内存安全性检查
@@ -219,6 +232,7 @@ $$\text{counterexample}: s_0 \rightarrow s_1 \rightarrow \ldots \rightarrow s_k$
 $$|S| = \prod_{i=1}^n |S_i|$$
 
 **缓解技术**：
+
 - 偏序归约
 - 对称性归约
 - 抽象技术
@@ -227,13 +241,15 @@ $$|S| = \prod_{i=1}^n |S_i|$$
 ### 05.2 规约工程
 
 **性质规约挑战**：
+
 - 完整性
 - 一致性
 - 可理解性
 - 可维护性
 
 **模式库方法**：
-```
+
+```text
 Absence: G ¬p
 Existence: F p  
 Bounded Existence: ♦≤n p
@@ -247,17 +263,20 @@ Response: G(p → F q)
 ### 06.1 AI增强的模型检验
 
 **机器学习辅助**：
+
 - 智能抽象选择
 - 性质自动推断
 - 反例分析自动化
 
 **深度强化学习**：
+
 - 状态空间搜索优化
 - 启发式策略学习
 
 ### 06.2 分布式模型检验
 
 **云计算平台**：
+
 - 大规模并行验证
 - 弹性资源调度
 - 分布式状态存储
@@ -265,6 +284,7 @@ Response: G(p → F q)
 ### 06.3 量子模型检验
 
 **量子系统验证**：
+
 - 量子状态建模
 - 量子性质规约
 - 量子算法验证
@@ -272,8 +292,9 @@ Response: G(p → F q)
 ---
 
 **交叉引用索引**：
+
 - [FormalLanguages.md](./02-FormalLanguages.md) - 时态逻辑理论
 - [TypeTheory.md](./03-TypeTheory.md) - 类型化建模
 - [AI/05-Model.md](../AI/05-Model.md) - AI模型验证
 
-**文档版本**：v1.0 | **创建日期**：2024-12 | **字数统计**：约3,200字 
+**文档版本**：v1.0 | **创建日期**：2024-12 | **字数统计**：约3,200字
