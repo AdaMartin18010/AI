@@ -13,6 +13,7 @@
 $$\mathcal{A} = \langle \mathcal{I}, \mathcal{O}, \mathcal{S}, \mathcal{T}, \mathcal{C} \rangle$$
 
 其中：
+
 - $\mathcal{I}$：输入域 (Input Domain)
 - $\mathcal{O}$：输出域 (Output Domain)  
 - $\mathcal{S}$：算法步骤序列 (Step Sequence)
@@ -22,6 +23,7 @@ $$\mathcal{A} = \langle \mathcal{I}, \mathcal{O}, \mathcal{S}, \mathcal{T}, \mat
 #### 01.1.2 算法性质
 
 **算法基本性质**：
+
 1. **有限性**：有限步骤内必须终止
 2. **确定性**：每步操作明确无歧义
 3. **输入性**：接受零个或多个输入
@@ -75,6 +77,7 @@ $$O(1) \subset O(\log n) \subset O(n) \subset O(n \log n) \subset O(n^2) \subset
 将问题分解为更小的子问题，递归解决，然后合并结果。
 
 **通用框架**：
+
 ```python
 def divide_and_conquer(problem):
     if problem.size <= threshold:
@@ -93,6 +96,7 @@ def divide_and_conquer(problem):
 $$T(n) = aT(n/b) + f(n)$$
 
 其中：
+
 - $a$：子问题数量
 - $n/b$：子问题规模
 - $f(n)$：分解和合并的代价
@@ -166,6 +170,7 @@ $$\text{dp}[i] = \text{opt}_{j < i} \{\text{dp}[j] + \text{cost}(j, i)\}$$
 #### 02.2.2 动态规划设计方法
 
 **四步设计法**：
+
 1. **定义状态**：确定问题的状态表示
 2. **状态转移**：建立状态间的递推关系
 3. **初始化**：确定边界条件
@@ -174,6 +179,7 @@ $$\text{dp}[i] = \text{opt}_{j < i} \{\text{dp}[j] + \text{cost}(j, i)\}$$
 **经典问题分析**：
 
 **最长公共子序列 (LCS)**：
+
 ```python
 def lcs_length(X, Y):
     m, n = len(X), len(Y)
@@ -200,7 +206,7 @@ $$\text{dp}[i][j] = \begin{cases}
 def knapsack_01(weights, values, capacity):
     n = len(weights)
     dp = [[0] * (capacity + 1) for _ in range(n + 1)]
-    
+
     for i in range(1, n + 1):
         for w in range(capacity + 1):
             if weights[i-1] <= w:
@@ -210,7 +216,7 @@ def knapsack_01(weights, values, capacity):
                 )
             else:
                 dp[i][w] = dp[i-1][w]
-    
+
     return dp[n][capacity]
 ```
 
@@ -246,15 +252,15 @@ $$\mathbb{E}[\text{dp}[i]] = \sum_j P(j) \cdot \text{dp}[j]$$
 def activity_selection(activities):
     # 按结束时间排序
     activities.sort(key=lambda x: x[1])
-    
+
     selected = [activities[0]]
     last_end = activities[0][1]
-    
+
     for start, end in activities[1:]:
         if start >= last_end:
             selected.append((start, end))
             last_end = end
-    
+
     return selected
 ```
 
@@ -268,19 +274,19 @@ def huffman_encoding(text):
     frequency = defaultdict(int)
     for char in text:
         frequency[char] += 1
-    
+
     # 构建最小堆
     heap = [[freq, char] for char, freq in frequency.items()]
     heapq.heapify(heap)
-    
+
     # 构建Huffman树
     while len(heap) > 1:
         left = heapq.heappop(heap)
         right = heapq.heappop(heap)
-        
+
         merged = [left[0] + right[0], left, right]
         heapq.heappush(heap, merged)
-    
+
     return heap[0]
 ```
 
@@ -290,12 +296,12 @@ class UnionFind:
     def __init__(self, n):
         self.parent = list(range(n))
         self.rank = [0] * n
-    
+
     def find(self, x):
         if self.parent[x] != x:
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
-    
+
     def union(self, x, y):
         px, py = self.find(x), self.find(y)
         if px == py:
@@ -311,13 +317,13 @@ def kruskal_mst(n, edges):
     edges.sort(key=lambda x: x[2])  # 按权重排序
     uf = UnionFind(n)
     mst = []
-    
+
     for u, v, weight in edges:
         if uf.union(u, v):
             mst.append((u, v, weight))
             if len(mst) == n - 1:
                 break
-    
+
     return mst
 ```
 
@@ -333,17 +339,17 @@ def kruskal_mst(n, edges):
 def backtrack(solution, choices):
     if is_complete(solution):
         return solution
-    
+
     for choice in choices:
         if is_valid(solution, choice):
             solution.append(choice)
-            
+
             result = backtrack(solution, updated_choices)
             if result is not None:
                 return result
-            
+
             solution.pop()  # 回溯
-    
+
     return None
 ```
 
@@ -357,27 +363,27 @@ def solve_n_queens(n):
         for i in range(row):
             if board[i] == col:
                 return False
-        
+
         # 检查对角线
         for i in range(row):
             if abs(board[i] - col) == abs(i - row):
                 return False
-        
+
         return True
-    
+
     def backtrack(board, row):
         if row == n:
             return [board[:]]
-        
+
         solutions = []
         for col in range(n):
             if is_safe(board, row, col):
                 board[row] = col
                 solutions.extend(backtrack(board, row + 1))
                 board[row] = -1  # 回溯
-        
+
         return solutions
-    
+
     return backtrack([-1] * n, 0)
 ```
 
@@ -389,21 +395,21 @@ def solve_sudoku(board):
         for j in range(9):
             if board[row][j] == num:
                 return False
-        
+
         # 检查列
         for i in range(9):
             if board[i][col] == num:
                 return False
-        
+
         # 检查3x3方格
         start_row, start_col = 3 * (row // 3), 3 * (col // 3)
         for i in range(3):
             for j in range(3):
                 if board[start_row + i][start_col + j] == num:
                     return False
-        
+
         return True
-    
+
     def backtrack():
         for i in range(9):
             for j in range(9):
@@ -411,15 +417,15 @@ def solve_sudoku(board):
                     for num in range(1, 10):
                         if is_valid(board, i, j, num):
                             board[i][j] = num
-                            
+
                             if backtrack():
                                 return True
-                            
+
                             board[i][j] = 0  # 回溯
-                    
+
                     return False
         return True
-    
+
     return backtrack()
 ```
 
@@ -467,14 +473,14 @@ $$A[i][j] = \begin{cases}
 def dfs_recursive(graph, start, visited=None):
     if visited is None:
         visited = set()
-    
+
     visited.add(start)
     print(start)
-    
+
     for neighbor in graph[start]:
         if neighbor not in visited:
             dfs_recursive(graph, neighbor, visited)
-    
+
     return visited
 ```
 
@@ -483,18 +489,18 @@ def dfs_recursive(graph, start, visited=None):
 def dfs_iterative(graph, start):
     visited = set()
     stack = [start]
-    
+
     while stack:
         vertex = stack.pop()
         if vertex not in visited:
             visited.add(vertex)
             print(vertex)
-            
+
             # 添加未访问的邻居（逆序以保持一致性）
             for neighbor in reversed(graph[vertex]):
                 if neighbor not in visited:
                     stack.append(neighbor)
-    
+
     return visited
 ```
 
@@ -513,16 +519,16 @@ def bfs(graph, start):
     visited = set()
     queue = deque([start])
     visited.add(start)
-    
+
     while queue:
         vertex = queue.popleft()
         print(vertex)
-        
+
         for neighbor in graph[vertex]:
             if neighbor not in visited:
                 visited.add(neighbor)
                 queue.append(neighbor)
-    
+
     return visited
 ```
 
@@ -547,22 +553,22 @@ def dijkstra(graph, start):
     distances[start] = 0
     pq = [(0, start)]
     visited = set()
-    
+
     while pq:
         current_distance, current_vertex = heapq.heappop(pq)
-        
+
         if current_vertex in visited:
             continue
-        
+
         visited.add(current_vertex)
-        
+
         for neighbor, weight in graph[current_vertex]:
             distance = current_distance + weight
-            
+
             if distance < distances[neighbor]:
                 distances[neighbor] = distance
                 heapq.heappush(pq, (distance, neighbor))
-    
+
     return distances
 ```
 
@@ -582,24 +588,24 @@ def bellman_ford(graph, start):
     # 初始化距离
     distances = {vertex: float('infinity') for vertex in graph}
     distances[start] = 0
-    
+
     # 松弛V-1轮
     for _ in range(len(graph) - 1):
         for vertex in graph:
             for neighbor, weight in graph[vertex]:
                 if distances[vertex] != float('infinity'):
                     distances[neighbor] = min(
-                        distances[neighbor], 
+                        distances[neighbor],
                         distances[vertex] + weight
                     )
-    
+
     # 检测负权重环
     for vertex in graph:
         for neighbor, weight in graph[vertex]:
             if distances[vertex] != float('infinity'):
                 if distances[vertex] + weight < distances[neighbor]:
                     return None  # 存在负权重环
-    
+
     return distances
 ```
 
@@ -618,26 +624,26 @@ def bellman_ford(graph, start):
 def floyd_warshall(graph):
     vertices = list(graph.keys())
     n = len(vertices)
-    
+
     # 初始化距离矩阵
     dist = [[float('infinity')] * n for _ in range(n)]
-    
+
     # 顶点到自身的距离为0
     for i in range(n):
         dist[i][i] = 0
-    
+
     # 直接相连的边
     for i, vertex in enumerate(vertices):
         for neighbor, weight in graph[vertex]:
             j = vertices.index(neighbor)
             dist[i][j] = weight
-    
+
     # Floyd-Warshall核心算法
     for k in range(n):
         for i in range(n):
             for j in range(n):
                 dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
-    
+
     return dist
 ```
 
@@ -660,28 +666,28 @@ import heapq
 def prim_mst(graph):
     if not graph:
         return []
-    
+
     start_vertex = next(iter(graph))
     mst = []
     visited = {start_vertex}
-    
+
     # 将起始顶点的所有边加入优先队列
-    edges = [(weight, start_vertex, neighbor) 
+    edges = [(weight, start_vertex, neighbor)
              for neighbor, weight in graph[start_vertex]]
     heapq.heapify(edges)
-    
+
     while edges and len(visited) < len(graph):
         weight, u, v = heapq.heappop(edges)
-        
+
         if v not in visited:
             visited.add(v)
             mst.append((u, v, weight))
-            
+
             # 添加新顶点的边
             for neighbor, edge_weight in graph[v]:
                 if neighbor not in visited:
                     heapq.heappush(edges, (edge_weight, v, neighbor))
-    
+
     return mst
 ```
 
@@ -700,49 +706,49 @@ class UnionFind:
     def __init__(self, vertices):
         self.parent = {v: v for v in vertices}
         self.rank = {v: 0 for v in vertices}
-    
+
     def find(self, x):
         if self.parent[x] != x:
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
-    
+
     def union(self, x, y):
         px, py = self.find(x), self.find(y)
         if px == py:
             return False
-        
+
         if self.rank[px] < self.rank[py]:
             px, py = py, px
-        
+
         self.parent[py] = px
         if self.rank[px] == self.rank[py]:
             self.rank[px] += 1
-        
+
         return True
 
 def kruskal_mst(graph):
     edges = []
     vertices = set()
-    
+
     # 收集所有边
     for vertex in graph:
         vertices.add(vertex)
         for neighbor, weight in graph[vertex]:
             if vertex < neighbor:  # 避免重复边
                 edges.append((weight, vertex, neighbor))
-    
+
     # 按权重排序
     edges.sort()
-    
+
     uf = UnionFind(vertices)
     mst = []
-    
+
     for weight, u, v in edges:
         if uf.union(u, v):
             mst.append((u, v, weight))
             if len(mst) == len(vertices) - 1:
                 break
-    
+
     return mst
 ```
 
@@ -772,10 +778,10 @@ def ford_fulkerson(graph, source, sink):
     def bfs_find_path(graph, source, sink, parent):
         visited = set([source])
         queue = deque([source])
-        
+
         while queue:
             u = queue.popleft()
-            
+
             for v in graph[u]:
                 if v not in visited and graph[u][v] > 0:
                     visited.add(v)
@@ -783,27 +789,27 @@ def ford_fulkerson(graph, source, sink):
                     if v == sink:
                         return True
                     queue.append(v)
-        
+
         return False
-    
+
     parent = {}
     max_flow = 0
-    
+
     # 创建残留图
     residual_graph = defaultdict(lambda: defaultdict(int))
     for u in graph:
         for v in graph[u]:
             residual_graph[u][v] = graph[u][v]
-    
+
     while bfs_find_path(residual_graph, source, sink, parent):
         # 找到瓶颈容量
         path_flow = float('inf')
         s = sink
-        
+
         while s != source:
             path_flow = min(path_flow, residual_graph[parent[s]][s])
             s = parent[s]
-        
+
         # 更新残留图
         v = sink
         while v != source:
@@ -811,9 +817,9 @@ def ford_fulkerson(graph, source, sink):
             residual_graph[u][v] -= path_flow
             residual_graph[v][u] += path_flow
             v = parent[v]
-        
+
         max_flow += path_flow
-    
+
     return max_flow
 ```
 
@@ -839,37 +845,37 @@ $$\max\text{-flow} = \min\text{-cut}$$
 def build_next(pattern):
     next_array = [0] * len(pattern)
     j = 0
-    
+
     for i in range(1, len(pattern)):
         while j > 0 and pattern[i] != pattern[j]:
             j = next_array[j - 1]
-        
+
         if pattern[i] == pattern[j]:
             j += 1
-        
+
         next_array[i] = j
-    
+
     return next_array
 
 def kmp_search(text, pattern):
     if not pattern:
         return []
-    
+
     next_array = build_next(pattern)
     matches = []
     j = 0
-    
+
     for i in range(len(text)):
         while j > 0 and text[i] != pattern[j]:
             j = next_array[j - 1]
-        
+
         if text[i] == pattern[j]:
             j += 1
-        
+
         if j == len(pattern):
             matches.append(i - j + 1)
             j = next_array[j - 1]
-    
+
     return matches
 ```
 
@@ -895,11 +901,11 @@ def lcp_array(s, sa):
     n = len(s)
     rank = [0] * n
     lcp = [0] * (n - 1)
-    
+
     # 构建rank数组
     for i in range(n):
         rank[sa[i]] = i
-    
+
     h = 0
     for i in range(n):
         if rank[i] > 0:
@@ -909,7 +915,7 @@ def lcp_array(s, sa):
             lcp[rank[i] - 1] = h
             if h > 0:
                 h -= 1
-    
+
     return lcp
 ```
 
@@ -929,31 +935,31 @@ def lcp_array(s, sa):
 def three_sum(nums):
     nums.sort()
     result = []
-    
+
     for i in range(len(nums) - 2):
         if i > 0 and nums[i] == nums[i-1]:
             continue
-        
+
         left, right = i + 1, len(nums) - 1
-        
+
         while left < right:
             total = nums[i] + nums[left] + nums[right]
-            
+
             if total < 0:
                 left += 1
             elif total > 0:
                 right -= 1
             else:
                 result.append([nums[i], nums[left], nums[right]])
-                
+
                 while left < right and nums[left] == nums[left + 1]:
                     left += 1
                 while left < right and nums[right] == nums[right - 1]:
                     right -= 1
-                
+
                 left += 1
                 right -= 1
-    
+
     return result
 ```
 
@@ -969,14 +975,14 @@ def length_of_longest_substring(s):
     char_map = {}
     left = 0
     max_length = 0
-    
+
     for right in range(len(s)):
         if s[right] in char_map and char_map[s[right]] >= left:
             left = char_map[s[right]] + 1
-        
+
         char_map[s[right]] = right
         max_length = max(max_length, right - left + 1)
-    
+
     return max_length
 ```
 
@@ -992,10 +998,10 @@ def length_of_longest_substring(s):
 def fibonacci_memo(n, memo={}):
     if n in memo:
         return memo[n]
-    
+
     if n <= 1:
         return n
-    
+
     memo[n] = fibonacci_memo(n-1, memo) + fibonacci_memo(n-2, memo)
     return memo[n]
 
@@ -1053,7 +1059,7 @@ def randomized_quicksort(arr, low, high):
         # 随机选择pivot
         random_index = random.randint(low, high)
         arr[random_index], arr[high] = arr[high], arr[random_index]
-        
+
         pi = partition(arr, low, high)
         randomized_quicksort(arr, low, pi - 1)
         randomized_quicksort(arr, pi + 1, high)
@@ -1112,42 +1118,42 @@ graph TD
     A --> D[图算法]
     A --> E[高级技术]
     A --> F[优化方法]
-    
+
     B --> B1[分治算法]
     B --> B2[动态规划]
     B --> B3[贪心算法]
     B --> B4[回溯算法]
-    
+
     B1 --> B11[归并排序]
     B1 --> B12[快速排序]
     B1 --> B13[Strassen乘法]
     B1 --> B14[主定理]
-    
+
     B2 --> B21[LCS]
     B2 --> B22[背包问题]
     B2 --> B23[最短路径]
     B2 --> B24[状态压缩]
-    
+
     C --> C1[渐近分析]
     C --> C2[复杂度类]
     C --> C3[平均分析]
     C --> C4[摊还分析]
-    
+
     D --> D1[搜索算法]
     D --> D2[最短路径]
     D --> D3[最小生成树]
     D --> D4[网络流]
-    
+
     E --> E1[字符串算法]
     E --> E2[数值算法]
     E --> E3[并行算法]
     E --> E4[近似算法]
-    
+
     F --> F1[记忆化]
     F2[位运算]
     F --> F3[双指针]
     F --> F4[滑动窗口]
-    
+
     style A fill:#e1f5fe
     style B fill:#f3e5f5
     style C fill:#e8f5e8
@@ -1186,4 +1192,4 @@ graph TD
 - [FormalMethods/04-ModelChecking.md](../FormalMethods/04-ModelChecking.md) - 模型检验
 - [ComputerScience/02-Computability.md](./02-Computability.md) - 可计算性理论
 
-**文档版本**：v1.0 | **创建日期**：2024-12 | **字数统计**：约8,900字 
+**文档版本**：v1.0 | **创建日期**：2024-12 | **字数统计**：约8,900字

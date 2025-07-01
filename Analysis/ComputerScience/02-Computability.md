@@ -10,6 +10,7 @@
 $$M = \langle Q, \Sigma, \Gamma, \delta, q_0, q_{\text{accept}}, q_{\text{reject}} \rangle$$
 
 其中：
+
 - $Q$：有限状态集合
 - $\Sigma$：输入字母表，$\Sigma \subseteq \Gamma$
 - $\Gamma$：带字母表
@@ -40,6 +41,7 @@ $$\text{NTIME}(f(n)) = \{L : L \text{ 可被时间复杂度 } O(f(n)) \text{ 的
 #### 01.2.1 原始递归函数
 
 **基础函数**：
+
 1. **零函数**：$\text{zero}(n) = 0$
 2. **后继函数**：$\text{succ}(n) = n + 1$  
 3. **投影函数**：$\pi_i^n(x_1, \ldots, x_n) = x_i$
@@ -431,37 +433,37 @@ graph TD
     A --> C[判定性理论]
     A --> D[复杂度层次]
     A --> E[高级理论]
-    
+
     B --> B1[图灵机]
     B --> B2[递归函数]
     B --> B3[λ演算]
     B --> B4[其他模型]
-    
+
     B1 --> B11[确定性TM]
     B1 --> B12[非确定性TM]
     B1 --> B13[多带TM]
     B1 --> B14[Oracle TM]
-    
+
     C --> C1[递归语言]
     C --> C2[RE语言]
     C --> C3[不可判定问题]
     C --> C4[归约理论]
-    
+
     C3 --> C31[停机问题]
     C3 --> C32[Rice定理]
     C3 --> C33[Post对应问题]
     C3 --> C34[语言问题]
-    
+
     D --> D1[时间复杂度]
     D --> D2[空间复杂度]
     D --> D3[层次定理]
     D --> D4[相对化]
-    
+
     E --> E1[随机化计算]
     E --> E2[交互式证明]
     E --> E3[量子计算]
     E --> E4[并行计算]
-    
+
     style A fill:#e1f5fe
     style B fill:#f3e5f5
     style C fill:#e8f5e8
@@ -558,4 +560,4 @@ $$f \text{ 是单向的} \iff \text{P} \neq \text{NP}$$
 - [AI/03-Theory.md](../AI/03-Theory.md) - AI理论基础
 - [ComputerScience/03-Algorithms.md](./03-Algorithms.md) - 算法设计理论
 
-**文档版本**：v1.0 | **创建日期**：2024-12 | **字数统计**：约5,800字 
+**文档版本**：v1.0 | **创建日期**：2024-12 | **字数统计**：约5,800字

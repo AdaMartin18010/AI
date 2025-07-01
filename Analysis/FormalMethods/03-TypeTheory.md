@@ -494,15 +494,15 @@ impl Resource {
     fn new(s: String) -> Self {
         Resource { data: s }
     }
-    
+
     fn consume(self) -> String {  // 获取所有权
         self.data
     }
-    
+
     fn borrow(&self) -> &str {    // 不可变借用
         &self.data
     }
-    
+
     fn borrow_mut(&mut self) -> &mut String {  // 可变借用
         &mut self.data
     }
@@ -520,7 +520,7 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 
 **CSP风格协议**：
 ```haskell
-type Protocol = 
+type Protocol =
     Send Int (Recv String End)
   | Recv Bool (Send Float End)
   | End
@@ -564,8 +564,8 @@ $$\begin{align}
 case class User(id: Int, name: String, email: String)
 
 val query: Query[User] = sql"""
-  SELECT id, name, email 
-  FROM users 
+  SELECT id, name, email
+  FROM users
   WHERE age > ${minAge}
 """.as[User]
 ```
@@ -573,8 +573,8 @@ val query: Query[User] = sql"""
 **类型安全的查询构建**：
 ```haskell
 users :: Table (UserId, UserName, UserEmail)
-select (userId, userName) $ 
-  from users $ 
+select (userId, userName) $
+  from users $
   where_ (\(uid, name, email) -> userId >. val 18)
 ```
 
@@ -720,47 +720,47 @@ graph TD
     A --> C[高级系统]
     A --> D[应用实践]
     A --> E[跨学科融合]
-    
+
     B --> B1[简单类型λ演算]
     B --> B2[多态类型系统]
     B --> B3[依赖类型]
     B --> B4[归纳类型]
-    
+
     B1 --> B11[类型判断]
     B1 --> B12[类型保持性]
     B1 --> B13[强正规化]
     B1 --> B14[主类型定理]
-    
+
     B2 --> B21[System F]
     B2 --> B22[Hindley-Milner]
     B2 --> B23[参数化定理]
     B2 --> B24[类型推导]
-    
+
     C --> C1[线性类型]
     C --> C2[子类型系统]
     C --> C3[效应类型]
     C --> C4[会话类型]
-    
+
     C1 --> C11[资源管理]
     C1 --> C12[仿射类型]
     C1 --> C13[量子类型]
     C1 --> C14[所有权系统]
-    
+
     C2 --> C21[协变性]
     C2 --> C22[有界量化]
     C2 --> C23[结构子类型]
     C2 --> C24[F-bounded多态]
-    
+
     D --> D1[程序验证]
     D --> D2[并发编程]
     D --> D3[领域建模]
     D --> D4[API设计]
-    
+
     E --> E1[数学基础]
     E --> E2[AI理论]
     E --> E3[软件工程]
     E --> E4[编程语言]
-    
+
     style A fill:#e1f5fe
     style B fill:#f3e5f5
     style C fill:#e8f5e8
@@ -860,4 +860,4 @@ $$\text{TypeNet} : \text{AST} \rightarrow \text{Prob}(\text{Type})$$
 - [AI/04-MetaModel.md](../AI/04-MetaModel.md) - AI架构设计
 - [SoftwareEngineering/DesignPattern/](../SoftwareEngineering/DesignPattern/) - 设计模式
 
-**文档版本**：v1.0 | **创建日期**：2024-12 | **字数统计**：约8,500字 
+**文档版本**：v1.0 | **创建日期**：2024-12 | **字数统计**：约8,500字

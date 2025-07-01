@@ -12,6 +12,7 @@
 $$\mathcal{CS} = \langle \mathcal{C}, \mathcal{A}, \mathcal{D}, \mathcal{G}, \mathcal{P}, \mathcal{S} \rangle$$
 
 其中：
+
 - $\mathcal{C}$：可计算性理论 (Computability Theory)
 - $\mathcal{A}$：算法设计理论 (Algorithm Design Theory)  
 - $\mathcal{D}$：数据结构理论 (Data Structure Theory)
@@ -308,11 +309,11 @@ $$T(n) = aT(n/b) + D(n) + C(n)$$
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
-    
+
     mid = len(arr) // 2
     left = merge_sort(arr[:mid])    # 分解
     right = merge_sort(arr[mid:])   # 分解
-    
+
     return merge(left, right)       # 合并
 ```
 
@@ -326,14 +327,14 @@ $$\text{dp}[i] = \min_{j < i} \{\text{dp}[j] + \text{cost}(j, i)\}$$
 def longest_common_subsequence(s1, s2):
     m, n = len(s1), len(s2)
     dp = [[0] * (n + 1) for _ in range(m + 1)]
-    
+
     for i in range(1, m + 1):
         for j in range(1, n + 1):
             if s1[i-1] == s2[j-1]:
                 dp[i][j] = dp[i-1][j-1] + 1
             else:
                 dp[i][j] = max(dp[i-1][j], dp[i][j-1])
-    
+
     return dp[m][n]
 ```
 
@@ -347,15 +348,15 @@ $$\text{LocalOptimal} \Rightarrow \text{GlobalOptimal}$$
 def activity_selection(activities):
     # 按结束时间排序
     activities.sort(key=lambda x: x[1])
-    
+
     selected = [activities[0]]
     last_end = activities[0][1]
-    
+
     for start, end in activities[1:]:
         if start >= last_end:  # 贪心选择
             selected.append((start, end))
             last_end = end
-    
+
     return selected
 ```
 
@@ -510,47 +511,47 @@ graph TD
     A --> E[图论算法]
     A --> F[复杂性理论]
     A --> G[系统理论]
-    
+
     B --> B1[可计算性理论]
     B --> B2[递归函数理论]
     B --> B3[形式语言]
     B --> B4[自动机理论]
-    
+
     B1 --> B11[图灵机]
     B1 --> B12[停机问题]
     B1 --> B13[Church-Turing论题]
     B1 --> B14[判定性问题]
-    
+
     C --> C1[算法设计范式]
     C --> C2[算法分析技术]
     C --> C3[优化算法]
     C --> C4[随机算法]
-    
+
     C1 --> C11[分治法]
     C1 --> C12[动态规划]
     C1 --> C13[贪心算法]
     C1 --> C14[回溯法]
-    
+
     D --> D1[基础数据结构]
     D --> D2[高级数据结构]
     D --> D3[并发数据结构]
     D --> D4[外存数据结构]
-    
+
     E --> E1[图遍历算法]
     E --> E2[最短路径]
     E --> E3[网络流]
     E --> E4[匹配理论]
-    
+
     F --> F1[复杂性类]
     F --> F2[完全性理论]
     F --> F3[近似算法]
     F --> F4[随机复杂性]
-    
+
     G --> G1[并发理论]
     G --> G2[分布式算法]
     G --> G3[系统安全]
     G --> G4[性能分析]
-    
+
     style A fill:#e1f5fe
     style B fill:#f3e5f5
     style C fill:#e8f5e8
@@ -648,4 +649,4 @@ $$Q = \frac{1}{2m} \sum_{ij} \left(A_{ij} - \frac{k_i k_j}{2m}\right) \delta(c_i
 - [AI/05-Model.md](../AI/05-Model.md) - AI算法模型
 - [SoftwareEngineering/DesignPattern/](../SoftwareEngineering/DesignPattern/) - 设计模式
 
-**文档版本**：v1.0 | **创建日期**：2024-12 | **字数统计**：约6,200字 
+**文档版本**：v1.0 | **创建日期**：2024-12 | **字数统计**：约6,200字
