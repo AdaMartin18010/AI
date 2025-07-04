@@ -9,6 +9,7 @@
 $$\mathcal{P} = \langle \mathcal{M}, \mathcal{C}, \mathcal{E}, \mathcal{S} \rangle$$
 
 其中：
+
 - $\mathcal{M}$: 计算模型 (Computational Model)
 - $\mathcal{C}$: 控制结构 (Control Structures)
 - $\mathcal{E}$: 数据表达 (Data Expression)
@@ -83,6 +84,7 @@ $$\text{Any Program} = \text{Sequence} + \text{Selection} + \text{Iteration}$$
 $$\text{Object} = \langle \text{State}, \text{Methods}, \text{Class} \rangle$$
 
 其中：
+
 - $\text{State}$: 对象状态
 - $\text{Methods}$: 对象方法集合
 - $\text{Class}$: 对象所属类
@@ -136,6 +138,7 @@ $$(\lambda x. e_1) v_2 \rightarrow e_1[x := v_2]$$
 $$\text{Pure}(f) \iff \text{No Side Effects}(f) \land \text{Referential Transparency}(f)$$
 
 其中：
+
 - $\text{No Side Effects}(f)$: 函数无副作用
 - $\text{Referential Transparency}(f)$: 函数引用透明
 
@@ -162,6 +165,7 @@ Actor是并发计算的基本单位：
 $$\text{Actor} = \langle \text{State}, \text{Behavior}, \text{Mailbox} \rangle$$
 
 其中：
+
 - $\text{State}$: Actor内部状态
 - $\text{Behavior}$: 消息处理行为
 - $\text{Mailbox}$: 消息队列
@@ -227,6 +231,7 @@ $$\text{parreduce}(op, data) = op(op(\ldots op(x_1, x_2), \ldots), x_n)$$
 $$\text{Clause} = \text{Head} \leftarrow \text{Body}$$
 
 其中：
+
 - $\text{Head}$: 结论
 - $\text{Body}$: 条件
 
@@ -251,6 +256,7 @@ $$\frac{A \leftarrow B_1, \ldots, B_n \quad B_i \leftarrow C_1, \ldots, C_m}{A \
 $$\text{DataFlowGraph} = \langle V, E, \text{Operations} \rangle$$
 
 其中：
+
 - $V$: 节点集合（操作）
 - $E$: 边集合（数据流）
 - $\text{Operations}$: 操作函数
@@ -395,4 +401,4 @@ $$\text{ProbabilisticProgramming} = \text{RandomVariables} \times \text{Inferenc
 
 神经编程结合机器学习：
 
-$$\text{NeuralProgramming} = \text{NeuralNetworks} \times \text{Programming} \times \text{Learning}$$ 
+$$\text{NeuralProgramming} = \text{NeuralNetworks} \times \text{Programming} \times \text{Learning}$$
