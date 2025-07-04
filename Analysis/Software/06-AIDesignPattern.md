@@ -252,6 +252,7 @@
 函数式编程模式与范畴论有最直接的联系：
 
 1. **函子 (Functor)**:
+
    ```rust
    trait Functor<A, B> {
        fn map<F>(self, f: F) -> Self::Output
@@ -272,6 +273,7 @@
    ```
 
 2. **单子 (Monad)**:
+
    ```rust
    trait Monad<A, B> {
        fn bind<F>(self, f: F) -> Self::Output
@@ -317,6 +319,7 @@
 ### 数据结构作为数学对象
 
 1. **集合 (Sets)**:
+
    ```rust
    trait Set<T> {
        fn contains(&self, item: &T) -> bool;
@@ -326,6 +329,7 @@
    ```
 
 2. **序列 (Sequences)**:
+
    ```rust
    trait Sequence<T> {
        fn get(&self, index: usize) -> Option<&T>;
@@ -335,6 +339,7 @@
    ```
 
 3. **图 (Graphs)**:
+
    ```rust
    struct Graph<V, E> {
        vertices: Vec<V>,
@@ -349,6 +354,7 @@
    - 空间复杂度：$S(n) = O(g(n))$
 
 2. **递归算法**:
+
    ```rust
    fn fibonacci(n: u64) -> u64 {
        match n {
@@ -373,6 +379,7 @@
 ### 代码实例：从理论到实践
 
 1. **函子的实际应用**:
+
    ```rust
    // 列表函子
    fn map_list<T, U>(list: Vec<T>, f: impl Fn(T) -> U) -> Vec<U> {
@@ -386,6 +393,7 @@
    ```
 
 2. **单子的实际应用**:
+
    ```rust
    // 错误处理单子
    fn safe_divide(a: f64, b: f64) -> Option<f64> {
@@ -666,4 +674,4 @@ mindmap
 7. Bird, R., & de Moor, O. (1997). *Algebra of Programming*. Prentice Hall.
 8. Gibbons, J., & de Moor, O. (Eds.). (2004). *The Fun of Programming*. Palgrave Macmillan.
 9. Backus, J. (1978). *Can programming be liberated from the von Neumann style? A functional style and its algebra of programs*. Communications of the ACM, 21(8), 613-641.
-10. Moggi, E. (1991). *Notions of computation and monads*. Information and Computation, 93(1), 55-92. 
+10. Moggi, E. (1991). *Notions of computation and monads*. Information and Computation, 93(1), 55-92.
