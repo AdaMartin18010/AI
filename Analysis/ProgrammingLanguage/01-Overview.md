@@ -9,6 +9,7 @@
 $$\mathcal{PL} = \langle \mathcal{S}, \mathcal{T}, \mathcal{P}, \mathcal{I}, \mathcal{E} \rangle$$
 
 其中：
+
 - $\mathcal{S}$: 语法系统 (Syntax System)
 - $\mathcal{T}$: 类型系统 (Type System)  
 - $\mathcal{P}$: 范式系统 (Paradigm System)
@@ -63,6 +64,7 @@ graph TD
 $$\mathcal{S} = \langle \Sigma, N, P, S \rangle$$
 
 其中：
+
 - $\Sigma$: 终结符集合
 - $N$: 非终结符集合  
 - $P$: 产生式规则集合
@@ -293,4 +295,4 @@ $$\text{Expressiveness}(L) = \frac{|\text{Concepts}|}{|\text{Code}|}$$
 1. **代码规范**: 遵循语言编码规范
 2. **测试驱动**: 采用测试驱动开发
 3. **文档维护**: 保持代码文档的更新
-4. **性能优化**: 在必要时进行性能优化 
+4. **性能优化**: 在必要时进行性能优化
