@@ -1,5 +1,8 @@
 # 01. 微积分内容概览（Calculus Overview）
 
+> **已完成深度优化与批判性提升**  
+> 本文档已按统一标准补充批判性分析、未来展望、术语表、符号表、交叉引用等内容。
+
 ## 01.1 目录
 
 - [01. 微积分内容概览（Calculus Overview）](#01-微积分内容概览calculus-overview)
@@ -13,6 +16,11 @@
   - [01.8 多表征与可视化](#018-多表征与可视化)
     - [01.8.1 结构关系图（Mermaid）](#0181-结构关系图mermaid)
     - [01.8.2 典型公式与图示](#0182-典型公式与图示)
+  - [01.9 批判性分析](#019-批判性分析)
+  - [01.10 未来展望](#0110-未来展望)
+  - [01.11 术语表](#0111-术语表)
+  - [01.12 符号表](#0112-符号表)
+  - [01.13 交叉引用](#0113-交叉引用)
 
 ---
 
@@ -96,6 +104,43 @@ mindmap
 - $\int_a^b f(x)dx$
 - ![slope](https://latex.codecogs.com/svg.image?\text{Slope%20of%20Tangent})
 - ![area](https://latex.codecogs.com/svg.image?\text{Area%20under%20Curve})
+
+---
+
+## 01.9 批判性分析
+
+- 假设与局限：经典微积分建立在实数连续性、公理化极限等假设之上，实际建模中离散性、非光滑性、不可积现象常被忽略。
+- 创新建议：结合现代分析、分布式系统、AI建模等领域，探索微积分在复杂系统、非连续现象、数据驱动建模中的新型应用。
+- 交叉引用：[Matter/批判分析框架.md]、[Matter/Mathematics/analysis.md]
+
+## 01.10 未来展望
+
+- 微积分与数值分析、符号计算、机器学习等领域的深度融合。
+- 推动微积分在大数据、智能控制、科学计算等实际系统中的创新应用。
+
+## 01.11 术语表
+
+- **极限（Limit）**：描述函数趋近某点或无穷远时的行为。
+- **连续性（Continuity）**：函数在某点极限存在且等于函数值。
+- **导数（Derivative）**：函数变化率的度量。
+- **积分（Integral）**：函数累积量的度量。
+- **级数（Series）**：无穷项和的极限。
+
+## 01.12 符号表
+
+- $\lim$：极限
+- $f'(x)$：导数
+- $\int$：积分
+- $\sum$：求和符号
+- $\epsilon,\delta$：极限定义中的参数
+
+## 01.13 交叉引用
+
+- [Matter/批判分析框架.md]
+- [Matter/Mathematics/analysis.md]
+- [Analysis/Mathematics/Calculus/02-LimitsContinuity.md]
+- [Analysis/Mathematics/Calculus/03-DifferentialCalculus.md]
+- [Analysis/Mathematics/Calculus/04-IntegralCalculus.md]
 
 ---
 
