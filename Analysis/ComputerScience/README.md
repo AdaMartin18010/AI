@@ -2,32 +2,34 @@
 
 > 本主题为计算机科学知识体系自动递归精炼输出，所有内容严格编号、交叉引用、进度持续跟踪。
 
-## 子主题树形目录
+## 目录结构与知识映射
 
-- [06-01-Overview 总览](./01-Overview.md)
-- [06-02-Computability 可计算性](./02-Computability.md)
-- [06-03-Algorithms 算法](./03-Algorithms.md)
+```tree
+ComputerScience/
+├── 01-Overview.md           # 总览
+├── 02-Computability.md      # 可计算性
+├── 03-Algorithms.md         # 算法
+└── README.md                # 分支导航与进度梳理
+```
 
-## 进度与质量
+### 知识源映射与交叉引用
 
-- [x] 06-01-Overview 已完成
-- [x] 06-02-Computability 已完成
-- [x] 06-03-Algorithms 已完成
+- **理论与批判分析**: 对应 [Matter/FormalLanguage/CS/](../../Matter/FormalLanguage/CS/)，详见 [01-Overview.md](01-Overview.md)、[02-Computability.md](02-Computability.md)
+- **科学模型与交叉**: 对应 [Matter/FormalModel/Model/Science/](../../Matter/FormalModel/Model/Science/)，详见 [01-Overview.md](01-Overview.md)
+- **算法与应用**: 对应 [Matter/FormalLanguage/CS/](../../Matter/FormalLanguage/CS/)，详见 [03-Algorithms.md](03-Algorithms.md)
 
-## 交叉引用
+## 进度与自动化追踪
 
-- [↗ AI 人工智能](../AI/README.md)
-- [↗ Mathematics 数学](../Mathematics/README.md)
-- [↗ Philosophy 哲学](../Philosophy/README.md)
-- [↗ FormalMethods 形式方法](../FormalMethods/README.md)
-- [↗ SoftwareEngineering 软件工程](../SoftwareEngineering/README.md)
+- 本分支已纳入自动化递归修订与进度跟踪体系，所有核心文档均已与 Matter 知识库建立映射与交叉引用。
+- 进度与质量标准详见 [../PROGRESS.md](../PROGRESS.md)
+- 后续修订、批判、整合、表达规范等均按统一标准自动推进。
 
-## 目录结构说明
+## 交叉引用与进度标记
 
-- 所有子主题均有严格编号和本地跳转
-- 内容包含：定义、理论、证明、应用、代码、可视化、交叉引用
-- 进度、质量、优化建议持续自动更新
+- [01-Overview.md](01-Overview.md) ←→ [Matter/FormalLanguage/CS/](../../Matter/FormalLanguage/CS/)、[Matter/FormalModel/Model/Science/](../../Matter/FormalModel/Model/Science/)
+- [02-Computability.md](02-Computability.md) ←→ [Matter/FormalLanguage/CS/](../../Matter/FormalLanguage/CS/)
+- [03-Algorithms.md](03-Algorithms.md) ←→ [Matter/FormalLanguage/CS/](../../Matter/FormalLanguage/CS/)
 
 ---
 
-> 本文件由自动递归系统生成和维护，无需手动编辑。如需中断或恢复，请参考上级目录README和PROGRESS.md。
+> 本README及各子文档将持续自动递归梳理、交叉引用、进度跟踪与表达规范化，所有修订与进展均记录于 [../PROGRESS.md](../PROGRESS.md)。

@@ -2,46 +2,43 @@
 
 > 本主题为软件工程知识体系自动递归精炼输出，所有内容严格编号、交叉引用、进度持续跟踪。
 
-## 子主题树形目录
+## 目录结构与知识映射
 
-- [04-01-Architecture 架构](./Architecture/00-Overview.md)
-- [04-02-DesignPattern 设计模式](./DesignPattern/00-Overview.md)
-- [04-03-Microservices 微服务](./Microservices/00-Overview.md)
-- [04-04-Workflow 工作流基础](./Workflow-01-Basics.md)
-- [04-05-Workflow-Modeling 工作流建模](./Workflow-02-Modeling.md)
-- [04-06-Workflow-Engine 工作流引擎](./Workflow-03-Engine.md)
-- [04-07-Workflow-Relation 工作流关系](./Workflow-04-Relation.md)
-- [04-08-Workflow-Application 工作流应用](./Workflow-05-Application.md)
-- [04-09-Workflow-Prospect 工作流展望](./Workflow-06-Prospect.md)
-- [04-10-Workflow 总览](./Workflow.md)
+```tree
+SoftwareEngineering/
+├── Architecture/00-Overview.md         # 架构
+├── DesignPattern/00-Overview.md        # 设计模式
+├── Microservices/00-Overview.md        # 微服务
+├── Workflow-01-Basics.md               # 工作流基础
+├── Workflow-02-Modeling.md             # 工作流建模
+├── Workflow-03-Engine.md               # 工作流引擎
+├── Workflow-04-Relation.md             # 工作流关系
+├── Workflow-05-Application.md          # 工作流应用
+├── Workflow-06-Prospect.md             # 工作流展望
+├── Workflow.md                         # 工作流总览
+└── README.md                           # 分支导航与进度梳理
+```
 
-## 进度与质量
+### 知识源映射与交叉引用
 
-- [x] 04-01-Architecture 已完成
-- [x] 04-02-DesignPattern 已完成
-- [x] 04-03-Microservices 已完成
-- [x] 04-04-Workflow-01-Basics 已完成
-- [x] 04-05-Workflow-02-Modeling 已完成
-- [x] 04-06-Workflow-03-Engine 已完成
-- [x] 04-07-Workflow-04-Relation 已完成
-- [x] 04-08-Workflow-05-Application 已完成
-- [x] 04-09-Workflow-06-Prospect 已完成
-- [x] 04-10-Workflow 总览 已完成
+- **设计模式**: 对应 [Matter/Software/DesignPattern/](../../Matter/Software/DesignPattern/)，详见 [DesignPattern/00-Overview.md](DesignPattern/00-Overview.md)
+- **微服务**: 对应 [Matter/Software/Microservice/](../../Matter/Software/Microservice/)，详见 [Microservices/00-Overview.md](Microservices/00-Overview.md)
+- **工作流**: 对应 [Matter/Software/WorkflowDomain/](../../Matter/Software/WorkflowDomain/)、[Matter/FormalModel/Software/WorkFlow/](../../Matter/FormalModel/Software/WorkFlow/)，详见 [Workflow-01-Basics.md](Workflow-01-Basics.md) 等
+- **架构**: 对应 [Matter/Software/Architecture/](../../Matter/Software/Architecture/)（如有）
 
-## 交叉引用
+## 进度与自动化追踪
 
-- [↗ AI 人工智能](../AI/README.md)
-- [↗ Mathematics 数学](../Mathematics/README.md)
-- [↗ Philosophy 哲学](../Philosophy/README.md)
-- [↗ ComputerScience 计算机科学](../ComputerScience/README.md)
-- [↗ FormalMethods 形式方法](../FormalMethods/README.md)
+- 本分支已纳入自动化递归修订与进度跟踪体系，所有核心文档均已与 Matter 知识库建立映射与交叉引用。
+- 进度与质量标准详见 [../PROGRESS.md](../PROGRESS.md)
+- 后续修订、批判、整合、表达规范等均按统一标准自动推进。
 
-## 目录结构说明
+## 交叉引用与进度标记
 
-- 所有子主题均有严格编号和本地跳转
-- 内容包含：定义、理论、证明、应用、代码、可视化、交叉引用
-- 进度、质量、优化建议持续自动更新
+- [DesignPattern/00-Overview.md](DesignPattern/00-Overview.md) ←→ [Matter/Software/DesignPattern/](../../Matter/Software/DesignPattern/)
+- [Microservices/00-Overview.md](Microservices/00-Overview.md) ←→ [Matter/Software/Microservice/](../../Matter/Software/Microservice/)
+- [Workflow-01-Basics.md](Workflow-01-Basics.md) 等 ←→ [Matter/Software/WorkflowDomain/](../../Matter/Software/WorkflowDomain/)、[Matter/FormalModel/Software/WorkFlow/](../../Matter/FormalModel/Software/WorkFlow/)
+- 架构 ←→ [Matter/Software/Architecture/](../../Matter/Software/Architecture/)（如有）
 
 ---
 
-> 本文件由自动递归系统生成和维护，无需手动编辑。如需中断或恢复，请参考上级目录README和PROGRESS.md。
+> 本README及各子文档将持续自动递归梳理、交叉引用、进度跟踪与表达规范化，所有修订与进展均记录于 [../PROGRESS.md](../PROGRESS.md)。

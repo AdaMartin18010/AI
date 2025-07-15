@@ -2,42 +2,47 @@
 
 > 本主题为形式方法知识体系自动递归精炼输出，所有内容严格编号、交叉引用、进度持续跟踪。
 
-## 子主题树形目录
+## 目录结构与知识映射
 
-- [05-01-Overview 总览](./01-Overview.md)
-- [05-02-FormalLanguages 形式语言](./02-FormalLanguages.md)
-- [05-03-TypeTheory 类型理论](./03-TypeTheory.md)
-- [05-04-ModelChecking 模型检测](./04-ModelChecking.md)
-- [05-05-PetriNetTheory Petri网理论](./05-PetriNetTheory.md)
-- [05-06-CognitiveModel 认知模型](./06-CognitiveModel.md)
-- [05-07-DistributedModel 分布式模型](./07-DistributedModel.md)
-- [05-08-ControlTheory 控制理论](./04-ControlTheory.md)
+```tree
+FormalMethods/
+├── 01-Overview.md           # 总览
+├── 02-FormalLanguages.md    # 形式语言
+├── 03-TypeTheory.md         # 类型理论
+├── 04-ModelChecking.md      # 模型检测
+├── 05-PetriNetTheory.md     # Petri网理论
+├── 06-CognitiveModel.md     # 认知模型
+├── 07-DistributedModel.md   # 分布式模型
+├── 04-ControlTheory.md      # 控制理论
+└── README.md                # 分支导航与进度梳理
+```
 
-## 进度与质量
+### 知识源映射与交叉引用
 
-- [x] 05-01-Overview 已完成
-- [x] 05-02-FormalLanguages 已完成
-- [x] 05-03-TypeTheory 已完成
-- [x] 05-04-ModelChecking 已完成
-- [x] 05-05-PetriNetTheory 已完成
-- [x] 05-06-CognitiveModel 已完成
-- [x] 05-07-DistributedModel 已完成
-- [x] 05-08-ControlTheory 已完成
+- **认知模型**: 对应 [Matter/FormalModel/Model/Cognition/](../../Matter/FormalModel/Model/Cognition/)，详见 [06-CognitiveModel.md](06-CognitiveModel.md)
+- **分布式模型**: 对应 [Matter/FormalModel/Model/Distributed/](../../Matter/FormalModel/Model/Distributed/)，详见 [07-DistributedModel.md](07-DistributedModel.md)
+- **控制理论**: 对应 [Matter/FormalModel/Model/Control/](../../Matter/FormalModel/Model/Control/)，详见 [04-ControlTheory.md](04-ControlTheory.md)
+- **类型理论**: 对应 [Matter/FormalModel/Model/CAT/](../../Matter/FormalModel/Model/CAT/)、[Matter/FormalModel/Model/HoTT/](../../Matter/FormalModel/Model/HoTT/)，详见 [03-TypeTheory.md](03-TypeTheory.md)
+- **Petri网理论**: 对应 [Matter/FormalModel/Petri_Net_Theory.md](../../Matter/FormalModel/Petri_Net_Theory.md)，详见 [05-PetriNetTheory.md](05-PetriNetTheory.md)
+- **模型检测/AI设计**: 对应 [Matter/FormalModel/AI_Design/](../../Matter/FormalModel/AI_Design/)，详见 [04-ModelChecking.md](04-ModelChecking.md)
+- **AI理论交叉**: 对应 [Matter/FormalModel/AI/](../../Matter/FormalModel/AI/)，详见 [03-TypeTheory.md](03-TypeTheory.md)、[06-CognitiveModel.md](06-CognitiveModel.md)
 
-## 交叉引用
+## 进度与自动化追踪
 
-- [↗ AI 人工智能](../AI/README.md)
-- [↗ Mathematics 数学](../Mathematics/README.md)
-- [↗ Philosophy 哲学](../Philosophy/README.md)
-- [↗ ComputerScience 计算机科学](../ComputerScience/README.md)
-- [↗ SoftwareEngineering 软件工程](../SoftwareEngineering/README.md)
+- 本分支已纳入自动化递归修订与进度跟踪体系，所有核心文档均已与 Matter 知识库建立映射与交叉引用。
+- 进度与质量标准详见 [../PROGRESS.md](../PROGRESS.md)
+- 后续修订、批判、整合、表达规范等均按统一标准自动推进。
 
-## 目录结构说明
+## 交叉引用与进度标记
 
-- 所有子主题均有严格编号和本地跳转
-- 内容包含：定义、理论、证明、应用、代码、可视化、交叉引用
-- 进度、质量、优化建议持续自动更新
+- [06-CognitiveModel.md](06-CognitiveModel.md) ←→ [Matter/FormalModel/Model/Cognition/](../../Matter/FormalModel/Model/Cognition/)
+- [07-DistributedModel.md](07-DistributedModel.md) ←→ [Matter/FormalModel/Model/Distributed/](../../Matter/FormalModel/Model/Distributed/)
+- [04-ControlTheory.md](04-ControlTheory.md) ←→ [Matter/FormalModel/Model/Control/](../../Matter/FormalModel/Model/Control/)
+- [03-TypeTheory.md](03-TypeTheory.md) ←→ [Matter/FormalModel/Model/CAT/](../../Matter/FormalModel/Model/CAT/)、[Matter/FormalModel/Model/HoTT/](../../Matter/FormalModel/Model/HoTT/)
+- [05-PetriNetTheory.md](05-PetriNetTheory.md) ←→ [Matter/FormalModel/Petri_Net_Theory.md](../../Matter/FormalModel/Petri_Net_Theory.md)
+- [04-ModelChecking.md](04-ModelChecking.md) ←→ [Matter/FormalModel/AI_Design/](../../Matter/FormalModel/AI_Design/)
+- 类型理论/认知模型 ←→ [Matter/FormalModel/AI/](../../Matter/FormalModel/AI/)
 
 ---
 
-> 本文件由自动递归系统生成和维护，无需手动编辑。如需中断或恢复，请参考上级目录README和PROGRESS.md。
+> 本README及各子文档将持续自动递归梳理、交叉引用、进度跟踪与表达规范化，所有修订与进展均记录于 [../PROGRESS.md](../PROGRESS.md)。
