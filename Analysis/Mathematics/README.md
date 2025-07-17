@@ -64,6 +64,16 @@ Mathematics/
 - [x] Geometry/08-Topology.md 已完成深度优化与批判性提升
 - [x] Geometry/09-AlgebraicGeometry.md 已完成深度优化与批判性提升
 - [x] Geometry/10-ComputationalDiscreteFractalGeometry.md 已完成深度优化与批判性提升
+- [x] Probability/01-Overview.md 已完成深度优化与批判性提升
+- [x] Probability/02-ProbabilityTheory.md 已完成深度优化与批判性提升
+- [x] Probability/03-RandomVariables.md 已完成深度优化与批判性提升
+- [x] Probability/04-ProbabilityDistributions.md 已完成深度优化与批判性提升
+- [x] Probability/05-StatisticalInference.md 已完成深度优化与批判性提升
+- [x] Probability/06-HypothesisTesting.md 已完成深度优化与批判性提升
+- [x] Probability/07-RegressionAnalysis.md 已完成深度优化与批判性提升
+- [x] Probability/08-TimeSeries.md 已完成深度优化与批判性提升
+- [x] Probability/09-BayesianStatistics.md 已完成深度优化与批判性提升
+- [x] Probability/10-MachineLearningStats.md 已完成深度优化与批判性提升
 
 ---
 

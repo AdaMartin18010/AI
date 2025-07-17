@@ -110,6 +110,19 @@
 - **与FormalMethods**: 算法正确性验证、类型化设计
 - **与SoftwareEngineering**: 设计模式在算法中的应用
 
+### Probability 分支详细进展
+
+- [x] 01-Overview.md 已完成深度优化与批判性提升
+- [x] 02-ProbabilityTheory.md 已完成深度优化与批判性提升
+- [x] 03-RandomVariables.md 已完成深度优化与批判性提升
+- [x] 04-ProbabilityDistributions.md 已完成深度优化与批判性提升
+- [x] 05-StatisticalInference.md 已完成深度优化与批判性提升
+- [x] 06-HypothesisTesting.md 已完成深度优化与批判性提升
+- [x] 07-RegressionAnalysis.md 已完成深度优化与批判性提升
+- [x] 08-TimeSeries.md 已完成深度优化与批判性提升
+- [x] 09-BayesianStatistics.md 已完成深度优化与批判性提升
+- [x] 10-MachineLearningStats.md 已完成深度优化与批判性提升
+
 ## 体系化成就总结
 
 ### 六大分支协同体系
@@ -503,4 +516,4 @@ graph TD
 
 ### 2024-12-xx Mathematics/Calculus/10-AdvancedTopics.md 已完成深度优化与批判性提升，批判性分析、未来展望、术语表、符号表、交叉引用等已补充，进度与内容已同步
 
-### 2024-12-xx Mathematics/Geometry/ 全部主文档已完成深度优化与批判性提升，批判性分析、未来展望、术语表、符号表、交叉引用等已补充，进度与内容已同步。
+### 2024-12-xx Mathematics/Geometry/ 全部主文档已完成深度优化与批判性提升，批判性分析、未来展望、术语表、符号表、交叉引用等已补充，进度与内容已同步
