@@ -54,6 +54,16 @@ Mathematics/
 - [x] Calculus/08-FunctionalAnalysis.md 已完成深度优化与批判性提升
 - [x] Calculus/09-CalculusOfVariations.md 已完成深度优化与批判性提升
 - [x] Calculus/10-AdvancedTopics.md 已完成深度优化与批判性提升
+- [x] Geometry/01-Overview.md 已完成深度优化与批判性提升
+- [x] Geometry/02-CoreConcepts.md 已完成深度优化与批判性提升
+- [x] Geometry/03-EuclideanGeometry.md 已完成深度优化与批判性提升
+- [x] Geometry/04-NonEuclideanGeometry.md 已完成深度优化与批判性提升
+- [x] Geometry/05-AnalyticGeometry.md 已完成深度优化与批判性提升
+- [x] Geometry/06-ProjectiveGeometry.md 已完成深度优化与批判性提升
+- [x] Geometry/07-DifferentialGeometry.md 已完成深度优化与批判性提升
+- [x] Geometry/08-Topology.md 已完成深度优化与批判性提升
+- [x] Geometry/09-AlgebraicGeometry.md 已完成深度优化与批判性提升
+- [x] Geometry/10-ComputationalDiscreteFractalGeometry.md 已完成深度优化与批判性提升
 
 ---
 
