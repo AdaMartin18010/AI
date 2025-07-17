@@ -48,6 +48,12 @@ Mathematics/
 - [26-MathematicalIndex.md](26-MathematicalIndex.md) ←→ [Matter/Mathematics/]
 - [x] 01-27-MathematicalSummary 已完成深度优化与批判性提升
 - [27-MathematicalSummary.md](27-MathematicalSummary.md) ←→ [Matter/Mathematics/]
+- [x] Calculus/05-Series.md 已完成深度优化与批判性提升
+- [x] Calculus/06-MultivariableCalculus.md 已完成深度优化与批判性提升
+- [x] Calculus/07-DifferentialEquations.md 已完成深度优化与批判性提升
+- [x] Calculus/08-FunctionalAnalysis.md 已完成深度优化与批判性提升
+- [x] Calculus/09-CalculusOfVariations.md 已完成深度优化与批判性提升
+- [x] Calculus/10-AdvancedTopics.md 已完成深度优化与批判性提升
 
 ---
 
