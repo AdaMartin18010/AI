@@ -2,26 +2,29 @@
 
 ## 目录
 
-- [1. 理论基础与基本概念](#1-理论基础与基本概念)
-  - 1.1 向量嵌入与相似度计算
-  - 1.2 向量索引与元模型
-  - 1.3 本地AI与云AI模型对比
-- [2. 核心算法与数据结构](#2-核心算法与数据结构)
-  - 2.1 近似最近邻算法(ANN)
-  - 2.2 向量量化与压缩技术
-  - 2.3 分布式存储与扩展性
-- [3. 设计模式与架构](#3-设计模式与架构)
-  - 3.1 向量数据库架构模式
-  - 3.2 CPU/GPU优化策略
-  - 3.3 混合部署与边缘计算
-- [4. 工程实践与实现](#4-工程实践与实现)
-  - 4.1 Rust实现示例
-  - 4.2 主流数据库比较
-  - 4.3 性能优化与监控
-- [5. 应用场景与未来展望](#5-应用场景与未来展望)
-  - 5.1 RAG与语义搜索
-  - 5.2 推荐系统与多模态检索
-  - 5.3 边缘计算与量子向量
+- [向量数据库设计模式：理论、算法与工程实践](#向量数据库设计模式理论算法与工程实践)
+  - [目录](#目录)
+  - [1. 理论基础与基本概念](#1-理论基础与基本概念)
+    - [1.1 向量嵌入与相似度计算](#11-向量嵌入与相似度计算)
+    - [1.2 向量索引与元模型](#12-向量索引与元模型)
+    - [1.3 本地AI与云AI模型对比](#13-本地ai与云ai模型对比)
+  - [2. 核心算法与数据结构](#2-核心算法与数据结构)
+    - [2.1 近似最近邻算法(ANN)](#21-近似最近邻算法ann)
+    - [2.2 向量量化与压缩技术](#22-向量量化与压缩技术)
+    - [2.3 分布式存储与扩展性](#23-分布式存储与扩展性)
+  - [3. 设计模式与架构](#3-设计模式与架构)
+    - [3.1 向量数据库架构模式](#31-向量数据库架构模式)
+    - [3.2 CPU/GPU优化策略](#32-cpugpu优化策略)
+    - [3.3 混合部署与边缘计算](#33-混合部署与边缘计算)
+  - [4. 工程实践与实现](#4-工程实践与实现)
+    - [4.1 Rust实现示例](#41-rust实现示例)
+    - [4.2 主流数据库比较](#42-主流数据库比较)
+    - [4.3 性能优化与监控](#43-性能优化与监控)
+  - [5. 应用场景与未来展望](#5-应用场景与未来展望)
+    - [5.1 RAG与语义搜索](#51-rag与语义搜索)
+    - [5.2 推荐系统与多模态检索](#52-推荐系统与多模态检索)
+    - [5.3 边缘计算与量子向量](#53-边缘计算与量子向量)
+  - [参考文献](#参考文献)
 
 ---
 
@@ -76,6 +79,7 @@
 **理论复杂度**：查询时间复杂度为$O(\log n)$，空间复杂度为$O(n \log n)$。
 
 **其他算法**：
+
 - **Annoy**：树形索引结构
 - **IVF**：反向索引+聚类
 - **PQ**：向量压缩技术
@@ -87,6 +91,7 @@
 **量化误差理论上限**：$\|v - Q(v)\|^2 \leq \frac{d}{k} \cdot \|v\|^2$，其中$k$为子空间数量。
 
 **优化技术**：
+
 - **量化技术**：FP32→INT8/INT4量化，减少内存需求和计算强度
 - **稀疏性利用**：CSR/CSC格式，剪枝技术，动态稀疏化
 - **批处理优化**：固定适中批量(16-64)，有效利用CPU缓存
@@ -106,6 +111,7 @@
 ### 3.1 向量数据库架构模式
 
 **微服务架构**：
+
 ```mermaid
 graph TD
     Client --> API_Gateway
@@ -118,6 +124,7 @@ graph TD
 ```
 
 **事件驱动架构**：
+
 - 向量插入事件触发索引更新
 - 查询事件触发负载均衡
 - 故障事件触发自动恢复
@@ -147,11 +154,13 @@ graph TD
 ### 3.3 混合部署与边缘计算
 
 **混合架构**：
+
 - 前端本地小模型 + 后端云端大模型协同
 - 敏感数据本地处理，复杂任务云端计算
 - 根据网络和电池状况动态调整计算位置
 
 **边缘计算**：
+
 - 手机芯片专门优化AI工作负载
 - 特制神经网络处理单元（NPU）
 - 智能家居设备集成本地AI能力
@@ -337,12 +346,14 @@ impl HNSWIndex {
 ### 4.3 性能优化与监控
 
 **性能指标**：
+
 - 查询延迟：P50, P95, P99
 - 吞吐量：QPS (Queries Per Second)
 - 准确率：召回率与精确度
 - 资源利用率：CPU, 内存, 磁盘I/O
 
 **监控体系**：
+
 ```mermaid
 graph TD
     Metrics --> Prometheus
@@ -362,6 +373,7 @@ graph TD
 **检索增强生成(RAG)**：将大语言模型与向量检索结合，提升生成内容的准确性和相关性。
 
 **工作流程**：
+
 ```mermaid
 flowchart TD
     Query --> Embedding
@@ -372,6 +384,7 @@ flowchart TD
 ```
 
 **应用案例**：
+
 - 企业知识库问答系统
 - 个性化助手
 - 文档智能分析
@@ -383,6 +396,7 @@ flowchart TD
 **多模态检索**：跨媒体类型(文本、图像、音频)的相似性搜索。
 
 **技术栈**：
+
 - 文本嵌入：BERT, GPT, SentenceTransformers
 - 图像嵌入：CLIP, ResNet, Vision Transformer
 - 音频嵌入：Wav2Vec, AudioCLIP
@@ -390,16 +404,19 @@ flowchart TD
 ### 5.3 边缘计算与量子向量
 
 **边缘计算趋势**：
+
 - 手机芯片专门优化AI工作负载
 - 特制神经网络处理单元（NPU）
 - 智能家居设备集成本地AI能力
 
 **量子向量计算**：
+
 - 量子机器学习算法
 - 量子近似优化算法(QAOA)
 - 量子-经典混合计算
 
 **未来发展方向**：
+
 1. **轻量化与高效化**：蒸馏技术、量化技术、逐步弥补本地与云端模型能力差距
 2. **混合部署架构**：前端本地小模型 + 后端云端大模型协同
 3. **特定领域优化**：行业专用模型激增，面向特定任务的优化版本
@@ -418,4 +435,4 @@ flowchart TD
 7. Li, W., Zhang, Y., Sun, Y., Wang, W., Li, M., Zhang, W., & Lin, X. (2019). Approximate nearest neighbor search on high dimensional data—experiments, analyses, and improvement. IEEE Transactions on Knowledge and Data Engineering.
 8. Chen, M., Tworek, J., Jun, H., Yuan, Q., Pinto, H. P. D. O., Kaplan, J., ... & Zettlemoyer, L. (2021). Evaluating large language models trained on code. arXiv preprint arXiv:2107.03374.
 9. Radford, A., Kim, J. W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., ... & Sutskever, I. (2021). Learning transferable visual models from natural language supervision. In International conference on machine learning.
-10. Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2018). Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805. 
+10. Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2018). Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805.
