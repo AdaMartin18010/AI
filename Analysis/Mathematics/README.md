@@ -27,6 +27,32 @@ Mathematics/
 - **多视角**: 对应 [Matter/Mathematics/views/](../../Matter/Mathematics/views/)，详见 [views/00-Overview.md](views/00-Overview.md)
 - **综合/索引/总结**: 对应 [Matter/Mathematics/](../../Matter/Mathematics/)，详见 [25-MathematicalSynthesis.md](25-MathematicalSynthesis.md)、[26-MathematicalIndex.md](26-MathematicalIndex.md)、[27-MathematicalSummary.md](27-MathematicalSummary.md)
 
+## 跨学科交叉引用网络
+
+### 与AI分支的理论交叉
+
+- **范畴论**: [Algebra/07-CategoryTheory.md](Algebra/07-CategoryTheory.md) ←→ [AI/03-Theory.md](../AI/03-Theory.md) AI理论建模
+- **概率论**: [Probability/09-BayesianStatistics.md](Probability/09-BayesianStatistics.md) ←→ [AI/02-MetaTheory.md](../AI/02-MetaTheory.md) 贝叶斯推理
+- **泛函分析**: [Calculus/08-FunctionalAnalysis.md](Calculus/08-FunctionalAnalysis.md) ←→ [AI/05-Model.md](../AI/05-Model.md) 深度学习优化
+- **微分几何**: [Geometry/07-DifferentialGeometry.md](Geometry/07-DifferentialGeometry.md) ←→ [AI/05-Model.md](../AI/05-Model.md) 流形学习
+
+### 与形式化方法的联系
+
+- **格论**: [Algebra/06-Lattices.md](Algebra/06-Lattices.md) ←→ [FormalMethods/03-TypeTheory.md](../FormalMethods/03-TypeTheory.md) 类型层级
+- **拓扑学**: [Geometry/08-Topology.md](Geometry/08-Topology.md) ←→ [FormalMethods/06-CognitiveModel.md](../FormalMethods/06-CognitiveModel.md) 认知空间
+- **微分方程**: [Calculus/07-DifferentialEquations.md](Calculus/07-DifferentialEquations.md) ←→ [FormalMethods/04-ControlTheory.md](../FormalMethods/04-ControlTheory.md) 系统动力学
+
+### 与哲学思辨的交融
+
+- **数学基础**: [02-CoreConcepts.md](02-CoreConcepts.md) ←→ [Philosophy/01-Ontology.md](../Philosophy/01-Ontology.md) 数学实在论
+- **数学真理**: [25-MathematicalSynthesis.md](25-MathematicalSynthesis.md) ←→ [Philosophy/02-Epistemology.md](../Philosophy/02-Epistemology.md) 数学认识论
+- **无穷概念**: [Calculus/05-Series.md](Calculus/05-Series.md) ←→ [Philosophy/06-Interdisciplinary.md](../Philosophy/06-Interdisciplinary.md) 数学哲学
+
+### 与软件工程的应用
+
+- **离散数学**: [Algebra/02-Groups.md](Algebra/02-Groups.md) ←→ [SoftwareEngineering/DesignPattern/00-Overview.md](../SoftwareEngineering/DesignPattern/00-Overview.md) 结构模式
+- **统计分析**: [Probability/10-MachineLearningStats.md](Probability/10-MachineLearningStats.md) ←→ [SoftwareEngineering/Architecture/00-Overview.md](../SoftwareEngineering/Architecture/00-Overview.md) 系统性能分析
+
 ## 进度与自动化追踪
 
 - 本分支已纳入自动化递归修订与进度跟踪体系，所有核心文档均已与 Matter 知识库建立映射与交叉引用。

@@ -23,6 +23,32 @@ AI/
 - **设计模式**: 对应 [Matter/FormalModel/AI/AI/](../../Matter/FormalModel/AI/AI/)，详见 [04-DesignPattern.md](04-DesignPattern.md)
 - **应用分析**: 对应 [Matter/FormalModel/AI/](../../Matter/FormalModel/AI/)，详见 [06-Applications.md](06-Applications.md)
 
+## 跨学科交叉引用网络
+
+### 理论基础交叉引用
+
+- **数学基础**: [Mathematics/Algebra/07-CategoryTheory.md](../Mathematics/Algebra/07-CategoryTheory.md) ←→ AI理论建模
+- **概率论**: [Mathematics/Probability/09-BayesianStatistics.md](../Mathematics/Probability/09-BayesianStatistics.md) ←→ AI推理与学习
+- **微积分**: [Mathematics/Calculus/08-FunctionalAnalysis.md](../Mathematics/Calculus/08-FunctionalAnalysis.md) ←→ 深度学习优化
+- **几何学**: [Mathematics/Geometry/07-DifferentialGeometry.md](../Mathematics/Geometry/07-DifferentialGeometry.md) ←→ 流形学习
+
+### 形式化验证交叉引用
+
+- **类型理论**: [FormalMethods/03-TypeTheory.md](../FormalMethods/03-TypeTheory.md) ←→ AI系统形式化
+- **模型检查**: [FormalMethods/04-ModelChecking.md](../FormalMethods/04-ModelChecking.md) ←→ AI安全验证
+- **认知模型**: [FormalMethods/06-CognitiveModel.md](../FormalMethods/06-CognitiveModel.md) ←→ AI认知架构
+
+### 哲学思辨交叉引用
+
+- **认识论**: [Philosophy/02-Epistemology.md](../Philosophy/02-Epistemology.md) ←→ AI知识表示
+- **本体论**: [Philosophy/01-Ontology.md](../Philosophy/01-Ontology.md) ←→ AI世界建模
+- **伦理学**: [Philosophy/03-Ethics.md](../Philosophy/03-Ethics.md) ←→ AI伦理与安全
+
+### 工程实践交叉引用
+
+- **设计模式**: [SoftwareEngineering/DesignPattern/00-Overview.md](../SoftwareEngineering/DesignPattern/00-Overview.md) ←→ AI系统架构
+- **微服务**: [SoftwareEngineering/Microservices/00-Overview.md](../SoftwareEngineering/Microservices/00-Overview.md) ←→ 分布式AI系统
+
 ## 进度与自动化追踪
 
 - [x] 01-01-Overview 已完成深度优化与批判性提升
