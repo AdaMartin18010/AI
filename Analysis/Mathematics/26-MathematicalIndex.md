@@ -244,7 +244,7 @@
 - **[22-FormalLanguageTheory.md](views/22-FormalLanguageTheory.md)** - 形式语言理论
 - **[23-Metamathematics.md](views/23-Metamathematics.md)** - 元数学与数学哲学
 - **[24-MathematicalEducation.md](views/24-MathematicalEducation.md)** - 数学教育
-- **[25-MathematicalSynthesis.md](views/25-MathematicalSynthesis.md)** - 数学知识体系综合
+- **[25-MathematicalSynthesis.md](25-MathematicalSynthesis.md)** - 数学知识体系综合
 
 ## 按应用领域索引
 

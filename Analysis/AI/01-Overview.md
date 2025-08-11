@@ -239,9 +239,9 @@ timeline
 | [03-Theory](./03-Theory.md) | AI核心理论 | 符号、连接、概率范式 |
 | [04-MetaModel](./04-MetaModel.md) | AI元模型架构 | 认知架构、设计原则 |
 | [05-Model](./05-Model.md) | AI具体模型 | 实现算法、验证方法 |
-| [06-CrossMapping](./06-CrossMapping.md) | 跨层映射分析 | 层次间关系、一致性 |
-| [07-Applications](./07-Applications.md) | AI应用实践 | 工程实现、案例分析 |
-| [08-Future](./08-Future.md) | 未来展望 | 发展趋势、研究方向 |
+| [05-Model](./05-Model.md) | 模型层分析 | 具体实现、算法验证 |
+| [06-Applications](./06-Applications.md) | AI应用实践 | 工程实现、案例分析 |
+| [README](./README.md) | 未来展望 | 发展趋势、研究方向 |
 
 ### 01.9.2 交叉引用体系
 
@@ -255,7 +255,7 @@ timeline
 
 - 数学基础：→ [../Mathematics/01-Overview.md](../Mathematics/01-Overview.md)
 - 哲学基础：→ [../Philosophy/01-Ontology.md](../Philosophy/01-Ontology.md)
-- 软件工程：→ [../SoftwareEngineering/Architecture/01-Overview.md](../SoftwareEngineering/Architecture/01-Overview.md)
+- 软件工程：→ [../SoftwareEngineering/Architecture/00-Overview.md](../SoftwareEngineering/Architecture/00-Overview.md)
 
 ---
 

@@ -121,7 +121,7 @@ graph TD;
 - [哲学总览](./00-Overview.md)
 - [认识论](./02-Epistemology.md)
 - [数学分支总览](../Mathematics/views/00-Overview.md)
-- [AI分支总览](../AI/00-Overview.md)
+- [AI分支总览](../AI/01-Overview.md)
 
 ---
 

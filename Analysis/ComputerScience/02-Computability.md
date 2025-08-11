@@ -383,7 +383,7 @@ $$\text{可判定理论} \leftrightarrow \text{递归语言}$$
 **Gödel不完全性定理的计算观点**：
 任何足够强的形式系统的定理集合都不是递归的。
 
-参见：[Mathematics/views/view05.md](../Mathematics/views/view05.md) - 数理逻辑基础
+参见：[Mathematics/views/05-TheoreticalModels.md](../Mathematics/views/05-TheoreticalModels.md) - 理论模型基础
 
 #### 07.1.2 组合数学与算法分析
 
@@ -555,7 +555,7 @@ $$f \text{ 是单向的} \iff \text{P} \neq \text{NP}$$
 ---
 
 **交叉引用索引**：
-- [Mathematics/views/view05.md](../Mathematics/views/view05.md) - 数理逻辑基础
+- [Mathematics/views/05-TheoreticalModels.md](../Mathematics/views/05-TheoreticalModels.md) - 理论模型基础
 - [FormalMethods/02-FormalLanguages.md](../FormalMethods/02-FormalLanguages.md) - 形式语言理论
 - [AI/03-Theory.md](../AI/03-Theory.md) - AI理论基础
 - [ComputerScience/03-Algorithms.md](./03-Algorithms.md) - 算法设计理论

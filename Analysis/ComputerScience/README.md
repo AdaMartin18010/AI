@@ -60,7 +60,7 @@ ComputerScience/
 - **语言理论**: [01-Overview.md](01-Overview.md) ←→ [ProgrammingLanguage/02-LanguageTheory.md](../ProgrammingLanguage/02-LanguageTheory.md) 计算语言
 - **编程范式**: [03-Algorithms.md](03-Algorithms.md) ←→ [ProgrammingLanguage/03-ProgrammingParadigms.md](../ProgrammingLanguage/03-ProgrammingParadigms.md) 算法范式
 - **异步编程**: [02-Computability.md](02-Computability.md) ←→ [ProgrammingLanguage/06-AsyncProgramming.md](../ProgrammingLanguage/06-AsyncProgramming.md) 异步计算
-- **并发模型**: [01-Overview.md](01-Overview.md) ←→ [ProgrammingLanguage/05-ConcurrentProgramming.md](../ProgrammingLanguage/05-ConcurrentProgramming.md) 并发计算
+- **并发模型**: [01-Overview.md](01-Overview.md) ←→ [ProgrammingLanguage/06-AsyncProgramming.md](../ProgrammingLanguage/06-AsyncProgramming.md) 异步编程
 
 ## 进度与自动化追踪
 

@@ -615,7 +615,7 @@ if __name__ == "__main__":
 
 **交叉引用**：
 
-- 量子算法理论：→ [../Mathematics/views/20-Quantum.md](../Mathematics/views/20-Quantum.md)
+- 量子算法理论：→ [../Mathematics/views/20-Topology.md](../Mathematics/views/20-Topology.md)
 - AI计算模型：→ [../AI/05-Model.md](../AI/05-Model.md)
 - 形式化验证：→ [../FormalMethods/09-EmergingTrends.md](../FormalMethods/09-EmergingTrends.md)
 - 哲学认知论：→ [../Philosophy/02-Epistemology.md](../Philosophy/02-Epistemology.md)

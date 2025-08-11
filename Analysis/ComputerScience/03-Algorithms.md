@@ -1068,7 +1068,7 @@ def randomized_quicksort(arr, low, high):
 **蒙特卡罗算法**：
 $$\mathbb{E}[\text{approximation error}] \leq \frac{\sigma}{\sqrt{n}}$$
 
-参见：[Mathematics/views/view08.md](../Mathematics/views/view08.md) - 概率论基础
+参见：[Mathematics/views/08-CalculusOfVariations.md](../Mathematics/views/08-CalculusOfVariations.md) - 变分法基础
 
 #### 06.1.2 数值算法
 
@@ -1187,7 +1187,7 @@ graph TD
 ---
 
 **交叉引用索引**：
-- [Mathematics/views/view08.md](../Mathematics/views/view08.md) - 概率论基础
+- [Mathematics/views/08-CalculusOfVariations.md](../Mathematics/views/08-CalculusOfVariations.md) - 变分法基础
 - [AI/05-Model.md](../AI/05-Model.md) - AI算法模型
 - [FormalMethods/04-ModelChecking.md](../FormalMethods/04-ModelChecking.md) - 模型检验
 - [ComputerScience/02-Computability.md](./02-Computability.md) - 可计算性理论

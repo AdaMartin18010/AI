@@ -49,7 +49,7 @@
 4. **依赖类型系统**：Π类型和Σ类型
 5. **同伦类型系统**：路径类型和等价性
 
-**定理 1.1 (层次包含关系)**
+**定理 1.1 (层次包含关系)**:
 
 ```math
 \text{Simple} \subset \text{Parametric} \subset \text{Higher-Order} \subset \text{Dependent} \subset \text{Homotopy}
@@ -65,7 +65,7 @@
 - 类型类约束：$\tau : \text{Class}$
 - 相等性假设：$\tau_1 \equiv \tau_2$
 
-**定义 1.3 (类型判断形式)**
+**定义 1.3 (类型判断形式)**:
 
 - 类型检查：$\Gamma \vdash e : \tau$
 - 类型推断：$\Gamma \vdash e \Rightarrow \tau$
@@ -121,7 +121,7 @@
 \llbracket \exists \alpha.\tau \rrbracket = \bigcup_{A \in \text{Type}} \llbracket \tau[\alpha \mapsto A] \rrbracket
 ```
 
-**算法 2.1 (存在类型消除)**
+**算法 2.1 (存在类型消除)**:
 
 ```haskell
 eliminateExistential :: Type -> Type -> Type -> Type
@@ -143,7 +143,7 @@ eliminateExistential (Exists alpha tau) bodyType context =
 - 类型保持性：如果 $\tau : \text{Type}$，则 $F \tau : \text{Type}$
 - 函数性：$F(\tau_1 \rightarrow \tau_2) = F\tau_1 \rightarrow F\tau_2$
 
-**定义 2.4 (函子类型类)**
+**定义 2.4 (函子类型类)**:
 
 ```haskell
 class Functor (f :: Type -> Type) where
@@ -171,7 +171,7 @@ class Functor (f :: Type -> Type) where
 \frac{\Gamma, x : A \vdash B(x) : \text{Type}}{\Gamma \vdash \Pi x : A.B(x) : \text{Type}}
 ```
 
-**定义 2.6 (Π类型应用)**
+**定义 2.6 (Π类型应用)**:
 
 ```math
 \frac{\Gamma \vdash f : \Pi x : A.B(x) \quad \Gamma \vdash a : A}{\Gamma \vdash f(a) : B(a)}
@@ -184,7 +184,7 @@ class Functor (f :: Type -> Type) where
 \frac{\Gamma \vdash A : \text{Type} \quad \Gamma, x : A \vdash B(x) : \text{Type}}{\Gamma \vdash \Sigma x : A.B(x) : \text{Type}}
 ```
 
-**算法 2.2 (依赖类型检查)**
+**算法 2.2 (依赖类型检查)**:
 
 ```haskell
 checkDependentType :: Context -> Expr -> Type -> Bool
@@ -214,13 +214,13 @@ checkDependentType ctx (App f a) expectedType =
 \sigma ::= \tau \mid \forall \alpha.\sigma
 ```
 
-**定义 3.2 (类型模式实例化)**
+**定义 3.2 (类型模式实例化)**:
 
 ```math
 \frac{\Gamma \vdash e : \forall \alpha.\sigma}{\Gamma \vdash e : \sigma[\alpha \mapsto \tau]}
 ```
 
-**算法 3.1 (改进的类型推断)**
+**算法 3.1 (改进的类型推断)**:
 
 ```haskell
 inferType :: Context -> Expr -> Either TypeError Type
@@ -257,7 +257,7 @@ inferType ctx (App fun arg) = do
 C ::= \tau_1 \equiv \tau_2 \mid C_1 \land C_2 \mid \exists \alpha.C
 ```
 
-**算法 3.2 (约束生成)**
+**算法 3.2 (约束生成)**:
 
 ```haskell
 generateConstraints :: Context -> Expr -> (Type, [Constraint])
@@ -274,7 +274,7 @@ generateConstraints ctx (App e1 e2) =
   in (freshType, c1 ++ c2 ++ [newConstraint])
 ```
 
-**算法 3.3 (约束求解)**
+**算法 3.3 (约束求解)**:
 
 ```haskell
 solveConstraints :: [Constraint] -> Either TypeError Substitution
@@ -295,7 +295,7 @@ solveConstraints (c:cs) = do
 
 ### 3.3 类型推断优化
 
-**算法 3.4 (类型推断优化)**
+**算法 3.4 (类型推断优化)**:
 
 ```haskell
 optimizedInferType :: Context -> Expr -> Either TypeError Type
@@ -349,7 +349,7 @@ preAnalyze expr =
 **定义 4.2 (约束求解)**
 约束求解是找到满足所有约束的类型替换的过程。
 
-**算法 4.1 (约束求解)**
+**算法 4.1 (约束求解)**:
 
 ```haskell
 solveConstraints :: [Constraint] -> Either TypeError Substitution
@@ -490,7 +490,7 @@ existsA = Exists Bool (\x -> x)
 
 ### 6.1 类型检查器实现
 
-**算法 6.1 (类型检查器)**
+**算法 6.1 (类型检查器)**:
 
 ```haskell
 typeCheck :: Context -> Expr -> Type -> Bool
@@ -512,7 +512,7 @@ typeCheck ctx (App fun arg) expectedType =
 
 ### 6.2 类型推断引擎
 
-**算法 6.2 (类型推断引擎)**
+**算法 6.2 (类型推断引擎)**:
 
 ```haskell
 typeInferenceEngine :: Context -> Expr -> Either TypeError Type
@@ -553,7 +553,7 @@ generateConstraints ctx expr =
 
 ### 6.3 类型系统优化
 
-**算法 6.3 (类型系统优化)**
+**算法 6.3 (类型系统优化)**:
 
 ```haskell
 optimizeTypeSystem :: TypeSystem -> OptimizedTypeSystem

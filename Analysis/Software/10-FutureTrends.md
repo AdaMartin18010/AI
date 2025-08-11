@@ -936,7 +936,7 @@ def bio_inspired_software_example():
 
 **交叉引用**：
 
-- 量子计算理论：→ [../Mathematics/views/20-Quantum.md](../Mathematics/views/20-Quantum.md)
+- 量子计算理论：→ [../Mathematics/views/20-Topology.md](../Mathematics/views/20-Topology.md)
 - AI系统设计：→ [../AI/05-Model.md](../AI/05-Model.md)
 - 形式化验证：→ [../FormalMethods/09-EmergingTrends.md](../FormalMethods/09-EmergingTrends.md)
-- 软件工程实践：→ [../SoftwareEngineering/03-DesignPattern.md](../SoftwareEngineering/03-DesignPattern.md)
+- 软件工程实践：→ [../SoftwareEngineering/DesignPattern/00-Overview.md](../SoftwareEngineering/DesignPattern/00-Overview.md)

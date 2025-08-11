@@ -281,6 +281,6 @@ def black_scholes_pde(S, t, sigma, r):
 
 **相关链接**:
 
-- [06. 常微分方程](./06-OrdinaryDifferentialEquations.md)
+- [06. 常微分方程](./06-OrdinaryDifferentialEquations.md) - 常微分方程基础理论
 - [08. 变分法](./08-CalculusOfVariations.md)
 - [数学概览](../01-Overview.md)

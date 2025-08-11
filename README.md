@@ -35,3 +35,35 @@ B.  从AI原理哲科到到行业领域 到架构领域 到组件算法和实践
 go on  激情澎湃的 <(￣︶￣)↗[GO!]  
 
 ```
+
+---
+
+## 执行中的改进计划（落地）
+
+- 去重整合：见 `Analysis/Processes/README.md` → 去重流程与验收标准
+- 目录重构：目标三层结构与统一命名，执行变更记录于 `Analysis/Quality/change_log.md`
+- 质量门禁：见 `Analysis/Quality/README.md`，所有提交需过门禁
+- 标准规范：见 `Analysis/Standards/README.md`
+- 中断恢复：按 `Analysis/Processes/README.md` 检查点机制执行
+
+## 当前待办（滚动）
+
+- [x] 生成“重复候选集”首批清单（首批清单已生成：`Analysis/Quality/dup_candidates.md`）
+- [x] 提交第一版目录重构蓝图（见：`Analysis/Processes/blueprint-directory-structure.md`）
+- [x] 建立 `Analysis/Quality/mappings.json`（已创建）
+- [x] 输出首个检查点（见：`Analysis/Quality/checkpoints/20250811-0000.md`）
+- [x] 执行第一批重复内容合并（见：`Analysis/Quality/checkpoints/20250811-0100.md`）
+- [x] 执行第一批断链修复（见：`Analysis/Quality/checkpoints/20250811-0300.md`）
+- [x] 执行第二批断链修复（见：`Analysis/Quality/checkpoints/20250811-0400.md`）
+- [x] 执行第三批断链修复（见：`Analysis/Quality/checkpoints/20250811-0500.md`）
+- [x] 执行第四批断链修复（见：`Analysis/Quality/checkpoints/20250811-0600.md`）
+- [x] 执行第五批断链修复（见：`Analysis/Quality/checkpoints/20250811-0700.md`）
+- [ ] 修复剩余断链（约150个，主要是Matter目录内）
+- [ ] 执行目录重构（基于蓝图）
+- [ ] 全面质量门禁检查
+
+## 快速入口
+
+- 流程：`Analysis/Processes/README.md`
+- 标准：`Analysis/Standards/README.md`
+- 质量：`Analysis/Quality/README.md`

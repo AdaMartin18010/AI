@@ -94,7 +94,7 @@ A = \frac{\partial f}{\partial x}\bigg|_{(x_e, u_e)}, \quad B = \frac{\partial f
 C = \frac{\partial h}{\partial x}\bigg|_{(x_e, u_e)}, \quad D = \frac{\partial h}{\partial u}\bigg|_{(x_e, u_e)}
 ```
 
-**算法 1.1 (系统线性化)**
+**算法 1.1 (系统线性化)**:
 
 ```haskell
 data NonlinearSystem = NonlinearSystem {
@@ -141,7 +141,7 @@ computeJacobian f x u t =
 2. 平衡点附近系统行为主要由线性项决定
 3. 非线性项相对于线性项为高阶小量
 
-**算法 1.2 (自动线性化)**
+**算法 1.2 (自动线性化)**:
 
 ```haskell
 autoLinearize :: NonlinearSystem -> [LinearSystem]
@@ -189,7 +189,7 @@ findEquilibria sys =
 2. $\dot{V}(x) < 0$ 确保 $V(x)$ 严格递减
 3. 结合李雅普诺夫稳定性得到全局渐近稳定性
 
-**算法 2.1 (李雅普诺夫函数构造)**
+**算法 2.1 (李雅普诺夫函数构造)**:
 
 ```haskell
 data LyapunovFunction = LyapunovFunction {
@@ -249,7 +249,7 @@ solveLyapunovEquation a q =
 2. 利用三角不等式
 3. 应用小增益条件
 
-**算法 2.2 (L2增益计算)**
+**算法 2.2 (L2增益计算)**:
 
 ```haskell
 computeL2Gain :: LinearSystem -> Double
@@ -312,7 +312,7 @@ u(t) = -Kx(t)
 
 其中 $K$ 是反馈增益矩阵。
 
-**算法 3.1 (极点配置)**
+**算法 3.1 (极点配置)**:
 
 ```haskell
 polePlacement :: LinearSystem -> [Complex Double] -> Matrix Double
@@ -351,7 +351,7 @@ computeAckermannGain a b coefficients =
 **定义 3.2 (反馈线性化)**
 通过状态反馈将非线性系统转换为线性系统。
 
-**算法 3.2 (反馈线性化)**
+**算法 3.2 (反馈线性化)**:
 
 ```haskell
 feedbackLinearization :: NonlinearSystem -> LinearSystem
@@ -382,7 +382,7 @@ computeRelativeDegree sys =
 **定义 3.3 (自适应控制)**
 控制器参数根据系统行为自动调整的控制方法。
 
-**算法 3.3 (模型参考自适应控制)**
+**算法 3.3 (模型参考自适应控制)**:
 
 ```haskell
 data AdaptiveController = AdaptiveController {
@@ -454,7 +454,7 @@ H(x, u, \lambda, t) = L(x, u, t) + \lambda^T f(x, u, t)
 V(x, t) = \min_{u} \left\{ L(x, u, t) + V(f(x, u, t), t + \Delta t) \right\}
 ```
 
-**算法 4.1 (动态规划求解)**
+**算法 4.1 (动态规划求解)**:
 
 ```haskell
 solveDynamicProgramming :: OptimalControlProblem -> ValueFunction
@@ -495,7 +495,7 @@ valueIteration problem currentValue =
 \frac{\partial V}{\partial t} + \min_{u} H(x, u, \frac{\partial V}{\partial x}, t) = 0
 ```
 
-**算法 4.2 (哈密顿-雅可比求解)**
+**算法 4.2 (哈密顿-雅可比求解)**:
 
 ```haskell
 solveHamiltonJacobi :: OptimalControlProblem -> ValueFunction
@@ -541,7 +541,7 @@ hamiltonJacobiOperator grid valueFunction =
 
 其中 $T_{zw}$ 是从干扰 $w$ 到性能输出 $z$ 的传递函数。
 
-**算法 5.1 (H∞控制器设计)**
+**算法 5.1 (H∞控制器设计)**:
 
 ```haskell
 designHInfinityController :: LinearSystem -> Double -> Controller
@@ -578,7 +578,7 @@ solveHInfinityRiccati plant gamma =
 \mu(M) = \frac{1}{\min\{\sigma(\Delta) : \det(I - M\Delta) = 0\}}
 ```
 
-**算法 5.2 (μ综合设计)**
+**算法 5.2 (μ综合设计)**:
 
 ```haskell
 muSynthesis :: UncertainSystem -> Controller
@@ -603,13 +603,13 @@ iterateMuSynthesis model =
 
 ### 5.3 不确定性建模
 
-**定义 5.5 (不确定性类型)**
+**定义 5.5 (不确定性类型)**:
 
 - **参数不确定性**：系统参数的不确定性
 - **非结构不确定性**：未建模动态
 - **结构不确定性**：已知结构但未知参数
 
-**算法 5.3 (不确定性建模)**
+**算法 5.3 (不确定性建模)**:
 
 ```haskell
 modelUncertainty :: System -> UncertaintyModel
@@ -645,7 +645,7 @@ modelUncertainty sys =
 \lim_{t \rightarrow \infty} \|x_i(t) - x_j(t)\| = 0, \quad \forall i, j
 ```
 
-**算法 6.1 (一致性控制)**
+**算法 6.1 (一致性控制)**:
 
 ```haskell
 consensusControl :: MultiAgentSystem -> ControlLaw
@@ -676,7 +676,7 @@ designConsensusController laplacian =
 **定义 6.4 (网络诱导延迟)**
 网络传输引起的延迟。
 
-**算法 6.2 (网络化控制设计)**
+**算法 6.2 (网络化控制设计)**:
 
 ```haskell
 networkedControlDesign :: NetworkedSystem -> Controller
@@ -694,7 +694,7 @@ networkedControlDesign netSys =
 **定义 6.5 (协同控制)**
 多个系统协同完成复杂任务的控制方法。
 
-**算法 6.3 (协同控制算法)**
+**算法 6.3 (协同控制算法)**:
 
 ```haskell
 cooperativeControl :: CooperativeSystem -> ControlStrategy
@@ -722,7 +722,7 @@ cooperativeControl coopSys =
 - 自适应控制
 - 鲁棒控制
 
-**算法 7.1 (机器人控制)**
+**算法 7.1 (机器人控制)**:
 
 ```haskell
 robotControl :: RobotSystem -> Trajectory -> ControlLaw

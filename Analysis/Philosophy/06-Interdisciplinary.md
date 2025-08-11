@@ -116,7 +116,7 @@ graph TD;
 - [哲学总览](./00-Overview.md)
 - [本体论](./01-Ontology.md)
 - [数学分支总览](../Mathematics/views/00-Overview.md)
-- [AI分支总览](../AI/00-Overview.md)
+- [AI分支总览](../AI/01-Overview.md)
 
 ---
 

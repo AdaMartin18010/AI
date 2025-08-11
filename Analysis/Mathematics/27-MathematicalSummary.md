@@ -72,9 +72,9 @@
 - ✅ **[22-FormalLanguageTheory.md](views/22-FormalLanguageTheory.md)** - 形式语言理论
 - ✅ **[23-Metamathematics.md](views/23-Metamathematics.md)** - 元数学与数学哲学
 - ✅ **[24-MathematicalEducation.md](views/24-MathematicalEducation.md)** - 数学教育
-- ✅ **[25-MathematicalSynthesis.md](views/25-MathematicalSynthesis.md)** - 数学知识体系综合
-- ✅ **[26-MathematicalIndex.md](views/26-MathematicalIndex.md)** - 数学知识体系索引
-- ✅ **[27-MathematicalSummary.md](views/27-MathematicalSummary.md)** - 数学知识体系总结报告
+- ✅ **[25-MathematicalSynthesis.md](25-MathematicalSynthesis.md)** - 数学知识体系综合
+- ✅ **[26-MathematicalIndex.md](26-MathematicalIndex.md)** - 数学知识体系索引
+- ✅ **[27-MathematicalSummary.md](27-MathematicalSummary.md)** - 数学知识体系总结报告
 
 ## 总计完成情况
 

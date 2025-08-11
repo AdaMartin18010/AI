@@ -622,6 +622,6 @@ def ai_programming_example():
 **交叉引用**：
 
 - 形式化语言理论：→ [../FormalMethods/02-FormalLanguages.md](../FormalMethods/02-FormalLanguages.md)
-- 软件工程实践：→ [../SoftwareEngineering/03-DesignPattern.md](../SoftwareEngineering/03-DesignPattern.md)
+- 软件工程实践：→ [../SoftwareEngineering/DesignPattern/00-Overview.md](../SoftwareEngineering/DesignPattern/00-Overview.md)
 - AI系统设计：→ [../AI/05-Model.md](../AI/05-Model.md)
 - 数学基础：→ [../Mathematics/02-CoreConcepts.md](../Mathematics/02-CoreConcepts.md)

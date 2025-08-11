@@ -63,7 +63,7 @@ Petri网是一个四元组 $N = (P, T, F, M_0)$，其中：
 - $^\bullet x = \{y \mid (y, x) \in F\}$ 是 $x$ 的前集
 - $x^\bullet = \{y \mid (x, y) \in F\}$ 是 $x$ 的后集
 
-**算法 1.1 (Petri网构造)**
+**算法 1.1 (Petri网构造)**:
 
 ```haskell
 data PetriNet = PetriNet {
@@ -112,7 +112,7 @@ M'(p) = M(p) - F(p, t) + F(t, p)
 \sum_{p \in P} M'(p) = \sum_{p \in P} (M(p) - F(p, t) + F(t, p)) = \sum_{p \in P} M(p)
 ```
 
-**算法 1.2 (变迁发生)**
+**算法 1.2 (变迁发生)**:
 
 ```haskell
 fireTransition :: PetriNet -> Marking -> Transition -> Maybe Marking
@@ -144,14 +144,14 @@ computeNewMarking net marking transition =
 
 ### 1.3 基本性质
 
-**定义 1.6 (Petri网性质)**
+**定义 1.6 (Petri网性质)**:
 
 - **有界性**：所有位置的托肯数量有上界
 - **安全性**：所有位置最多只有一个托肯
 - **活性**：每个变迁都能无限次发生
 - **可逆性**：可以从任何可达标识回到初始标识
 
-**算法 1.3 (性质检查)**
+**算法 1.3 (性质检查)**:
 
 ```haskell
 checkProperties :: PetriNet -> PropertyReport
@@ -205,7 +205,7 @@ Petri网的状态空间是图 $G = (V, E)$，其中：
 - $V = R(M_0)$ 是可达标识集合
 - $E = \{(M, M') \mid \exists t : M[t\rangle M'\}$ 是变迁关系
 
-**算法 2.1 (可达性分析)**
+**算法 2.1 (可达性分析)**:
 
 ```haskell
 reachabilityAnalysis :: PetriNet -> [Marking]
@@ -226,7 +226,7 @@ reachabilityAnalysis net =
 
 ### 2.3 可达性算法
 
-**算法 2.2 (深度优先搜索可达性)**
+**算法 2.2 (深度优先搜索可达性)**:
 
 ```haskell
 dfsReachability :: PetriNet -> [Marking]
@@ -250,7 +250,7 @@ dfsReachability net =
         in reachable
 ```
 
-**算法 2.3 (符号可达性分析)**
+**算法 2.3 (符号可达性分析)**:
 
 ```haskell
 symbolicReachability :: PetriNet -> SymbolicStateSpace
@@ -288,7 +288,7 @@ computeSymbolicReachability net initialState =
 2. 变迁发生顺序不影响最终结果
 3. 中间标识可能不同但最终标识相同
 
-**算法 3.1 (并发检测)**
+**算法 3.1 (并发检测)**:
 
 ```haskell
 detectConcurrency :: PetriNet -> Marking -> [Transition] -> [Transition]
@@ -323,7 +323,7 @@ areConcurrent net marking t1 t2 =
 2. 一个变迁的发生会消耗共享托肯
 3. 另一个变迁将不再使能
 
-**算法 3.2 (冲突检测)**
+**算法 3.2 (冲突检测)**:
 
 ```haskell
 detectConflicts :: PetriNet -> Marking -> [Transition] -> [(Transition, Transition)]
@@ -346,7 +346,7 @@ areConflicting net marking t1 t2 =
 **定义 3.3 (并发控制)**
 管理并发变迁发生的策略。
 
-**算法 3.3 (并发控制策略)**
+**算法 3.3 (并发控制策略)**:
 
 ```haskell
 concurrentControl :: PetriNet -> Marking -> [Transition] -> [Transition]
@@ -383,7 +383,7 @@ Petri网是安全的，如果所有位置都是1-有界的。
 **定理 4.1 (有界性判定)**
 位置 $p$ 是 $k$-有界的当且仅当在状态空间中 $M(p) \leq k$ 对所有可达标识 $M$ 成立。
 
-**算法 4.1 (有界性检查)**
+**算法 4.1 (有界性检查)**:
 
 ```haskell
 checkBoundedness :: PetriNet -> BoundednessReport
@@ -417,7 +417,7 @@ isSafe net =
 2. 不存在所有变迁都无法使能的标识
 3. 因此不会出现死锁
 
-**算法 4.2 (活性检查)**
+**算法 4.2 (活性检查)**:
 
 ```haskell
 checkLiveness :: PetriNet -> LivenessReport
@@ -443,7 +443,7 @@ Petri网是可逆的，如果对于每个可达标识 $M \in R(M_0)$，都有 $M
 **定理 4.3 (可逆性判定)**
 Petri网是可逆的当且仅当初始标识 $M_0$ 在状态空间中是强连通的。
 
-**算法 4.3 (可逆性检查)**
+**算法 4.3 (可逆性检查)**:
 
 ```haskell
 checkReversibility :: PetriNet -> Bool
@@ -480,7 +480,7 @@ isReachableFrom net target source =
 2. $\tau \in I(t)$
 3. 变迁持续时间为 $D(t)$
 
-**算法 5.1 (时间Petri网模拟)**
+**算法 5.1 (时间Petri网模拟)**:
 
 ```haskell
 data TimedPetriNet = TimedPetriNet {
@@ -517,7 +517,7 @@ simulateTimedEvents net currentState endTime =
 **定义 5.4 (着色标识)**
 着色标识 $M : P \rightarrow \text{Multiset}(C(p))$ 表示每个位置中的有色托肯。
 
-**算法 5.2 (着色Petri网构造)**
+**算法 5.2 (着色Petri网构造)**:
 
 ```haskell
 data ColoredPetriNet = ColoredPetriNet {
@@ -541,7 +541,7 @@ constructColoredPetriNet baseNet colorFunc =
 **定义 5.5 (层次Petri网)**
 层次Petri网允许将子网作为变迁，形成层次结构。
 
-**算法 5.3 (层次Petri网分析)**
+**算法 5.3 (层次Petri网分析)**:
 
 ```haskell
 data HierarchicalPetriNet = HierarchicalPetriNet {
@@ -570,7 +570,7 @@ analyzeHierarchicalNet hnet =
 
 ### 6.1 并发系统建模
 
-**定义 6.1 (生产者-消费者模型)**
+**定义 6.1 (生产者-消费者模型)**:
 
 ```haskell
 data ProducerConsumer = ProducerConsumer {
@@ -608,7 +608,7 @@ modelProducerConsumer =
 **定义 6.2 (工作流Petri网)**
 工作流Petri网用于建模业务流程。
 
-**算法 6.1 (工作流分析)**
+**算法 6.1 (工作流分析)**:
 
 ```haskell
 analyzeWorkflow :: WorkflowPetriNet -> WorkflowAnalysis
@@ -637,7 +637,7 @@ analyzeWorkflow workflow =
 **定义 6.3 (协议Petri网)**
 协议Petri网用于验证通信协议的正确性。
 
-**算法 6.2 (协议验证)**
+**算法 6.2 (协议验证)**:
 
 ```haskell
 verifyProtocol :: ProtocolPetriNet -> ProtocolVerification
@@ -670,7 +670,7 @@ verifyProtocol protocol =
 **定义 7.1 (模型检查)**
 使用算法验证Petri网是否满足给定的性质。
 
-**算法 7.1 (CTL模型检查)**
+**算法 7.1 (CTL模型检查)**:
 
 ```haskell
 modelCheckCTL :: PetriNet -> CTLFormula -> Bool
@@ -702,7 +702,7 @@ checkEF net phi =
 **定义 7.2 (性质验证)**
 验证Petri网是否满足特定的性质。
 
-**算法 7.2 (性质验证)**
+**算法 7.2 (性质验证)**:
 
 ```haskell
 verifyProperties :: PetriNet -> [Property] -> VerificationResult
@@ -725,7 +725,7 @@ verifyProperty net property =
 **定义 7.3 (Petri网工具)**
 支持Petri网分析和验证的工具。
 
-**算法 7.3 (工具集成)**
+**算法 7.3 (工具集成)**:
 
 ```haskell
 integrateTools :: PetriNet -> ToolIntegration

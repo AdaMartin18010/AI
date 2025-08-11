@@ -670,6 +670,6 @@ End.
 **交叉引用**：
 
 - AI模型验证：→ [../AI/05-Model.md](../AI/05-Model.md)
-- 数学证明理论：→ [../Mathematics/views/02-Proof.md](../Mathematics/views/02-Proof.md)
-- 软件架构验证：→ [../SoftwareEngineering/Architecture/05-QualityAssurance.md](../SoftwareEngineering/Architecture/05-QualityAssurance.md)
+- 数学证明理论：→ [../Mathematics/views/02-MathematicalInternalSystem.md](../Mathematics/views/02-MathematicalInternalSystem.md)
+- 软件架构验证：→ [../SoftwareEngineering/Architecture/05-EngineeringRust.md](../SoftwareEngineering/Architecture/05-EngineeringRust.md)
 - 哲学逻辑基础：→ [../Philosophy/04-Logic.md](../Philosophy/04-Logic.md)

@@ -183,7 +183,7 @@ $$\begin{align}
 \end{align}$$
 
 参见：
-- [Mathematics/views/view05.md](../Mathematics/views/view05.md) - 数理逻辑基础
+- [Mathematics/views/05-TheoreticalModels.md](../Mathematics/views/05-TheoreticalModels.md) - 理论模型基础
 - [Mathematics/Algebra/02-Groups.md](../Mathematics/Algebra/02-Groups.md) - 代数结构
 
 #### 03.1.2 类型理论与范畴论对应

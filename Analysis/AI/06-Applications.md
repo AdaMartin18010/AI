@@ -762,7 +762,7 @@ AI应用层作为技术落地的最终环节，其发展水平直接体现了AI�
 **表达规范与交叉引用**：
 
 - 全文术语、符号统一，公式编号规范。
-- 交叉引用 [Matter/批判分析框架.md](../../Matter/批判分析框架.md) 及 [05-Model.md](./05-Model.md)、[../Philosophy/06-Ethics.md](../Philosophy/06-Ethics.md) 等相关理论文档。
+- 交叉引用 [Matter/批判框架标准化.md](../../Matter/批判框架标准化.md) 及 [05-Model.md](./05-Model.md)、[../Philosophy/03-Ethics.md](../Philosophy/03-Ethics.md) 等相关理论文档。
 
 **最后更新**：2024-12-29
 

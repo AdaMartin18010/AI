@@ -1,0 +1,34 @@
+{
+  "version": "0.1.0",
+  "updated": "2025-08-11",
+  "mappings": [
+    {
+      "old_path": "Matter/中期优化计划执行总结报告.md",
+      "new_path": "中期优化计划执行总结报告.md",
+      "action": "merged",
+      "date": "2025-08-11",
+      "reason": "重复内容合并"
+    },
+    {
+      "old_path": "Matter/中期优化计划规划与实施方案.md",
+      "new_path": "中期优化计划规划与实施方案.md",
+      "action": "merged",
+      "date": "2025-08-11",
+      "reason": "重复内容合并"
+    },
+    {
+      "old_path": "Matter/整体质量检查报告.md",
+      "new_path": "Matter/整体质量检查与优化报告.md",
+      "action": "merged",
+      "date": "2025-08-11",
+      "reason": "重复内容合并"
+    },
+    {
+      "old_path": "Matter/批判分析框架.md",
+      "new_path": "Matter/批判框架标准化.md",
+      "action": "merged",
+      "date": "2025-08-11",
+      "reason": "重复内容合并"
+    }
+  ]
+} 

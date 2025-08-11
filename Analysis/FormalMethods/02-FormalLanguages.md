@@ -661,7 +661,7 @@ $$P ::= \ldots \mid P @_l \mid \text{migrate } P \text{ to } l$$
 ---
 
 **交叉引用索引**：
-- [Mathematics/views/view05.md](../Mathematics/views/view05.md) - 数理逻辑基础
+- [Mathematics/views/05-TheoreticalModels.md](../Mathematics/views/05-TheoreticalModels.md) - 理论模型基础
 - [Philosophy/04-Logic.md](../Philosophy/04-Logic.md) - 逻辑哲学
 - [AI/03-Theory.md](../AI/03-Theory.md) - AI理论基础
 - [SoftwareEngineering/DesignPattern/](../SoftwareEngineering/DesignPattern/) - 设计模式

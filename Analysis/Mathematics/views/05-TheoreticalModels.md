@@ -27,12 +27,12 @@
 ### 5.1.5 概率论与数理统计中的模型
 
 - 概率空间、分布、统计推断等
-- 相关内容详见：[Calculus/09-Probability.md](../Calculus/09-Probability.md)
+- 相关内容详见：[Probability/01-Overview.md](../Probability/01-Overview.md)
 
 ### 5.1.6 离散数学与计算机科学相关的数学模型
 
 - 图论、组合、自动机、算法复杂性等
-- 相关内容详见：[../DiscreteMath/01-Overview.md](../DiscreteMath/01-Overview.md)
+- 相关内容详见：[../Algebra/01-Overview.md](../Algebra/01-Overview.md)
 
 ## 5.2 理论模型的分析维度
 

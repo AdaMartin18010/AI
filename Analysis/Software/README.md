@@ -67,7 +67,7 @@ Software/
 - **语言特性**: [02-Component.md](02-Component.md) ←→ [ProgrammingLanguage/02-LanguageTheory.md](../ProgrammingLanguage/02-LanguageTheory.md) 语言理论
 - **编程范式**: [03-DesignPattern.md](03-DesignPattern.md) ←→ [ProgrammingLanguage/03-ProgrammingParadigms.md](../ProgrammingLanguage/03-ProgrammingParadigms.md) 编程范式
 - **异步编程**: [06-Workflow.md](06-Workflow.md) ←→ [ProgrammingLanguage/06-AsyncProgramming.md](../ProgrammingLanguage/06-AsyncProgramming.md) 异步编程
-- **并发模型**: [04-Microservice.md](04-Microservice.md) ←→ [ProgrammingLanguage/05-ConcurrentProgramming.md](../ProgrammingLanguage/05-ConcurrentProgramming.md) 并发编程
+- **并发模型**: [04-Microservice.md](04-Microservice.md) ←→ [ProgrammingLanguage/06-AsyncProgramming.md](../ProgrammingLanguage/06-AsyncProgramming.md) 异步编程
 
 ## 理论框架
 

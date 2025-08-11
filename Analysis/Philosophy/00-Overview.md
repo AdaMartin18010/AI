@@ -65,7 +65,7 @@ graph TD;
 ## 交叉引用示例
 
 - [数学分支总览](../Mathematics/views/00-Overview.md)
-- [AI分支总览](../AI/00-Overview.md)
+- [AI分支总览](../AI/01-Overview.md)
 
 ---
 

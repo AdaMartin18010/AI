@@ -56,7 +56,7 @@ $$\begin{align}
 | **数据结构** | 图论、代数 | 树结构、哈希表 |
 | **并发系统** | 过程代数、时态逻辑 | 进程通信、系统验证 |
 
-参见：[Mathematics/views/view05.md](../Mathematics/views/view05.md) - 离散数学基础
+参见：[Mathematics/views/05-TheoreticalModels.md](../Mathematics/views/05-TheoreticalModels.md) - 理论模型基础
 
 #### 01.2.2 与形式方法的融合
 
@@ -644,7 +644,7 @@ $$Q = \frac{1}{2m} \sum_{ij} \left(A_{ij} - \frac{k_i k_j}{2m}\right) \delta(c_i
 ---
 
 **交叉引用索引**：
-- [Mathematics/views/view05.md](../Mathematics/views/view05.md) - 离散数学基础
+- [Mathematics/views/05-TheoreticalModels.md](../Mathematics/views/05-TheoreticalModels.md) - 理论模型基础
 - [FormalMethods/README.md](../FormalMethods/README.md) - 形式方法体系
 - [AI/05-Model.md](../AI/05-Model.md) - AI算法模型
 - [SoftwareEngineering/DesignPattern/](../SoftwareEngineering/DesignPattern/) - 设计模式
