@@ -1,0 +1,614 @@
+﻿BROKEN Analysis\AI\02-MetaTheory.md
+  -> ../../AI/03-Theory.md
+  -> ../../FormalMethods/02-FormalLanguages.md
+  -> ../../Philosophy/02-Epistemology.md
+  -> ../../Mathematics/02-CoreConcepts.md
+BROKEN Analysis\AI\04-DesignPattern.md
+  -> ../../AI/02-MetaTheory.md
+  -> ../../SoftwareEngineering/Architecture/01-DistributedMicroservices.md
+  -> ../../ProgrammingLanguage/02-LanguageTheory.md
+  -> ../../FormalMethods/02-FormalLanguages.md
+BROKEN Analysis\FormalMethods\03-TypeTheory.md
+  -> ../../FormalMethods/02-FormalLanguages.md
+  -> ../../AI/04-DesignPattern.md
+  -> ../../Mathematics/02-CoreConcepts.md
+  -> ../../ProgrammingLanguage/02-LanguageTheory.md
+BROKEN Analysis\FormalMethods\04-ControlTheory.md
+  -> ../../FormalMethods/02-FormalLanguages.md
+  -> ../../FormalMethods/03-TypeTheory.md
+  -> ../../Mathematics/02-CoreConcepts.md
+  -> ../../AI/03-Theory.md
+BROKEN Analysis\FormalMethods\05-PetriNetTheory.md
+  -> ../../FormalMethods/02-FormalLanguages.md
+  -> ../../FormalMethods/03-TypeTheory.md
+  -> ../../FormalMethods/04-ControlTheory.md
+  -> ../../Mathematics/02-CoreConcepts.md
+BROKEN Analysis\FormalMethods\06-CognitiveModel.md
+  -> ../../FormalMethods/02-FormalLanguages.md
+  -> ../../FormalMethods/03-TypeTheory.md
+  -> ../../FormalMethods/04-ControlTheory.md
+  -> ../../FormalMethods/05-PetriNetTheory.md
+  -> ../../AI/03-Theory.md
+BROKEN Analysis\FormalMethods\07-DistributedModel.md
+  -> ../../FormalMethods/05-PetriNetTheory.md
+  -> ../../FormalMethods/04-ControlTheory.md
+  -> ../../FormalMethods/03-TypeTheory.md
+  -> ../../FormalMethods/06-CognitiveModel.md
+  -> ../../AI/03-Theory.md
+BROKEN Analysis\Mathematics\26-MathematicalIndex.md
+  -> Geometry/04-NonEuclidean.md
+  -> Geometry/05-Differential.md
+  -> Geometry/06-Algebraic.md
+  -> Geometry/07-Discrete.md
+  -> Calculus/06-Multivariable.md
+  -> Geometry/04-NonEuclidean.md
+  -> Geometry/05-Differential.md
+  -> Geometry/06-Algebraic.md
+  -> Geometry/04-NonEuclidean.md
+  -> Geometry/05-Differential.md
+  -> Geometry/06-Algebraic.md
+  -> Geometry/07-Discrete.md
+  -> Calculus/06-Multivariable.md
+  -> Geometry/05-Differential.md
+  -> Geometry/05-Differential.md
+BROKEN Analysis\Mathematics\27-MathematicalSummary.md
+  -> Geometry/04-NonEuclidean.md
+  -> Geometry/05-Differential.md
+  -> Geometry/06-Algebraic.md
+  -> Geometry/07-Discrete.md
+  -> Calculus/06-Multivariable.md
+BROKEN Analysis\Mathematics\Calculus\README.md
+  -> ../../../../Matter/AI/
+BROKEN Analysis\Mathematics\views\02-MathematicalInternalSystem.md
+  -> ../FormalMethods/02-FormalLanguages.md
+  -> ../FormalMethods/03-TypeTheory.md
+BROKEN Analysis\Mathematics\views\21-CategoryTheory.md
+  -> f: B ~> C, g: A ~> B
+  -> f: A => B
+  -> fa: F[A]
+  -> fa: F[A]
+  -> fa: F[A]
+BROKEN Analysis\Mathematics\views\22-FormalLanguageTheory.md
+  -> states: Set[S], alphabet: Set[A], transition: (S, A
+BROKEN Analysis\Refactor\7. 理论科学与综合性分析\7.2 类型理论\7.2.1 类型理论基础.md
+  -> ../7.2.2 线性与仿射类型理论.md
+  -> ../7.6 形式语言理论/7.6.2 形式语言与类型理论.md
+BROKEN Analysis\Refactor\7. 理论科学与综合性分析\7.3 时序逻辑\7.3.1 时序逻辑基础.md
+  -> ../7.3.2 时序逻辑与控制理论.md
+BROKEN Analysis\Refactor\7. 理论科学与综合性分析\7.4 Petri网\7.4.1 Petri网基础理论.md
+  -> ../7.4.2 Petri网与分布式系统.md
+BROKEN Analysis\Refactor\7. 理论科学与综合性分析\7.5 分布式\7.5.1 分布式系统基础.md
+  -> ../7.5.2 分布式一致性理论.md
+  -> ../7.4 Petri网/7.4.2 Petri网与分布式系统.md
+BROKEN Analysis\Refactor\7. 理论科学与综合性分析\7.6 形式语言理论\7.6.1 形式语言理论基础.md
+  -> ../7.6.2 形式语言与类型理论.md
+  -> ../../6. 形式语言理论与多维分析/6.4 计算机科学/6.4.1 形式语言与自动机理论.md
+BROKEN Analysis\Software\README.md
+  -> ../../Matter/Software/System/
+  -> 05-System.md
+  -> 06-Workflow.md
+  -> 07-IOT.md
+  -> 05-System.md
+  -> 06-Workflow.md
+  -> 05-System.md
+  -> 06-Workflow.md
+  -> 06-Workflow.md
+  -> 05-System.md
+  -> 05-System.md
+  -> 06-Workflow.md
+  -> 07-IOT.md
+  -> 05-System.md
+  -> 06-Workflow.md
+  -> 05-System.md
+  -> ../../Matter/Software/System/
+  -> 06-Workflow.md
+  -> 07-IOT.md
+BROKEN Analysis\Software\Component\01-AuthDomain.md
+  -> ../SoftwareEngineering/README.md
+  -> ../SoftwareEngineering/DesignPattern/00-Overview.md
+  -> ../SoftwareEngineering/Microservices/00-Overview.md
+BROKEN Analysis\SoftwareEngineering\README.md
+  -> ../../Matter/Software/Architecture/
+  -> ../../Matter/Software/Architecture/
+BROKEN Analysis\SoftwareEngineering\Architecture\10-FutureTrends.md
+  -> ../AI/05-Model.md
+  -> ../Mathematics/views/15-Optimization.md
+  -> ../FormalMethods/09-EmergingTrends.md
+  -> ../Philosophy/02-Epistemology.md
+BROKEN Analysis\SoftwareEngineering\Microservices\05-Evolution.md
+  -> ../../../../Matter/FormalModel/
+  -> ../../../../Matter/FormalModel/
+BROKEN Analysis\SoftwareEngineering\Microservices\06-Formalization.md
+  -> ../../../../Matter/Theory/Temporal_Logic_Control_Deepening/
+  -> ../../../../Matter/Theory/Temporal_Logic_Control_Deepening/
+  -> ../../../../Matter/FormalModel/
+BROKEN Analysis\SoftwareEngineering\Microservices\09-SummaryProspect.md
+  -> ../../../../Matter/FormalModel/
+BROKEN Analysis\Standards\README.md
+  -> url
+BROKEN Matter\FormalModel\Petri_Net_Theory.md
+  -> β
+BROKEN Matter\FormalModel\AI_Design\define_pattern03.md
+  -> fa: F[A]
+  -> fa: Option[A]
+BROKEN Matter\FormalModel\AI_Design\Design\view19.md
+  -> data:image/svg+xml;base64,...
+BROKEN Matter\FormalModel\Model\CAT\formal_science\AI\从范畴论视角分析当前人工智能技术与数学原理.md
+  -> s
+BROKEN Matter\FormalModel\Model\CAT\formal_science\control\形式世界-信息世界-软件架构的范畴论统一视角：深度综合与批判性分析.md
+  -> x,a
+BROKEN Matter\FormalModel\Model\CAT\formal_science\control\范畴论视角下的多维世界控制理论统一框架.md
+  -> &organism_signal
+  -> &organ_response
+  -> &cell_response
+  -> &molecular_response
+  -> &cell_response
+  -> &organ_response
+BROKEN Matter\FormalModel\Model\HoTT\同伦类型论(HoTT)与软件工程\同伦类型论与软件工程的多维交汇.md
+  -> f: I => O
+  -> 
+  first: Workflow[I, M], 
+  second: Workflow[M, O]
+
+  -> 
+  left: Workflow[I, O1],
+  right: Workflow[I, O2],
+  combine: (O1, O2
+BROKEN Matter\FormalModel\Model\Information\信息学形式模型综述.md
+  -> epsilon
+  -> model
+  -> model
+  -> model
+BROKEN Matter\FormalModel\Model\Math\数学内概念分析.md
+  -> x
+  -> x
+  -> x-a
+  -> X
+  -> X
+  -> X
+  -> X, x₀
+BROKEN Matter\FormalModel\Model\Math\数学概念分析和综合.md
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+BROKEN Matter\FormalModel\Model\Math\Algebra\从范畴论视角审视代数.md
+  -> -, R
+  -> R, -
+  -> -,R
+  -> -,R
+  -> id[R]
+  -> -,R
+  -> X,R
+  -> g,R
+  -> f
+  -> K(c
+  -> d, K(c
+  -> c,-
+  -> c,-
+  -> X
+  -> X
+  -> X
+  -> X
+  -> C
+  -> 1, -
+  -> C[•]
+BROKEN Matter\FormalModel\Model\Math\Calculus\微积分的合法性：哲学与科学视角的深化.md
+  -> x-a
+BROKEN Matter\FormalModel\Model\Math\Calculus\微积分的合法性：多维度论证与批判性分析.md
+  -> f(k
+BROKEN Matter\FormalModel\Model\Math\MetaMath\Computability\view_递归_可计算性理论_05.md
+  -> x
+  -> x
+BROKEN Matter\FormalModel\Model\Math\MetaMath\Logic\view_Logic01.md
+  -> n
+BROKEN Matter\FormalModel\Model\Math\MetaMath\Model\view_模型论01.md
+  -> s
+  -> s
+BROKEN Matter\FormalModel\Model\Math\MetaMath\Model\view_模型论03.md
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+BROKEN Matter\FormalModel\Model\Math\MetaMath\Model\模型论02.md
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+BROKEN Matter\FormalModel\Model\Math\MetaMath\Proof\view_证明论01.md
+  -> 概念1
+  -> 概念2
+BROKEN Matter\FormalModel\Model\Math\views\view17.md
+  -> s
+  -> s
+  -> s
+  -> s
+BROKEN Matter\FormalModel\Software\WorkFlow\define\workflow05.md
+  -> item T
+BROKEN Matter\FormalModel\Software\WorkFlow\patterns\workflow_design_pattern09.md
+  -> 架构设计
+BROKEN Matter\FormalModel\Software\WorkFlow\patterns\workflow_design_pattern11.md
+  -> cadence-architecture
+  -> temporal-architecture
+BROKEN Matter\FormalModel\Software\WorkFlow\patterns\workflow_pattern_HoTT_view01.md
+  -> s.clone(
+  -> data
+BROKEN Matter\FormalModel\Software\WorkFlow\view\design\data_flow\data_flow_view15.md
+  -> &self.context
+BROKEN Matter\FormalModel\Software\WorkFlow\view\design\software_formal\web_ui\software_formal_view06.md
+  -> ...args
+BROKEN Matter\Mathematics\数学内容索引.md
+  -> docs/FormalModel/Model/Math/数学概念分析.md#集合-set
+  -> docs/FormalModel/Model/Math/数学概念分析.md#关系-relation
+  -> docs/FormalModel/Model/Math/数学概念分析.md#基数与序数
+  -> docs/FormalModel/Model/Math/数学概念分析.md#自然数
+  -> docs/FormalModel/Model/Math/数学概念分析.md#整数
+  -> docs/FormalModel/Model/Math/数学概念分析.md#有理数
+  -> docs/FormalModel/Model/Math/数学概念分析.md#实数
+  -> docs/FormalModel/Model/Math/数学概念分析.md#复数
+  -> docs/FormalModel/Model/Math/数学逻辑.md#命题逻辑
+  -> docs/FormalModel/Model/Math/数学逻辑.md#谓词逻辑
+  -> docs/FormalModel/Model/Math/数学概念分析.md#推理规则
+  -> docs/FormalModel/Model/Math/数学概念分析.md#证明方法
+  -> docs/FormalModel/Model/Math/Algebra/数学代数：认知结构、概念分解与建构分析.md#群论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#群论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#同态
+  -> docs/FormalModel/Model/Math/Algebra/view_抽象代数.md#有限群
+  -> docs/FormalModel/Model/Math/数学概念联系.md#环论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#理想
+  -> docs/FormalModel/Model/Math/数学概念联系.md#整环
+  -> docs/FormalModel/Model/Math/数学概念联系.md#域论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#域扩张
+  -> docs/FormalModel/Model/Math/数学概念联系.md#伽罗瓦理论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#线性代数
+  -> docs/FormalModel/Model/Math/数学概念联系.md#线性变换
+  -> docs/FormalModel/Model/Math/数学概念联系.md#特征值
+  -> docs/FormalModel/Model/Math/Geometry/view_几何01.md#欧几里得几何
+  -> docs/FormalModel/Model/Math/Geometry/view_几何01.md#基本定理
+  -> docs/FormalModel/Model/Math/Geometry/view_几何01.md#证明方法
+  -> docs/FormalModel/Model/Math/Geometry/view_几何01.md#非欧几何
+  -> docs/FormalModel/Model/Math/Geometry/view_几何01.md#双曲几何
+  -> docs/FormalModel/Model/Math/数学概念联系.md#拓扑学
+  -> docs/FormalModel/Model/Math/数学概念联系.md#连续映射
+  -> docs/FormalModel/Model/Math/数学概念联系.md#紧致性
+  -> docs/FormalModel/Model/Math/数学概念联系.md#基本群
+  -> docs/FormalModel/Model/Math/数学概念联系.md#同调群
+  -> docs/FormalModel/Model/Math/数学概念联系.md#同伦论
+  -> docs/FormalModel/Model/Math/Geometry/view_几何01.md#微分几何
+  -> docs/FormalModel/Model/Math/Geometry/view_几何01.md#切空间
+  -> docs/FormalModel/Model/Math/Geometry/view_几何01.md#黎曼几何
+  -> docs/FormalModel/Model/Math/Calculus/微积分的合法性：哲学与科学视角的深化.md#极限
+  -> docs/FormalModel/Model/Math/Calculus/微积分的合法性：哲学与科学视角的深化.md#微分
+  -> docs/FormalModel/Model/Math/Calculus/微积分的合法性：哲学与科学视角的深化.md#积分
+  -> docs/FormalModel/Model/Math/数学概念联系.md#测度论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#勒贝格积分
+  -> docs/FormalModel/Model/Math/数学概念联系.md#复分析
+  -> docs/FormalModel/Model/Math/数学概念联系.md#留数理论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#初等数论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#同余
+  -> docs/FormalModel/Model/Math/数学概念联系.md#素数
+  -> docs/FormalModel/Model/Math/数学概念联系.md#代数数论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#理想论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#类域论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#概率论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#随机变量
+  -> docs/FormalModel/Model/Math/数学概念联系.md#概率分布
+  -> docs/FormalModel/Model/Math/数学概念联系.md#统计学
+  -> docs/FormalModel/Model/Math/数学概念联系.md#推断统计
+  -> docs/FormalModel/Model/Math/数学概念联系.md#回归分析
+  -> docs/FormalModel/Model/Math/数学概念联系.md#范畴论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#函子
+  -> docs/FormalModel/Model/Math/数学概念联系.md#自然变换
+  -> docs/FormalModel/Model/Math/数学概念联系.md#Yoneda引理
+  -> docs/FormalModel/Model/Math/数学概念联系.md#伴随函子
+  -> docs/FormalModel/Model/Math/数学概念联系.md#极限
+  -> docs/FormalModel/Model/FormalLanguage/形式语言理论：多维分析、认知视角与数学关系.md#句法层
+  -> docs/FormalModel/Model/FormalLanguage/形式语言理论：多维分析、认知视角与数学关系.md#语义层
+  -> docs/FormalModel/Model/FormalLanguage/形式语言理论：多维分析、认知视角与数学关系.md#类型论
+  -> docs/FormalModel/Model/FormalLanguage/形式语言理论：多维分析、认知视角与数学关系.md#具身认知
+  -> docs/FormalModel/Model/FormalLanguage/形式语言理论：多维分析、认知视角与数学关系.md#隐喻系统
+  -> docs/FormalModel/Model/Math/数学概念分析.md#公理系统
+  -> docs/FormalModel/Model/Math/数学概念分析.md#皮亚诺公理
+  -> docs/FormalModel/Model/Math/数学概念分析.md#欧几里得公理
+  -> docs/FormalModel/Model/Math/数学概念分析.md#证明方法
+  -> docs/FormalModel/Model/Math/数学概念分析.md#证明复杂性
+  -> docs/FormalModel/Model/Math/views/math_view02.md#柏拉图主义
+  -> docs/FormalModel/Model/Math/views/math_view02.md#形式主义
+  -> docs/FormalModel/Model/Math/views/math_view02.md#直觉主义
+  -> docs/FormalModel/Model/Math/数学概念分析和综合.md#数学知识
+  -> docs/FormalModel/Model/Math/数学概念分析和综合.md#数学真理
+  -> docs/FormalModel/Model/Math/数学概念分析和综合.md#数学发现
+  -> docs/FormalModel/Model/Math/数学概念联系.md#数值分析
+  -> docs/FormalModel/Model/Math/数学概念联系.md#误差分析
+  -> docs/FormalModel/Model/Math/数学概念联系.md#线性规划
+  -> docs/FormalModel/Model/Math/数学概念联系.md#非线性规划
+  -> docs/FormalModel/Model/Math/数学概念联系.md#动态规划
+  -> docs/FormalModel/Model/View/CMAR/人脑认知、数学、现实：关联性、映射与综合论证.md#数感
+  -> docs/FormalModel/Model/View/CMAR/人脑认知、数学、现实：关联性、映射与综合论证.md#空间认知
+  -> docs/FormalModel/Model/View/CMAR/人脑认知、数学、现实：关联性、映射与综合论证.md#逻辑推理
+  -> docs/FormalModel/Model/View/CMAR/人脑认知、数学、现实：关联性、映射与综合论证.md#概念形成
+  -> docs/FormalModel/Model/View/CMAR/人脑认知、数学、现实：关联性、映射与综合论证.md#认知图式
+  -> docs/FormalModel/Model/Math/数学概念联系.md#算法理论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#计算复杂性
+  -> docs/FormalModel/Model/Math/数学概念联系.md#形式验证
+  -> docs/FormalModel/Model/Math/数学概念联系.md#量子力学
+  -> docs/FormalModel/Model/Math/数学概念联系.md#相对论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#统计物理
+  -> docs/FormalModel/Model/Math/数学概念联系.md#博弈论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#优化理论
+  -> docs/FormalModel/Model/Math/数学概念联系.md#计量经济学
+  -> docs/Mathematics/数学内容全面分析报告.md
+  -> docs/Mathematics/数学内容思维导图.md
+  -> docs/Mathematics/数学内容索引.md
+BROKEN Matter\Mathematics\数学内概念分析.md
+  -> x
+  -> x
+  -> x-a
+  -> X
+  -> X
+  -> X
+  -> X, x₀
+BROKEN Matter\Mathematics\数学概念分析和综合.md
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+BROKEN Matter\Mathematics\Algebra\从范畴论视角审视代数.md
+  -> -, R
+  -> R, -
+  -> -,R
+  -> -,R
+  -> id[R]
+  -> -,R
+  -> X,R
+  -> g,R
+  -> f
+  -> K(c
+  -> d, K(c
+  -> c,-
+  -> c,-
+  -> X
+  -> X
+  -> X
+  -> X
+  -> C
+  -> 1, -
+  -> C[•]
+BROKEN Matter\Mathematics\Calculus\微积分的合法性：哲学与科学视角的深化.md
+  -> x-a
+BROKEN Matter\Mathematics\Calculus\微积分的合法性：多维度论证与批判性分析.md
+  -> f(k
+BROKEN Matter\Mathematics\MetaMath\Computability\view_递归_可计算性理论_05.md
+  -> x
+  -> x
+BROKEN Matter\Mathematics\MetaMath\Logic\view_Logic01.md
+  -> n
+BROKEN Matter\Mathematics\MetaMath\Model\view_模型论01.md
+  -> s
+  -> s
+BROKEN Matter\Mathematics\MetaMath\Model\view_模型论03.md
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+BROKEN Matter\Mathematics\MetaMath\Model\模型论02.md
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+  -> s
+BROKEN Matter\Mathematics\MetaMath\Proof\view_证明论01.md
+  -> 概念1
+  -> 概念2
+BROKEN Matter\Mathematics\views\view17.md
+  -> s
+  -> s
+  -> s
+  -> s
+BROKEN Matter\Philosophy\哲学内容索引.md
+  -> content/ontology/AI本体论分析.md
+  -> content/ontology/本体论综合比较.md
+  -> content/epistemology/知识来源分析.md
+  -> content/epistemology/知识结构分析.md
+  -> content/epistemology/认知科学视角.md
+  -> content/epistemology/AI认识论分析.md
+  -> content/ethics/元伦理学分析.md
+  -> content/ethics/应用伦理学分析.md
+  -> content/ethics/AI伦理分析.md
+  -> content/ethics/形式化伦理学.md
+  -> content/logic/形式逻辑分析.md
+  -> content/logic/哲学逻辑分析.md
+  -> content/logic/非经典逻辑分析.md
+  -> content/logic/逻辑哲学分析.md
+  -> content/logic/计算逻辑应用.md
+  -> content/metaphysics/存在论分析.md
+  -> content/metaphysics/模态形而上学分析.md
+  -> content/metaphysics/时间空间哲学.md
+  -> content/metaphysics/因果性分析.md
+  -> content/metaphysics/形而上学综合.md
+  -> content/interdisciplinary/mathematics/数学对象存在性.md
+  -> content/interdisciplinary/mathematics/数学真理本质.md
+  -> content/interdisciplinary/mathematics/数学发现发明.md
+  -> content/interdisciplinary/mathematics/数学应用性.md
+  -> content/interdisciplinary/science/科学方法论.md
+  -> content/interdisciplinary/science/科学实在论.md
+  -> content/interdisciplinary/science/科学革命.md
+  -> content/interdisciplinary/science/科学解释.md
+  -> content/interdisciplinary/cognitive/心智哲学.md
+  -> content/interdisciplinary/cognitive/意识问题.md
+  -> content/interdisciplinary/cognitive/认知科学哲学.md
+  -> content/interdisciplinary/cognitive/认知计算.md
+  -> content/interdisciplinary/technology/AI哲学.md
+  -> content/interdisciplinary/technology/计算哲学.md
+  -> content/interdisciplinary/technology/信息哲学.md
+  -> content/interdisciplinary/technology/网络哲学.md
+  -> content/traditional/existentialism/加缪荒诞哲学.md
+  -> content/traditional/existentialism/海德格尔存在哲学.md
+  -> content/traditional/existentialism/雅斯贝尔斯生存哲学.md
+  -> content/traditional/phenomenology/胡塞尔现象学.md
+  -> content/traditional/phenomenology/海德格尔现象学.md
+  -> content/traditional/phenomenology/梅洛庞蒂现象学.md
+  -> content/traditional/phenomenology/萨特现象学.md
+  -> content/traditional/hermeneutics/伽达默尔解释学.md
+  -> content/traditional/hermeneutics/利科解释学.md
+  -> content/traditional/hermeneutics/哈贝马斯批判理论.md
+  -> content/traditional/hermeneutics/德里达解构主义.md
+  -> content/traditional/feminism/性别视角.md
+  -> content/traditional/feminism/女性主义认识论.md
+  -> content/traditional/feminism/女性主义伦理学.md
+  -> content/traditional/feminism/女性主义政治哲学.md
+  -> content/modern/environmental/生态伦理学.md
+  -> content/modern/environmental/环境正义.md
+  -> content/modern/environmental/可持续发展.md
+  -> content/modern/environmental/生物伦理学.md
+  -> content/modern/political/正义理论.md
+  -> content/modern/political/自由理论.md
+  -> content/modern/political/权利理论.md
+  -> content/modern/political/民主理论.md
+  -> content/modern/social/社会理论.md
+  -> content/modern/social/文化哲学.md
+  -> content/modern/social/技术社会.md
+  -> content/modern/social/全球化.md
+  -> content/modern/postmodern/后结构主义.md
+  -> content/modern/postmodern/解构主义.md
+  -> content/modern/postmodern/后现代主义.md
+  -> content/modern/postmodern/新实用主义.md
+  -> content/emerging/neurophilosophy/神经伦理学.md
+  -> content/emerging/neurophilosophy/神经美学.md
+  -> content/emerging/neurophilosophy/神经宗教.md
+  -> content/emerging/neurophilosophy/神经自由意志.md
+  -> content/emerging/quantum/量子认识论.md
+  -> content/emerging/quantum/量子本体论.md
+  -> content/emerging/quantum/量子因果性.md
+  -> content/emerging/quantum/量子意识.md
+  -> content/emerging/complexity/复杂系统.md
+  -> content/emerging/complexity/涌现性.md
+  -> content/emerging/complexity/自组织.md
+  -> content/emerging/complexity/混沌理论.md
+  -> content/emerging/network/网络空间.md
+  -> content/emerging/network/虚拟现实.md
+  -> content/emerging/network/数字身份.md
+  -> content/emerging/network/网络伦理.md
+  -> analysis/philosophical_content_analysis.md
+  -> analysis/concept_mapping.md
+  -> analysis/argument_structure.md
+  -> analysis/formalization_analysis.md
+  -> analysis/wiki_comparison.md
+  -> analysis/contemporary_alignment.md
+  -> visualizations/mindmaps/本体论思维导图.md
+  -> visualizations/mindmaps/认识论思维导图.md
+  -> visualizations/mindmaps/伦理学思维导图.md
+  -> visualizations/mindmaps/逻辑学思维导图.md
+  -> visualizations/mindmaps/形而上学思维导图.md
+  -> visualizations/mindmaps/交叉领域哲学思维导图.md
+  -> visualizations/mindmaps/哲学发展趋势思维导图.md
+  -> visualizations/graphs/哲学概念关系图.md
+  -> visualizations/graphs/哲学流派关系图.md
+  -> visualizations/graphs/哲学方法关系图.md
+  -> visualizations/graphs/哲学应用关系图.md
+  -> visualizations/graphs/哲学发展时间线.md
+  -> visualizations/tables/哲学方法对比表.md
+  -> visualizations/tables/哲学应用对比表.md
+  -> visualizations/tables/哲学概念对比表.md
+  -> visualizations/tables/哲学发展对比表.md
+  -> supplements/philosophical_positions.md
+  -> supplements/formal_systems.md
+  -> supplements/contemporary_issues.md
+  -> supplements/historical_development.md
+  -> supplements/cultural_perspectives.md
+  -> supplements/practical_applications.md
+  -> resources/references/classical_philosophy.md
+  -> resources/references/modern_philosophy.md
+  -> resources/references/contemporary_philosophy.md
+  -> resources/references/interdisciplinary_philosophy.md
+  -> resources/tools/formalization_tools.md
+  -> resources/tools/analysis_methods.md
+  -> resources/tools/visualization_tools.md
+  -> resources/tools/computational_tools.md
+  -> resources/examples/philosophical_arguments.md
+  -> resources/examples/formal_proofs.md
+  -> resources/examples/real_world_applications.md
+  -> resources/examples/case_studies.md
+BROKEN Matter\ProgrammingLanguage\Language_Compare\category_rust_scala_haskell.md
+  -> fa: F[A]
+  -> a: A
+  -> ff: F[A => B]
+  -> fa: F[A]
+  -> l1: List[T], l2: List[T]
+  -> f: F[B, C], g: F[A, B]
+  -> f: B => C, g: A => B
+BROKEN Matter\ProgrammingLanguage\Paradigm\AsyncProgram\async_program06.md
+  -> f: => Future[T], maxPerSecond: Int
+  -> f: => Future[T], maxRetries: Int
+  -> f: K => Future[V]
+  -> results[i]
+  -> error
+  -> &event
+  -> op: => Future[T], times: Int, delay: FiniteDuration
+  -> items: List[A]
+  -> items: List[A]
+  -> future: Future[T], timeout: FiniteDuration, fallback: => T
+BROKEN Matter\ProgrammingLanguage\RustDomain\README.md
+  -> ../../../../Analysis/SUMMARY.md
+  -> ../../../../Analysis/SoftwareEngineering/Microservices/00-Overview.md
+  -> ../../../../Analysis/SoftwareEngineering/Architecture/00-Overview.md
+BROKEN Matter\ProgrammingLanguage\RustDomain\rust\view_category_theory\category_theory_system.md
+  -> fa: List[A]
+BROKEN Matter\ProgrammingLanguage\RustDomain\rust\view_homotopy_type_theory\hott_01.md
+  -> instance
+BROKEN Matter\ProgrammingLanguage\RustDomain\rust\view_type_algebra\type_algebra.md
+  -> f: A => B
+BROKEN Matter\ProgrammingLanguage\RustDomain\rust\view_type_theory\type_define_operation.md
+  -> ./variant/variant.md
+BROKEN Matter\Software\Component\web_domain\webassembly\view01.md
+  -> s, vs
+BROKEN Matter\Software\Microservice\CI_CD\CI_CD05.md
+  -> ...args
+  -> ...args
+BROKEN Matter\Software\Microservice\CI_CD\CI_CD10.md
+  -> context
+BROKEN Matter\Software\Microservice\Docker\docker01.md
+  -> max(0, index-24
+  -> 0
+  -> 0
+  -> 0
+BROKEN Matter\Software\Microservice\Docker\WebAssembly05.md
+  -> ...args
+  -> ${impl.url}
+BROKEN Matter\Theory\Advanced_Control_Theory_Extended.md
+  -> H_1, P(t
+BROKEN Matter\Theory\Advanced_Control_Theory_Synthesis_Extended.md
+  -> y(t
+BROKEN Matter\Theory\Advanced_Petri_Net_Theory.md
+  -> \beta
+  -> \beta
+  -> \beta
+  -> \sigma
+  -> \sigma
+  -> \sigma
+BROKEN Matter\Theory\批判框架标准化分析.md
+  -> theory
+  -> theory
+  -> theory
+  -> theory
+  -> theory
+  -> theory
+  -> theory
+  -> scores

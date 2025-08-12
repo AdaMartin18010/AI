@@ -4,15 +4,15 @@
 
 ## 主题树形目录
 
-1. [01-AI 人工智能](./AI/README.md)
-2. [02-Mathematics 数学](./Mathematics/README.md)
-3. [03-Philosophy 哲学](./Philosophy/README.md)
-4. [04-SoftwareEngineering 软件工程](./SoftwareEngineering/README.md)
-5. [05-FormalMethods 形式方法](./FormalMethods/README.md)
-6. [06-ComputerScience 计算机科学](./ComputerScience/README.md)
-7. [07-ProgrammingLanguage 编程语言](./ProgrammingLanguage/README.md)
-8. [08-Software 软件与架构](./Software/README.md)
-9. [09-Refactor 重构与进阶](./Refactor/README.md)
+1. [01-AI 人工智能](./10-AI/README.md)
+2. [02-Mathematics 数学](./20-Mathematics/README.md)
+3. [03-Philosophy 哲学](./90-Theory/README.md)
+4. [04-SoftwareEngineering 软件工程](./60-SoftwareEngineering/README.md)
+5. [05-FormalMethods 形式方法](./30-FormalMethods/README.md)
+6. [06-ComputerScience 计算机科学](./40-ComputerScience/README.md)
+7. [07-ProgrammingLanguage 编程语言](./50-ProgrammingLanguage/README.md)
+8. [08-Software 软件与架构](./60-SoftwareEngineering/README.md)
+9. [09-Refactor 重构与进阶](./90-Theory/README.md)
 
 ## 进度与质量跟踪
 
@@ -42,12 +42,12 @@
 
 ```tree
 Analysis/
-├── 01-AI/
+├── 01-10-AI/
 │   ├── 01-Overview.md
 │   ├── 02-MetaTheory.md
 │   ├── ...
 │   └── README.md
-├── 02-Mathematics/
+├── 02-20-Mathematics/
 │   ├── 01-Overview.md
 │   ├── ...
 │   └── README.md
