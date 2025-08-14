@@ -132,6 +132,7 @@ impl STLCToSystemF {
 - Progress（可进性）：若 ⊢ t : T，则 t 是值或存在 t' 使得 t ↦ t'
 
 证明思路要点：
+
 - 归纳于推导结构；关键在于应用与类型应用的相容性；
 - 替换引理：值替换与类型替换分别与语法/规则良好交互；
 - 规范化：强规范化在 System F 不平凡，需借助可还原性语义（Tait/Girard）。
@@ -165,4 +166,4 @@ fn infer_partially(ctx: Ctx, term: SysFExpr) -> Result<SysFType, HoleConstraints
 ## 八、结论与后续
 
 - 已建立 STLC → System F 的扩展与翻译骨架，明确性质与擦除语义。
-- 下一步进入“类型安全与推导正确性”的形式化证明细化与算法化实现接口。 
+- 下一步进入“类型安全与推导正确性”的形式化证明细化与算法化实现接口。
