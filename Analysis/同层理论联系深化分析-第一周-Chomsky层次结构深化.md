@@ -113,7 +113,7 @@ $$\begin{align}
 struct DFAtoCFGConverter {
     // DFA组件
     dfa: DFA,
-    
+
     // 转换后的CFG组件
     variables: HashSet<String>,
     terminals: HashSet<char>,
@@ -124,24 +124,24 @@ struct DFAtoCFGConverter {
 impl DFAtoCFGConverter {
     fn convert_dfa_to_cfg(&self, dfa: &DFA) -> ContextFreeGrammar {
         let mut cfg = ContextFreeGrammar::new();
-        
+
         // 步骤1：设置变量
         for state in &dfa.states {
             cfg.add_variable(format!("S_{}", state));
         }
-        
+
         // 步骤2：设置终结符
         cfg.terminals = dfa.alphabet.clone();
-        
+
         // 步骤3：生成产生式
         self.generate_productions(&mut cfg, dfa);
-        
+
         // 步骤4：设置起始符号
         cfg.start_symbol = format!("S_{}", dfa.initial_state);
-        
+
         cfg
     }
-    
+
     fn generate_productions(&self, cfg: &mut ContextFreeGrammar, dfa: &DFA) {
         // 为每个转移生成产生式
         for (state, symbol, next_state) in &dfa.transitions {
@@ -154,7 +154,7 @@ impl DFAtoCFGConverter {
             };
             cfg.add_production(production);
         }
-        
+
         // 为接受状态生成ε产生式
         for accept_state in &dfa.accept_states {
             let production = Production {
@@ -178,7 +178,7 @@ impl DFAtoCFGConverter {
 struct RegexToCFGConverter {
     // 正则表达式组件
     regex: Regex,
-    
+
     // 转换状态
     variable_counter: usize,
     productions: Vec<Production>,
@@ -187,7 +187,7 @@ struct RegexToCFGConverter {
 impl RegexToCFGConverter {
     fn convert_regex_to_cfg(&mut self, regex: &Regex) -> ContextFreeGrammar {
         let mut cfg = ContextFreeGrammar::new();
-        
+
         match regex {
             Regex::Empty => {
                 // 空语言：不生成任何产生式
@@ -228,20 +228,20 @@ impl RegexToCFGConverter {
             },
         }
     }
-    
+
     fn concatenate_grammars(&self, cfg1: &ContextFreeGrammar, cfg2: &ContextFreeGrammar) -> ContextFreeGrammar {
         let mut result = ContextFreeGrammar::new();
-        
+
         // 合并变量和终结符
         result.variables.extend(cfg1.variables.clone());
         result.variables.extend(cfg2.variables.clone());
         result.terminals.extend(cfg1.terminals.clone());
         result.terminals.extend(cfg2.terminals.clone());
-        
+
         // 添加产生式
         result.productions.extend(cfg1.productions.clone());
         result.productions.extend(cfg2.productions.clone());
-        
+
         // 添加连接产生式：S → S1 S2
         result.add_production(Production {
             left: "S".to_string(),
@@ -250,24 +250,24 @@ impl RegexToCFGConverter {
                 Symbol::Variable(cfg2.start_symbol.clone())
             ]
         });
-        
+
         result.start_symbol = "S".to_string();
         result
     }
-    
+
     fn union_grammars(&self, cfg1: &ContextFreeGrammar, cfg2: &ContextFreeGrammar) -> ContextFreeGrammar {
         let mut result = ContextFreeGrammar::new();
-        
+
         // 合并变量和终结符
         result.variables.extend(cfg1.variables.clone());
         result.variables.extend(cfg2.variables.clone());
         result.terminals.extend(cfg1.terminals.clone());
         result.terminals.extend(cfg2.terminals.clone());
-        
+
         // 添加产生式
         result.productions.extend(cfg1.productions.clone());
         result.productions.extend(cfg2.productions.clone());
-        
+
         // 添加并集产生式：S → S1 | S2
         result.add_production(Production {
             left: "S".to_string(),
@@ -277,19 +277,19 @@ impl RegexToCFGConverter {
             left: "S".to_string(),
             right: vec![Symbol::Variable(cfg2.start_symbol.clone())]
         });
-        
+
         result.start_symbol = "S".to_string();
         result
     }
-    
+
     fn kleene_star_grammar(&self, cfg: &ContextFreeGrammar) -> ContextFreeGrammar {
         let mut result = ContextFreeGrammar::new();
-        
+
         // 复制原文法
         result.variables = cfg.variables.clone();
         result.terminals = cfg.terminals.clone();
         result.productions = cfg.productions.clone();
-        
+
         // 添加Kleene星产生式：S → S1 S | ε
         result.add_production(Production {
             left: "S".to_string(),
@@ -302,7 +302,7 @@ impl RegexToCFGConverter {
             left: "S".to_string(),
             right: vec![Symbol::Epsilon]
         });
-        
+
         result.start_symbol = "S".to_string();
         result
     }
@@ -529,13 +529,13 @@ $\text{CSL} \subset \text{RE}$
 struct InclusionProofFramework {
     // 证明类型
     proof_type: ProofType,
-    
+
     // 证明方法
     proof_method: ProofMethod,
-    
+
     // 证明步骤
     proof_steps: Vec<ProofStep>,
-    
+
     // 验证工具
     verification_tools: Vec<VerificationTool>,
 }
@@ -572,10 +572,10 @@ struct ProofStep {
 struct ProofVerifier {
     // 验证方法
     verification_methods: Vec<VerificationMethod>,
-    
+
     // 验证结果
     verification_results: Vec<VerificationResult>,
-    
+
     // 错误检测
     error_detection: ErrorDetector,
 }
@@ -583,35 +583,35 @@ struct ProofVerifier {
 impl ProofVerifier {
     fn verify_inclusion_proof(&self, proof: &InclusionProof) -> VerificationResult {
         let mut result = VerificationResult::new();
-        
+
         // 验证逻辑一致性
         if !self.verify_logical_consistency(proof) {
             result.add_error("逻辑不一致");
         }
-        
+
         // 验证构造正确性
         if !self.verify_construction_correctness(proof) {
             result.add_error("构造不正确");
         }
-        
+
         // 验证完备性
         if !self.verify_completeness(proof) {
             result.add_error("证明不完备");
         }
-        
+
         result
     }
-    
+
     fn verify_logical_consistency(&self, proof: &InclusionProof) -> bool {
         // 检查逻辑推理的正确性
         true
     }
-    
+
     fn verify_construction_correctness(&self, proof: &InclusionProof) -> bool {
         // 检查构造的正确性
         true
     }
-    
+
     fn verify_completeness(&self, proof: &InclusionProof) -> bool {
         // 检查证明的完备性
         true
@@ -633,10 +633,10 @@ impl ProofVerifier {
 struct LexicalAnalyzer {
     // 词法模式
     patterns: Vec<LexicalPattern>,
-    
+
     // DFA状态机
     dfa: DFA,
-    
+
     // 词法单元类型
     token_types: HashMap<String, TokenType>,
 }
@@ -645,24 +645,24 @@ impl LexicalAnalyzer {
     fn build_lexer(&mut self) {
         // 步骤1：将正则表达式转换为NFA
         let nfa = self.regex_to_nfa();
-        
+
         // 步骤2：将NFA转换为DFA
         self.dfa = self.nfa_to_dfa(nfa);
-        
+
         // 步骤3：最小化DFA
         self.dfa = self.minimize_dfa(self.dfa);
     }
-    
+
     fn tokenize(&self, input: &str) -> Vec<Token> {
         let mut tokens = Vec::new();
         let mut current_pos = 0;
-        
+
         while current_pos < input.len() {
             let (token, new_pos) = self.recognize_token(&input[current_pos..]);
             tokens.push(token);
             current_pos = new_pos;
         }
-        
+
         tokens
     }
 }
@@ -678,10 +678,10 @@ impl LexicalAnalyzer {
 struct Parser {
     // 语法规则
     grammar: ContextFreeGrammar,
-    
+
     // 下推自动机
     pda: PushdownAutomaton,
-    
+
     // 语法树构建
     syntax_tree_builder: SyntaxTreeBuilder,
 }
@@ -690,15 +690,15 @@ impl Parser {
     fn build_parser(&mut self) {
         // 步骤1：将CFG转换为PDA
         self.pda = self.cfg_to_pda(&self.grammar);
-        
+
         // 步骤2：优化PDA
         self.pda = self.optimize_pda(self.pda);
     }
-    
+
     fn parse(&self, tokens: &[Token]) -> SyntaxTree {
         // 使用PDA进行语法分析
         let parse_result = self.pda.parse(tokens);
-        
+
         // 构建语法树
         self.syntax_tree_builder.build_tree(parse_result)
     }
@@ -717,10 +717,10 @@ impl Parser {
 struct NaturalLanguageParser {
     // 自然语言语法
     grammar: NaturalLanguageGrammar,
-    
+
     // 句法分析器
     parser: ChartParser,
-    
+
     // 语义分析
     semantic_analyzer: SemanticAnalyzer,
 }
@@ -729,13 +729,13 @@ impl NaturalLanguageParser {
     fn parse_sentence(&self, sentence: &str) -> ParseTree {
         // 步骤1：词法分析
         let tokens = self.tokenize(sentence);
-        
+
         // 步骤2：句法分析
         let parse_tree = self.parser.parse(&tokens);
-        
+
         // 步骤3：语义分析
         let semantic_tree = self.semantic_analyzer.analyze(parse_tree);
-        
+
         semantic_tree
     }
 }
@@ -753,10 +753,10 @@ impl NaturalLanguageParser {
 struct PatternRecognitionSystem {
     // 模式库
     pattern_library: HashMap<String, Pattern>,
-    
+
     // 识别器
     recognizers: Vec<PatternRecognizer>,
-    
+
     // 学习算法
     learning_algorithm: LearningAlgorithm,
 }
@@ -764,16 +764,16 @@ struct PatternRecognitionSystem {
 impl PatternRecognitionSystem {
     fn recognize_pattern(&self, input: &str) -> Vec<PatternMatch> {
         let mut matches = Vec::new();
-        
+
         for recognizer in &self.recognizers {
             if let Some(match_result) = recognizer.recognize(input) {
                 matches.push(match_result);
             }
         }
-        
+
         matches
     }
-    
+
     fn learn_pattern(&mut self, examples: &[String], pattern_type: PatternType) {
         // 使用学习算法学习新模式
         let new_pattern = self.learning_algorithm.learn(examples, pattern_type);
@@ -826,4 +826,4 @@ impl PatternRecognitionSystem {
 **分析人员**：AI助手
 **分析状态**：已完成
 **下一步计划**：自动机理论统一
-**质量等级**：⭐⭐⭐⭐⭐ 学术发表标准 
+**质量等级**：⭐⭐⭐⭐⭐ 学术发表标准
