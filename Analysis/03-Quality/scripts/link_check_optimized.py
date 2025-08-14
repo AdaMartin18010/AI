@@ -101,13 +101,19 @@ def extract_links_from_markdown(file_path):
         if url.startswith(('http://', 'https://', 'mailto:', 'tel:')):
             continue
         
+        # 跳过锚点链接（文档内部链接）
+        if url.startswith('#'):
+            continue
+        
         # 检查是否为误报
         if not is_valid_markdown_link(text):
             continue
         
         # 处理相对路径
+        target_path = None
         if url.startswith('./'):
             url = url[2:]
+            target_path = file_path.parent / url
         elif url.startswith('../'):
             # 计算相对路径
             current_dir = file_path.parent
@@ -120,7 +126,7 @@ def extract_links_from_markdown(file_path):
             target_path = file_path.parent / url
         
         # 检查文件是否存在
-        if not target_path.exists():
+        if target_path and not target_path.exists():
             broken_links.append((text, url))
     
     return broken_links
