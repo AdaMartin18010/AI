@@ -1022,7 +1022,7 @@ impl QuantumDevice for IBMQuantumDevice {
 
 ### 与批判分析框架的关联
 
-- [Matter/批判框架标准化.md](../../Matter/批判框架标准化.md) ←→ 量子计算批判性分析框架
+- [Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架](../../Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架) ←→ 量子计算批判性分析框架
 
 ---
 

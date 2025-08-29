@@ -16,12 +16,12 @@
 ## 统一表达规范
 
 - 每个主文档均补充批判性分析、未来展望、术语表、符号表、交叉引用
-- 交叉引用Matter/批判框架标准化.md及相关理论文档
+- 交叉引用Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架及相关理论文档
 - 进度与内容变更自动同步至PROGRESS.md
 
 ## 交叉引用
 
-- [Matter/批判框架标准化.md]
+- [Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架]
 - [Matter/FormalLanguage/形式语言的多维批判性分析：从基础理论到应用实践.md]
 - [Analysis/20-Mathematics/Geometry/01-Overview.md]
 - [Analysis/20-Mathematics/Algebra/07-CategoryTheory.md]

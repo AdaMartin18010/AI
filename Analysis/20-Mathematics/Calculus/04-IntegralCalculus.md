@@ -94,7 +94,7 @@ graph TD
 
 - 假设与局限：积分理论依赖函数的可积性与连续性，实际问题中常遇到不可积、奇异、分布型、离散数据等情况。
 - 创新建议：结合分布理论、数值分析、AI建模等领域，拓展积分学在非连续、非光滑、数据驱动系统中的应用。
-- 交叉引用：[Matter/批判框架标准化.md]、[Matter/20-Mathematics/analysis.md]
+- 交叉引用：[Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架]、[Matter/20-Mathematics/analysis.md]
 
 ## 04.9 未来展望
 
@@ -119,7 +119,7 @@ graph TD
 
 ## 04.12 交叉引用
 
-- [Matter/批判框架标准化.md]
+- [Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架]
 - [Matter/20-Mathematics/analysis.md]
 - [Analysis/20-Mathematics/Calculus/01-Overview.md]
 - [Analysis/20-Mathematics/Calculus/02-LimitsContinuity.md]

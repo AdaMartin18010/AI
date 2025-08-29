@@ -81,7 +81,7 @@ graph TD
 
 - 假设与局限：极限与连续性理论依赖实数完备性与$oldsymbol{\epsilon}$-boldsymbol{\delta}定义，实际问题中常遇到不可积、不可连续、离散或分形现象。
 - 创新建议：结合现代分析、动力系统、分形几何、AI建模等领域，拓展极限与连续性的适用范围。
-- 交叉引用：[Matter/批判框架标准化.md]、[Matter/20-Mathematics/analysis.md]
+- 交叉引用：[Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架]、[Matter/20-Mathematics/analysis.md]
 
 ## 02.8 未来展望
 
@@ -106,7 +106,7 @@ graph TD
 
 ## 02.11 交叉引用
 
-- [Matter/批判框架标准化.md]
+- [Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架]
 - [Matter/20-Mathematics/analysis.md]
 - [Analysis/20-Mathematics/Calculus/01-Overview.md]
 - [Analysis/20-Mathematics/Calculus/03-DifferentialCalculus.md]

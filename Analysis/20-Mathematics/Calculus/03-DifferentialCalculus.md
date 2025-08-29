@@ -88,7 +88,7 @@ graph TD
 
 - 假设与局限：微分学理论依赖函数的可微性与连续性，实际问题中常遇到不可微、分段、非光滑、噪声数据等情况。
 - 创新建议：结合非标准分析、分布式计算、AI建模等领域，拓展微分学在非光滑、离散、数据驱动系统中的应用。
-- 交叉引用：[Matter/批判框架标准化.md]、[Matter/20-Mathematics/analysis.md]
+- 交叉引用：[Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架]、[Matter/20-Mathematics/analysis.md]
 
 ## 03.9 未来展望
 
@@ -113,7 +113,7 @@ graph TD
 
 ## 03.12 交叉引用
 
-- [Matter/批判框架标准化.md]
+- [Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架]
 - [Matter/20-Mathematics/analysis.md]
 - [Analysis/20-Mathematics/Calculus/01-Overview.md]
 - [Analysis/20-Mathematics/Calculus/02-LimitsContinuity.md]

@@ -47,7 +47,7 @@
 
 - 假设与局限：范畴论强调结构与映射的抽象统一，但实际建模中对象与态射的选择高度依赖领域知识，过度抽象可能导致可操作性下降。
 - 创新建议：结合类型理论、图论、AI知识表示等领域，探索范畴论在复杂系统建模、自动推理、跨学科知识整合中的新型应用。
-- 交叉引用：[Matter/批判框架标准化.md]、[Matter/FormalLanguage/形式语言的多维批判性分析：从基础理论到应用实践.md]
+- 交叉引用：[Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架]、[Matter/FormalLanguage/形式语言的多维批判性分析：从基础理论到应用实践.md]
 
 ### 07.3.2 未来展望
 
@@ -149,7 +149,7 @@ impl Functor<i32, i32, fn(i32) -> i32> for Option<i32> {
 
 ## 07.10 交叉引用
 
-- [Matter/批判框架标准化.md]
+- [Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架]
 - [Matter/FormalLanguage/形式语言的多维批判性分析：从基础理论到应用实践.md]
 - [Analysis/20-Mathematics/Algebra/06-Lattices.md]
 - [Analysis/20-Mathematics/Algebra/05-Modules.md]

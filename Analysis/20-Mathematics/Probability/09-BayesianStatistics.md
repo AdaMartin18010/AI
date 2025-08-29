@@ -122,7 +122,7 @@ print(summary(model))
 
 ## 9.10 交叉引用
 
-- [Matter/批判框架标准化.md]
+- [Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架]
 - [Matter/FormalLanguage/形式语言的多维批判性分析：从基础理论到应用实践.md]
 - [Analysis/20-Mathematics/Probability/08-TimeSeries.md]
 - [Analysis/20-Mathematics/Probability/10-MachineLearningStats.md]

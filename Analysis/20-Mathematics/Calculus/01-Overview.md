@@ -111,7 +111,7 @@ mindmap
 
 - 假设与局限：经典微积分建立在实数连续性、公理化极限等假设之上，实际建模中离散性、非光滑性、不可积现象常被忽略。
 - 创新建议：结合现代分析、分布式系统、AI建模等领域，探索微积分在复杂系统、非连续现象、数据驱动建模中的新型应用。
-- 交叉引用：[Matter/批判框架标准化.md]、[Matter/20-Mathematics/analysis.md]
+- 交叉引用：[Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架]、[Matter/20-Mathematics/analysis.md]
 
 ## 01.10 未来展望
 
@@ -136,7 +136,7 @@ mindmap
 
 ## 01.13 交叉引用
 
-- [Matter/批判框架标准化.md]
+- [Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架]
 - [Matter/20-Mathematics/analysis.md]
 - [Analysis/20-Mathematics/Calculus/02-LimitsContinuity.md]
 - [Analysis/20-Mathematics/Calculus/03-DifferentialCalculus.md]

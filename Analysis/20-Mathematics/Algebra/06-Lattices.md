@@ -45,7 +45,7 @@
 
 - 假设与局限：格论假定偏序关系完备，实际应用中部分系统难以满足完全性，需关注边界与例外。
 - 创新建议：探索格结构在AI推理、知识图谱、复杂系统建模中的新型应用，结合范畴论等工具提升表达力。
-- 交叉引用：[Matter/批判框架标准化.md]、[Matter/FormalLanguage/形式语言的多维批判性分析：从基础理论到应用实践.md]
+- 交叉引用：[Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架]、[Matter/FormalLanguage/形式语言的多维批判性分析：从基础理论到应用实践.md]
 
 ### 06.3.2 未来展望
 
@@ -144,7 +144,7 @@ impl Lattice for bool {
 
 ## 06.10 交叉引用
 
-- [Matter/批判框架标准化.md]
+- [Matter/批判性分析方法多元化与理论评估框架.md#十一标准化框架]
 - [Matter/FormalLanguage/形式语言的多维批判性分析：从基础理论到应用实践.md]
 - [Analysis/20-Mathematics/Algebra/05-Modules.md]
 - [Analysis/20-Mathematics/Algebra/07-CategoryTheory.md]
